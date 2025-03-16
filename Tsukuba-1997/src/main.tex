@@ -1,0 +1,58 @@
+
+\documentclass[twocolumn,a4paper]{article}
+\pagestyle{empty}
+\include{epsf}
+\include{frenchquote}
+\def\noi{\noindent}
+\include{fidelmap}
+
+\def\Babel{\textsf{Babel}}
+\def\ethioplogo{\textsf{ethiop}}
+%\def\Babel{\texttt{Babel}}
+%\def\ethioplogo{\texttt{ethiop}}
+
+\newfont{\washra}{/usr/lib/texmf/fonts/ethiopian/wshr10.300pk}
+\newfont{\washrx}{/usr/lib/texmf/fonts/ethiopian/wshrx10.300pk}
+\newfont{\washry}{/usr/lib/texmf/fonts/ethiopian/wshry10.300pk}
+\newfont{\washrz}{/usr/lib/texmf/fonts/ethiopian/wshrz10.300pk}
+\newfont{\washrv}{/usr/lib/texmf/fonts/ethiopian/wshrv10.300pk}
+\newfont{\Washra}{/usr/lib/texmf/fonts/ethiopian/wshr12.300pk}
+\newfont{\Washrx}{/usr/lib/texmf/fonts/ethiopian/wshrx12.300pk}
+\newfont{\smallet}{/usr/lib/texmf/fonts/ethiopian/ethio8.300pk}
+\newfont{\smalletx}{/usr/lib/texmf/fonts/ethiopian/ethxx8.300pk}
+
+
+\begin{document}
+\title{Transliteration on the Internet: The Case of Ethiopic}
+
+\author{ {\Washra \char199\char151\char165\char077 \ \char192{\Washrx \char166}\char119\char130 \ 
+                   \char079{\Washrx \char203}\char151\char151} \\
+         Daniel Yaqob, \emph{dmulholl@cs.indiana.edu} }
+
+\date{March 1997}
+
+
+\maketitle
+\thispagestyle{empty}
+\input{etinet}
+%\pagebreak
+%\newpage
+\input{bib}
+\onecolumn
+\input{unicode2}
+\onecolumn
+\input{unisera}
+
+%%\input{seramap}
+%%\cleardoublepage
+%%\pagebreak
+%%\input{unicode}
+%%\cleardoublepage
+%%\pagebreak
+%%\cleardoublepage
+%%\pagebreak
+%%\clearpage
+%%\pagebreak
+%%\input{seratable}
+
+\end{document}

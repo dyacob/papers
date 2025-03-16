@@ -1,0 +1,64 @@
+\documentclass[twocolumn,a4paper]{article}
+%\documentclass[a4paper]{article}
+\pagestyle{empty}
+\include{epsf}
+\include{frenchquote}
+\def\noi{\noindent}
+\input{mydefs}
+\input{fidelmap}
+\include{ipamacs}
+
+\usepackage{supertabular}
+\usepackage{ulem}
+
+\def\Babel{\textsf{Babel}}
+\def\ethioplogo{\textsf{ethiop}}
+\def\upglot{\raisebox{0.8ex}{{\smallipa b}}}
+\def\uptglot{\raisebox{0.6ex}{{\tinyipa b}}}
+%\def\Babel{\texttt{Babel}}
+%\def\ethioplogo{\texttt{ethiop}}
+
+\newfont{\washra}{wshr10}
+\newfont{\washrv}{wshrv10}
+\newfont{\washrx}{wshrx10}
+\newfont{\washry}{wshry10}
+\newfont{\washrz}{wshrz10}
+
+\newfont{\smallet}{ethio8}
+\newfont{\tinyet}{ethio6}
+
+%\newfont{\washrv}{/usr/lib/texmf/fonts/local/washra/pk/wshrv10.300pk}
+%\newfont{\washra}{/usr/lib/texmf/fonts/local/washra/pk/wshr10.300pk}
+%\newfont{\washrx}{/usr/lib/texmf/fonts/local/washra/pk/wshrx10.300pk}
+%\newfont{\washry}{/usr/lib/texmf/fonts/local/washra/pk/wshry10.300pk}
+%\newfont{\washrz}{/usr/lib/texmf/fonts/local/washra/pk/wshrz10.300pk}
+%\newfont{\washrv}{/usr/lib/texmf/fonts/local/washra/pk/wshrv10.300pk}
+%\newfont{\Washra}{/usr/lib/texmf/fonts/local/washra/pk/wshr12.300pk}
+%\newfont{\Washrx}{/usr/lib/texmf/fonts/local/washra/pk/wshrx12.300pk}
+%\newfont{\smallet}{/usr/lib/texmf/fonts/local/washra/pk/ethio8.300pk}
+%\newfont{\smalletx}{/usr/lib/texmf/fonts/local/washra/pk/ethxx8.300pk}
+%\newfont{\tinyipa}{wsuipa8}
+\newfont{\smallipa}{wsuipa8.300pk}
+\newfont{\tinyipa}{wsuipa8.225pk}
+
+
+\begin{document}
+\title{Requirements of Ethiopic Orthography}
+
+\author{Daniel Abera, Addis Ababa University\\ Daniel Yacob, Indiana University}
+%\author{ {\Washra \char199\char151\char165\char077 \ \char192{\Washrx \char166}\char119\char130 \ 
+%                  \char079{\Washrx \char203}\char151\char151} \\
+%        Daniel Yaqob, \emph{dmulholl@cs.indiana.edu} }
+
+\date{June 1998}
+
+
+\maketitle
+\thispagestyle{empty}
+\input{publishing}
+\input{langintro}
+\newpage
+\onecolumn
+\input{table1}
+
+\end{document}

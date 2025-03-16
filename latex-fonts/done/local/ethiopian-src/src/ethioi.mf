@@ -1,0 +1,163 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOI.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program name:---------------- y1.mf
+cmchar "The letter y1";
+beginchar(oct "151",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-2u#,0);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x0=.5w; x0'=.5w+.5u; x1=x0; x2r=w-7u;  x2'r=x2r+.25u; x3=w-3u;
+bot y0'=00; y0=.1h; y1=.35h; y2=.65h; y2'=.5h; top y3=.95h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...z1e---z0e{down}..{right}z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+penlabels(0,0',1,2,3,4,5); endchar;
+
+
+% Program name:---------------- y2.mf
+cmchar "The letter y2";
+beginchar(oct "266",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-2u#,1u#);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x0=.5w; x0'=.5w+.5u; x1=x0; x2r=w-7u;  x2'r=x2r+.25u; x3=w-3u;
+bot y0'=00; y0=.1h; y1=.35h; y2=.65h; y2'=.5h; top y3=.95h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...z1e---z0e{down}..{right}z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u;y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+x6=x1l; y6=y1; rt_wing(6,2u,.015h);
+penlabels(0,0',1,2,2',3,4,5); endchar;
+
+
+% Program name:---------------- y3.mf
+cmchar "The letter y3";
+beginchar(oct "267",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-2u#,3.5u#);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x0=.5w; x0'=.5w+.5u; x1=x0; x2r=w-7u;  x2'r=x2r+.25u; x3=w-3u;
+bot y0'=00; y0=.1h; y1=.35h; y2=.65h; y2'=.5h; top y3=.95h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...z1e---z0e{down}..{right}z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+
+pos6(vair,45); pos7(vair,45);
+penpos8(stem,0); penpos9(stem,0); penpos10(stem,0);
+x6=x1l; x7=x6+1.75u; y6=y7=.275h; filldraw stroke z6e--z7e;
+x8l=x9l-.25u=x10l-.25u=x7; y8=.4h; y9=y8-.075h; y10=.225h;
+filldraw stroke z8e{right}..{down}z9e---z10e;
+x11=x10; y11=y10; rt_wing(11,2u,0);
+penlabels(0,0',1,2,2',3,4,5); endchar;
+
+
+% Program name:---------------- y4.mf
+cmchar "The letter y4";
+beginchar(oct "270",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(.5u#,0);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,190); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x1=w-4.5u; x2r=w-7u;  x2'r=x2r+.2u; x3=w-3u;
+y1=.175h; y2=.65h; y2'=.5h; top y3=h;
+filldraw stroke z3e{left}...{down}z2e..z2'e---z1e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+
+pos6(vair,90); pos7(vair,90);
+x6=x1r; x7=x6-1.75u; y6=y1; y7=y6-.05h; filldraw stroke z6e--z7e;
+x8=x7+.25u; y8=y7-.025h; lft_half_ellipse(8,0);
+penlabels(0,0',1,2,3,4,5,6,7); endchar;
+
+
+def yfive_ring(suffix $)(expr theta)=
+   pickup tiny.nib;  transform t; t=identity rotatedaround((.5w,.5h),theta);
+   x$:=x$+.4u; y$:=y$-.125h;
+   x$a=x$c=x$+1.75u; x$b=x$b'=x$; x$d=x$d'=x$a+2u; x$e=x$f=x$+1.75u;
+
+   y$a=y$b=y$d'=y$+.15h; y$b'=y$d=y$c=y$-.05h; y$e=y$+.125h; y$f=y$-.025h;
+   path p, q; p=z$a..z$b..z$b'..z$c..z$d..z$d'..cycle;  q=z$e..z$f..cycle;
+   fill p transformed t;   unfill q transformed t;
+   penlabels(z$a,z$b,z$b',z$c,z$d,z$d',z$e,z$f);
+enddef;
+% Program name:---------------- y5.mf
+cmchar "The letter y5";
+beginchar(oct "271",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-2u#,2.5u#);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x0=.5w; x0'=.5w+.5u; x1=x0; x2r=w-7u;  x2'r=x2r+.25u; x3=w-3u;
+bot y0'=00; y0=.1h; y1=.35h; y2=.65h; y2'=.5h; top y3=.95h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...z1e---z0e{down}..{right}z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+
+pos6(vair,45); pos7(vair,45);
+penpos8(stem,0); penpos9(stem,0); penpos10(stem,0);
+x6=x1; x7=x6+2.75u; y6=y7+o=.4h; draw z6--z7;
+x8=x7l-.25u; y8=y7; yfive_ring(8,-2);
+penlabels(0,0',1,2,2',3,4,56,7); endchar;
+
+
+% Program name:---------------- y6.mf
+cmchar "The letter y6";
+beginchar(oct "272",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-.5u#,2u#);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos1(stem,190); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105);
+pos1'(vair,270); penpos0(stem,0); penpos0'(stem,0);
+x1=w-4.5u; x2r=w-7u;  x2'r=x2r+.2u; x3=w-3u;
+y1=.225h; y2=.65h; y2'=.5h; top y3=h;
+x1'=w-1.5u; x0l=w-.5u; x0'l=x0l-.5u;
+y1'=.2h; y0=y1'+.175h; y0'=y0+.075h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...
+ z1e...z1'e{right}..{up}z0e...z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+pos6(vair,90); pos7(vair,90);
+x6=x1r; x7=x6-.75u; y6=y1; y7=y6-.05h; filldraw stroke z6e--z7e;
+x8=x7l; y8=y7r+o; t_wing(8);
+penlabels(0,0',1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- y7.mf
+cmchar "The letter y7";
+beginchar(oct "273",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-2u#,3.5u#);
+
+% THE RIGHT TOP ARC
+pickup fine.nib; penpos0(stem,180); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105); penpos0'(stem,180);
+x0=.5w; x0'=.5w+.5u; x1=x0; x2r=w-7u;  x2'r=x2r+.25u; x3=w-3u;
+bot y0'=00; y0=.1h; y1=.35h; y2=.65h; y2'=.5h; top y3=.95h;
+filldraw stroke z3e{left}...{down}z2e..z2'e...z1e---z0e{down}..{right}z0'e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.5u; y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+x6=x4; y6=y4-.2h; rt_wing(6,2u,.015h);
+penlabels(0,0',1,2,3,4,5); endchar;

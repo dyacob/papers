@@ -1,0 +1,17 @@
+This is TeX, Version 3.14159 (C version 6.1.3N) (format=tex 97.9.21)  11 JAN 1998 01:14
+**testfont
+(/usr/lib/texmf/tex/plain/macros/misc/testfont.tex
+\m=\count26
+\n=\count27
+\p=\count28
+\dim=\dimen16
+\skewtrial=\count29
+
+
+Name of the font to test = wshrz10
+Now type a test command (\help for help):)
+*\table
+
+*\end
+[1]
+Output written on testfont.dvi (1 page, 9004 bytes).

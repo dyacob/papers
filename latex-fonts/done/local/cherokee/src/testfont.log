@@ -1,0 +1,17 @@
+This is TeX, Version 3.14159 (C version 6.1.3N) (format=tex 98.1.11)  11 MAY 1999 18:15
+**testfont
+(/usr/lib/texmf/tex/plain/macros/misc/testfont.tex
+\m=\count26
+\n=\count27
+\p=\count28
+\dim=\dimen16
+\skewtrial=\count29
+
+
+Name of the font to test = cherokee.432gf
+Now type a test command (\help for help):)
+*\table
+
+*\end
+[1]
+Output written on testfont.dvi (1 page, 4748 bytes).

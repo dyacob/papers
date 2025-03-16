@@ -1,0 +1,216 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOHH.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program name:---------------- hh1.mf
+cmchar "The letter hh1";
+beginchar(oct "150",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); penpos6(max(eps,light_vair-fine),90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=bot y8=bot y4=0; y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.3h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+%%%%%%%%%y7r=.35h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+%%filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6);
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...
+  pulled_arc.e(5,6);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh2.mf
+cmchar "The letter hh2";
+beginchar(oct "260",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,4u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); penpos6(max(eps,light_vair-fine),90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=bot y8=bot y4=0; y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.3h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...
+  pulled_arc.e(5,6);
+x9=x7r; y9=y7+.05h; rt_wing(9,2u,.025h);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh3.mf
+cmchar "The letter hh3";
+beginchar(oct "261",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,4u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); pos6(vair,90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=bot y8=bot y4=0; y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.3h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...pulled_arc.e(5,6);
+x9=x8r; bot y9=00; rt_half_ellipse(9,1.5u);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh4.mf
+cmchar "The letter hh4";
+beginchar(oct "262",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); pos6(vair,90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=.25h; bot y8=00; bot y4=.225h; y4'=.3h;
+y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.4h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.25h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...pulled_arc.e(5,6);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh5.mf
+cmchar "The letter hh5";
+beginchar(oct "263",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,4u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); penpos6(max(eps,light_vair-fine),90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=bot y8=bot y4=0; y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.3h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...pulled_arc.e(5,6);
+x9=x8; bot y9=00; half_ring(9);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh6.mf
+cmchar "The letter hh6";
+beginchar(oct "264",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); penpos6(max(eps,light_vair-fine),90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=bot y8=bot y4=0; y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.3h; y6l=.55h; y8'=.25[y7,78]; y7'=y7-.25[y7,y8];
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+x0'=x0l+.45u; y0'=y0+.075h; lft_half_ellipse(0',0);
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...
+  pulled_arc.e(5,6);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;
+
+
+% Program name:---------------- hh7.mf
+cmchar "The letter hh7";
+beginchar(oct "265",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,-.5u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+transform t,b; t=identity rotatedaround((.5w,.5h),-10);
+b=identity rotatedaround((.5w,.5h),10);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+penpos0(stem,10); penpos1(stem,0); penpos2(stem,0); penpos4'(stem,180);
+penpos3(stem,0); penpos3'(stem,-20); penpos5(stem,180); penpos5'(stem,180);
+penpos4(stem,180); penpos7'(stem,0); penpos6(max(eps,light_vair-fine),90);
+penpos7(stem,0); penpos8(stem,0); penpos8'(stem,0);
+
+x0=hround(.5w); x1=x0+.5u; x2=x0-.5u; x3=x0;
+rt x8r=hround(w-1u); rt x8'r=hround(x8r-fine); x6=hround(.5w);
+rt x7'r=hround(x8r+fine); rt x7r=hround(x8r-fine);
+lft x5r=lft x5'r=hround .5u; x4r=x5r+.25u; x4'r=x5r;
+
+top y0=h; bot y3=.275h; bot y4=0; y8=.275h; 
+y4'=.1h; y2=y3+.1(y0-y3); y1=y3+.9(y0-y3);
+y7r=.35h; y6l=.55h; y8'=y8+.25(y7-y8); y7'=y7-.25(y7-y8);
+y5=y6-.35h; y5'r=.5[y5,y4];
+filldraw stroke z0e{right}..{down}z1e--z2e{down}..{right}z3e;
+
+filldraw stroke z8e..controls z8'e and z7'e..pulled_arc.e(7,6) transformed b;
+filldraw stroke z4e...z4'e...
+  pulled_arc.e(5,6);
+penlabels(0,1,2,3,4,5,5',6,7,8,8'); endchar;

@@ -1,0 +1,77 @@
+\subsection{Escapes}
+
+The core of SERA will always be its transliteration definition for the Fidel
+syllabary. SERA provides ``escapes'' or ``switches'' so that changes of
+language and scripts can be signaled to a reader without requiring special
+software to read the document. Special purpose escapes are also provided so
+that applications may communicate graphic elements and processing directives in
+an ASCII document. \\
+
+%Software developers may wish to apply SERA's transliteration definition and
+%forgo the escape specifications for their own proprietary system. This approach
+%presents no complications when only the proprietary environment is used. The
+%escape mechanism provided in SERA is then recommended when content is exported
+%to simple text files. SERA transliteration applied in HTML documents, for
+%example, is one such document type where an alternative escape system is
+%available. \\
+
+The backslash character then is chosen for escapes in SERA as it is in
+agreement with the existing conventions of Unix, \LaTeX, C, and other
+programming languages. 
+
+
+\noi
+\begin{tabular}{|l|l|} \hline
+  $\backslash$   &   \parbox{2.0in}{\scriptsize Script Toggle ... $\leftarrow$ fidel $\rightarrow$ $\backslash$ $\leftarrow$ latin $\rightarrow$ $\backslash$ $\leftarrow$ fidel $\rightarrow$ etc. 
+                     One or more punctuation characters following $\backslash$ will not 
+                     require a closing $\backslash$  The script toggle terminates when the 
+                     first nonpunctuation charcter is reached.}\\ \hline
+
+  $\backslash\backslash$  &  \small{$\backslash$ The backslash escape is in follow-}\\ 
+                &    \small{ing with normal rules for punctuation.}\\ \hline
+
+  $\backslash\tilde{}\,$!   &   Escapes are ignored until closing $\backslash\tilde{}\,$!  \\ \hline
+
+
+
+  $\backslash\tilde{}\,$xxx &  \\
+  $\backslash\tilde{}$\{do xxx\}    &       Perform ``xxx''  \\ \hline
+\end{tabular} \\
+
+\noi
+Whitespace is the required terminator for all escapes. When space, `` '',
+is the following whitespace terminator it will be removed from the transcribed
+output. 
+
+
+\subsection{Multilingualism}
+
+
+It is assumed that a document will be written primarily in two languages
+-which may be written in one or two scripts. The regular or bilingual script 
+escape, ``$\backslash$'' , always serves the two primary languages in the 
+document. After switching to a third language, ``$\backslash$'' will indicate
+a return to the first of the two major modes. \\
+
+SERA applies the ISO 639 2 character and 3 character language names for
+multilingualism. The principle is identical to that adopted in HTML 3.0. The 
+language name is then simply appended to the special purpose escape 
+``$\backslash\tilde{}$\,''. \\  
+
+\noi
+Example Usage: \\
+
+\noi
+\hspace*{-0.1in}
+{\small
+\begin{tabular}{lll}
+    $\backslash\,\tilde{}$amh$\tilde{}$\,eng   
+	                       & this is amharic   & (Set Primary/Secondary)    \\
+    $\backslash\,\tilde{}$\,tir & this is tigrigna   & (New Third Language) \\
+    $\backslash$           & this is amharic   & (Return To Primary)        \\
+    $\backslash$           & this is english   & (Secondary)                \\
+    $\backslash\,\tilde{}$ar\,$\tilde{}$gz     
+	                       & this is arabic    & ({\footnotesize Reset Primary/Secondary})  \\
+    $\backslash$           & this is ge'ez     & (Secondary)              
+\end{tabular}   
+}

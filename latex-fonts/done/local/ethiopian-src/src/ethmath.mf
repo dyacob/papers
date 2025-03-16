@@ -1,0 +1,57 @@
+% ---------------------------------------------------------------------------
+% This ETHMATH.MF, a driver for math font, as of February, 1993 
+% by Abass B. Alamnehe
+% ---------------------------------------------------------------------------
+
+font_coding_scheme:="TeX math italic";
+mode_setup; font_setup;
+%%input romanu;  % upper case (majuscules)
+%%input itall;  % lower case (minuscules)
+\input ethiopic.mac;
+\input ethiob.mf;
+\input ethioc.mf;
+\input ethioch.mf;
+\input ethiod.mf;
+\input ethioe.mf;
+\input ethiof.mf;
+\input ethiog.mf;
+\input ethioh.mf;
+\input ethioi.mf;
+\input ethioj.mf;
+\input ethiok.mf;
+\input ethiol.mf;
+\input ethiom.mf;
+\input ethion.mf;
+\input ethioo.mf;
+\input ethiop.mf;
+\input ethiopp.mf;
+\input ethioq.mf;
+\input ethior.mf;
+\input ethiosh.mf;
+\input ethiot.mf;
+\input ethiott.mf;
+\input ethiov.mf;
+\input ethiow.mf;
+\input ethioyn.mf;
+\input ethioz.mf;
+\input ethiozz.mf;
+
+input greeku;  % upper case greek letters
+input greekl;  % lower case Greek letters
+input italms;  % special symbols for math italic
+font_slant slant;  font_x_height x_height#;
+font_quad 18u#+4letter_fit#;
+
+slant:=mono_charic#:=0;  % the remaining characters will not be slanted
+currenttransform:=identity yscaled aspect_ratio scaled granularity;
+input olddig;  % oldstyle numerals
+input romms;  % roman math specials
+
+skewchar=oct"177"; skew#=.5u#;
+save comma;
+period=oct"72"; comma=oct"73"; slash=oct"75"; % non-ASCII positions
+ligtable oct"027":oct"034": comma kern -u#, period kern -u#, % $\nu:\tau:$
+ oct"035":oct"173": skewchar kern skew#; % $\upsilon:\imath:$
+ligtable oct"007": slash kern-u#, % $\it\Upsilon:$
+ comma kern-2u#, period kern-2u#, skewchar kern 2skew#;
+bye.

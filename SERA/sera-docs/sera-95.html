@@ -1,0 +1,250 @@
+<html>
+<head>
+  <title>SERA-95 Updates</title>
+</head>
+<h1 align="center">
+<hr size=3 width=60%>
+                   T<font size=-1>he</font> 
+                <u>S</u><font size=-1>ystem for</font> 
+                <u>E</u><font size=-1>thiopic</font> 
+                <u>R</u><font size=-1>epresentation in</font>
+                <u>A</u><font size=-1>SCII</font><p>
+                 -1995 Standard-
+<hr size=3 width=25%>
+</h1>
+
+<h2><u>Changes for 1995</u></h2>
+
+Changes in The System for Ethiopic Representation in ASCII, or SERA, are introduced
+August 1, 1995 to resolve issues of; ease of use, alternate preferences, and to
+fascilitate future applications.
+<p>
+Categorically additions to the convention are given for; multilingualism, WWW
+hypertext, gemination, the previously unaddressed Ethiopic question mark found in
+historic documents, and a mode for punctuation that maintains the appearance of
+punctuation in native form.
+<p>
+Revisions are also made to the rules of punctuation use for the purpose of
+simplification.
+<p>
+It is hoped that these changes for 1995 will make SERA more accessible for software
+implementation and easier to use by Fidel composers working in ASCII.  A discussion
+of these additions and revisions follows.  A <a href="sera-faq.html">FAQ</a> is now
+available to discuss and answer questions about SERA comprehensively.
+<p>
+<hr>
+<h2><u>Multilingual Extensions</u></h2>
+
+
+SERA was initially designed as a bilingual system for Ethiopic and one other script.
+This presents obvious limitations in the real world and so a mechanism and convention
+is required to fascilate this reality.  A minor layer of abstraction added to
+the existing escape sequence already defined for graphic purposes solves both requirements. 
+<p>
+
+It is necessary when the writer desires text to later be transcribed into another
+script, that the script to be transcribed into be in some way identified to the
+transcriber.  Following the convention devised for 
+<a href="http://www.w3.org/hypertext/WWW/MarkUp/html3/CoverPage.html">HTML 3.0</a>
+for the same purpose; SERA parsers will use the ISO's 
+<a href="http://www.stonehand.com/unicode/standard/iso639.html">2 character</a>
+and
+<a href="http://www.stonehand.com/unicode/standard/cd639-2.html">3 character</a>
+language tags following the extended escape ``\~''.
+<p>
+It is assumed that a document will be written primary in two languages <b>--</b>which
+may be written in one or two scripts.
+The regular script escape, ``\'' , always serves the two primary languages in
+the document.  After switching to a third language, ``\'' will indicate
+a return to the <i>last</i> of the two major modes.
+<p>
+In example:
+<p>
+<pre>
+ <b>1)</b> ..latin.. \ ..fidel.. \~ar ..arabic.. \~el ..greek.. \ ..fidel..
+ <b>2)</b> ..latin.. \ ..fidel.. \~ar ..arabic.. \~ar ..fidel..
+</pre>
+<b>*1)</b> Hence ``\'' will always mean ``return to last'' of the 2 defaulted scripts.<br>
+<b>*2)</b> If an escape is found that would change the current language to the current 
+          language, the 2nd escape should mark the end-of-zone and function as per ``\''
+          in <b>(1)</b>.
+</pre>
+
+<p>
+<hr>
+<h2><u>Revision of Vowels</u></h2>
+The multilingual capability added to SERA allows for the correction of an
+earlier inconsistancy in the representation of the vowel forms of the first
+vowel group.  The revision is as follows:
+
+<pre>
+<h3>Independent Vowels:</h3>
+
+   <img src="fidels/e.gif" alt="">      <img src="fidels/u.gif" alt="">    <img src="fidels/i.gif" alt="">    <img src="fidels/A.gif" alt="">    <img src="fidels/E.gif" alt="">   <img src="fidels/I.gif" alt="">    <img src="fidels/o.gif" alt="">    <img src="fidels/e3.gif" alt="">
+  e/a*   u/U   i   a/A   E   I   o/O   e3<br> 
+</pre>
+
+*
+The use of ``a'' for ``<img src="fidels/e.gif">'' will <i><u>only</u></i> be applied when transcribing
+an Amharic document (``e'' remains valid as well).  The alternative definition of ``A'' for 
+``<img src="fidels/A.gif" alt="the 4th form independent vowel">'' will then be the only means in
+Amharic text to write the forth form vowel.
+
+<p>
+<hr>
+
+<h2><u>World Wide Web and HTML</u></h2>
+Experience gained with <a href="../mule.html">Mule</a> and the <a href="http://www.cs.indiana.edu/elisp/w3/docs.html">W3</a> web browser in '94-'95
+indicates that the parsing issues should be clarified to avoid
+malformed hypertext documents.
+<p>
+When a SERA->Fidel transliterator precedes the text processing
+of an HTML parser, let it be the convention that text between
+`&lt;' and `&gt;' remain in Latin script.  Let the rule be applied
+additionally between the HTML escapes &amp; and ;  . This requires that
+the SERA transliterator be aware that it is processing an HTML (likewise
+for SGML, VRML, etc.) document; the implementation of which is left to developer.
+<p>
+<hr>
+<h2><u>Punctuation Revision</u></h2>
+Comprehensive rules for punctuation and escapes are provided in
+questions
+<a href="sera-faq_3.html">3</a> and <a href="sera-faq_5.html">5</a>
+in the <a href="sera-faq.html">SERA FAQ</a>
+<p>
+<b>In Ethiopic Zones</b>
+<pre>
+
+   ' is always ignored (current).
+
+   ` is ignored unless a special vowel or consonant follows
+         -- s,S,h, e,u\U,i,a\A,E,I,o\O
+
+  \' and \` are the only way to give ` and ' in ethiopic zones.
+
+
+Drop | as a special character it's purpose may be accomplished with
+' and `' sufficiently.  The cost of using 2 characters instead of
+one is minor considering the exceedingly rare use of | for vowel
+emphasis.  The simplification benefits also justify this approach.
+
+<h3>Examples:</h3>
+
+                ysTlN  =  y'sT'l'N
+                tgrNa  =  tg'r'Na                           
+                alfelgm  =  alfel'g'm
+                TrE  =  T`'rE
+
+
+
+<h3>Merits of Punctuation Revision</h3>
+
+   1)  SERA now uses only ' and ` as special characters ( in addition to \ ).
+   2)  Rules for ` and ' , \` and \' are more consistent.
+   3)  Fewer rules over all to remember.
+
+<hr>
+
+<a name="gem"><h3><u>Addition for Gemination</u></h3>
+                                                     
+   Let '' be the Ethiopic gemination marker for SERA.  Humans may
+interpret the markers without complication.  Software can use the
+markers '' to place the ethiopic gemination .. over the preceding
+charter:
+
+
+<b>English           SERA                Software
+Doubling</b>
+                                          ..
+ alle              ale''              (a)(le)          <img src="gifs/ale.gif" alt="">
+                                          ..
+ yellem           yele''m            (ye)(le)(m)       <img src="gifs/yelem.gif" alt="">
+                                          ..                
+ fellg            fel''g             (fe)(l)(g)        <img src="gifs/felg.gif" alt="">
+
+
+<hr>
+
+<h2><u>Archaic Question Mark</u></h2>
+                                                   
+Previously untreated.  Let \? denote the 3 dot, <img src="gifs/qmark2.gif" alt=""> , question mark
+found infrequently in some historical texts.  The extension for the question mark is provided
+primarily to fascilitate the republishing of those documents where it is found.
+
+<hr>
+<p>
+<h2><u>A Mode For ASCII-Glyph Based Composition of Ethiopic Punctuation</u></h2>
+<p>
+<p>
+<h3>Ethiopic Punctuation Subzone  \::</h3>
+
+   wordspace :   :
+
+   halfcolon :   :-
+
+   colon     :  -:
+
+   period    :   ::
+
+   quotation :   << >>
+
+   paragraph :   :|: 
+   break 
+
+
+<h3>Rules:    [ :: is Latin,  (::) is Ge'ez ]</h3>
+
+
+   ::     is always read as period (::) 
+
+   :::    is read as (::)(:) -period takes precedence
+                     
+   ::::   is read as (::)(::)
+   
+   n:     = n/2 (::)            if n even
+          = (n-1)/2 (::) + (:)  if n odd 
+
+   :':    is read as (:)(:)
+          This utilizes the existing separator ', likewise for ` .
+
+   <<<    is read as (<<)<  (follow n: rules)
+   <'<    is read as <<
+
+
+
+<b>Note</b> That the Ethiopic punctuation escapes (\< \_ \* etc.) are
+still recognized in the glyph based punctuation subzones.
+
+
+<b>**Wordspace Buffering</b>: 
+
+   In present day practices the Ge'ez wordspace is padded
+   on each side with small amounts of white space for 
+   ease of reading:
+   
+   <img src="gifs/passage.gif" alt="[Image of Passage]">
+
+   Were text transcribed literally into ASCII the result would
+   appear as a continuous string:
+
+<b>   yalewna:yeneberew:yemimeTawum:hulu:yemigeza:gEta:
+   amlak:-alfana:omEga:InE:neN:ylal::
+</b>
+   To maintain the original ease of reading the ASCII colons,
+   when used for wordspace, should be padded on each side with
+   with ASCII space:
+
+<b>   yalewna : yeneberew : yemimeTawum : hulu : yemigeza : gEta:
+   amlak:- alfana : omEga : InE : neN : ylal::
+</b>
+   To return to the original form in fidel, the spaces used as 
+   padding should then be removed.  Hence it shall be the convention
+   the first ASCII space immediately following punctuation in glyph based
+   punctuation subzones of Fidel script zones shall be removed. 
+   Further, the first space preceding Ge'ez wordspace shall also be
+   removed.
+<hr>
+
+
+</pre>
+</html>

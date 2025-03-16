@@ -1,0 +1,36 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOCH.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program neme:---------------- ethiop.mf
+cmchar "The letter Ethiopic punctuation nettebitabe";
+beginchar(oct "026",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+
+pickup fine.nib;
+
+pos1(curve,0); pos2(curve,90);
+x1=x2=.5w; y2=.95h; y1=.5[y2r,y2l]; dot(1,2);
+
+pos3(curve,0); pos4(curve,90);
+x3=x4=.5w; y4=.05h; y3=.5[y4r,y4l]; dot(3,4);
+
+pos5(curve,0); pos6(curve,90);
+x5=x6=.5w; y6=.5h; y5=.5[y6r,y6l]; dot(5,6);
+
+pos7(curve,0); pos8(curve,90);
+x7=x8=.25w; y8=.5[y6,y2]; y7=.5[y8r,y8l]; dot(7,8);
+
+pos9(curve,0); pos10(curve,90);
+x9=x10=.25w; y10=.5[y6,y4]; y9=.5[y10r,y10l]; dot(9,10);
+
+
+
+pos11(curve,0); pos12(curve,90);
+x11=x12=.75w; y12=.5[y6,y2]; y11=.5[y12r,y12l]; dot(11,12);
+
+pos13(curve,0); pos14(curve,90);
+x13=x14=.75w; y14=.5[y6,y4]; y13=.5[y14r,y14l]; dot(13,14);
+
+penlabels(1,2,2',3,4,6,7); endchar;
+

@@ -1,0 +1,60 @@
+
+ APPENDIX C:  On The Character Specific Representation of Numbers:
+
+
+ For most practical email exchanges it is enough to type "1987" to communicate
+ to the reader the year nineteen-hundred-and-eighty-seven.  But for a machine
+ to interpret the Arabic numbers into Ethiopic, "1987" becomes a highly 
+ ambiguous sequence of numbers.  The following is offered to present a method to
+ represent Ethiopic numbers with Arabic for simple computer translation.  
+
+ In our example, "1987", though understood as a Christian year could easily
+ have been a part of a phone number, a street address, or most anything in 
+ another context.  As there are 20 Ethiopic numbers (21 if the letter "xi",
+ used for 1,000 is counted) we are presented with the problem of interpreting
+ then, which numbers the typist had intended to communicate.
+
+ In example:  is 1987 to be read as the  6 Ethiopic numbers 10-100-9-100-80-7.
+ Or the 5 numbers 10-9-100-80-7, or the 4 numbers 10-9-80-7 , 10-9-8-7,
+ 1-90-8-7, or finally (skipping a few other possibilities) 1-9-8-7.
+
+ Writing each of the 20 Ethiopic numbers discreetly avoids the ambiguity problem
+ and the Christian year 1987 is written as 109100807. 
+
+ It may seem a little ungainly to have to type 9 Arabic numbers so that a
+ computer can understand that 5 Ethiopic numbers are desired.  This problem
+ can be affected slightly by applying some of the same philosophy that was
+ presented for denoting the forms of consonants for Ethiopic letters.
+ With the same method applied here the numbers 1,2,3,4...9 are thought of
+ as consonants and the vowels are then 0, 00, 000, and 0000 to denote the
+ forms "tens", "hundreds", "thousands", and "ten-thousands" (analogous to
+ "gIz", kaIb , sals, and rabI).  We then have a fidel for numbers : 
+
+
+ ones   tens   hundreds  thousands  ten-thousands ....
+          0       00        000         0000
+
+  1      10      100       1000        10000
+  2      20      200       2000        20000
+  3      30      200       3000        30000
+  4      40      400       4000        40000
+  .
+  .
+  9      90      900       9000        90000
+
+
+ and we may write the same 5 Ethiopic numbers for the year 1987 with the
+ 8 Arabic numbers 10900807.  It is intrinsic in this system that when the
+ number of zeros, 0, following a one (1,2,3...9) is greater than 2, that
+ 2 Ethiopic numbers are being represented.  That is, it is understood that
+ 200 is equivalent to the Ethiopic 2-100 and 2000 is 20-100.  If one wishes 
+ to use "xi" as a number, 2000 should then be written as 2xi.  A small computer 
+ algorithm that determines Ethiopic numbers with the system described, is 
+ available from the authors.
+
+ As a last thought on the representation of Ethiopic numbers with Arabic
+ we suggest that if commas "," or decimals "." be used to denote orders
+ of a thousand as in $5,362 , that the number be interpreted strictly as a
+ summation.  In this instance 5,362 = 5000 + 300 + 60 + 2 and is written in
+ Ethiopic as either the 5 characters 50-100-400-60-2 or 5-xi-400-60-2.
+

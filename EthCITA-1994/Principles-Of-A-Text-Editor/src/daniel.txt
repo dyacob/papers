@@ -1,0 +1,123 @@
+PRINCIPLES FOR AN ETHIOPIC TEXT EDITOR
+	Daniel Yaqob, Indiana University, IN
+	Yonas Fisseha, Software Engineer, Motorola Co.,
+	(yacob@apollo.aoe.vt.edu, fisseha@cig.mot.com)
+
+	Recently, when consulting on an editor for Ethiopic 
+script, to be used<B> </B>from the standard Latin keyboards, it 
+became of utility to write down<B> </B>and prioritize the 
+features and principles we wished to implement. The document 
+here was originally produced to aid GNU workers in their<B> 
+</B>implementation of Ethiopic into the Multilingual version of 
+Emacs. It is<B> </B>represented here as an itemized list of the 
+features and concepts we thought valuable with only brief 
+description of the numbered items.<B> </B>A discussion and 
+defense of the list items would be the subject of<B> 
+</B>another paper.  Elements of the document are strongly 
+biased towards<B> </B>SERA which was the Latin I/O system 
+we were working with for IM at the<B> </B>time.<P>
+<B>Notes:</B><P>
+<I>The ASCII representation of Ethiopic characters in this 
+document adhere to the SERA standards as defined in the 
+papers of Yaqob and Firdyiwek. SERA specific characters 
+within quotes mean the actual Latin string whereas those 
+within parentheses are the actual Ethiopic characters 
+corresponding to the Latin string.</I><P>
+<I>Items marked with * may be considered advanced 
+features and as such</I> <I>are nonessential.</I><P>
+<B>Input Method</B><P>
+<B>1)  Key Mapping</B><P>
+	Key mappings of Ethiopic characters onto Latin or other 
+keyboards be done in a logical and consistent<B> </B>manner in 
+agreement with the<B> </B>common sounds that the user will 
+have learned for both character<B> </B>sets.<P>
+<B>2)  Syllabic Entry</B><P>
+	A minimal number of keystrokes be required to enter any 
+character.<B> </B>The Latin characters "e","u","i","a","E","o" 
+and "W" are<B> </B>recommended for changing the syllabic 
+form of some base consonant.<P>
+<B>3)  Dynamical Character Composition</B><P>
+	The character being entered is updated at each phase 
+of<B> </B>entry (at each new keystroke).<P>
+Example:<P>
+	"h" is struck<B> </B>and (h) appears, "2" or "W" is 
+struck and (h2) or (hWa)<B> </B>appears, "E" is struck and 
+finally (h2E) or (hWE) appears.<B> </B>Dynamic updating also 
+applies for numbers.<P>
+<B>4)  Default Word Separator is Latin-Blank</B><P>
+	The blank space, " ", is the default word separator for 
+entry.<B> </B>The Ethiopic separator, ":", may be chosen with 
+an arbitrary<B> </B>toggle key.<P>
+<B>5)  Default Punctuation is Ethiopic</B><P>
+	Statistically, Ethiopic punctuation is in greater use 
+than<B> </B>English punctuation in modern writing.  A toggle 
+key is used<B> </B>to enter English punctuation.<P>
+<B>6)  Default Numeral System is Arabic</B><P>
+	Statistically, Arabic (0-9) numbers are in more regular 
+use<B> </B>than Ethiopic.  A toggle key is used to enter the 
+Ethiopic<B> </B>numerals.<P>
+<B>7)  Quotation Entry</B><P>
+	Ethiopic quotation marks be associated by glyph similarity 
+to the math symbols &lt  and &gt  .  The quotes may be entered 
+with either single or double keystrokes.  The math symbols should 
+remain available with either single or double strike, in compliment 
+with the quotation entry.<P>
+<B>8)  Availability of Native Punctuation</B><P>
+	All punctuation provided on the keyboard of entry should 
+be<B> </B>available while in an Ethiopic input mode. This may 
+usually<B> </B>be accomplished by a double strike method 
+whereby the mapped<B> </B>Ethiopic punctuation is exchanged 
+for the native at the 2nd<B> </B>strike.  Example : ";" is keyed 
+and (;) appears, and when ";" is<B> </B>struck a 2nd time ";" 
+replaces (;) and the entry terminates.<P>
+<B>9)* Syllabic Form Editing (Diacritical Mark Edit 
+Only)</B><P>
+	A character entered previously may have its syllabic 
+form<B> </B>updated with a single keystroke of the vowel for 
+the desired<B> </B>new syllabic state.  Example : (ce) has 
+been entered previously,<B> </B>the character (ce) is selected 
+[by highlighting or by "operate<B> </B>left" principle] and the 
+key "o" is struck, the (ce) glyph<B> </B>becomes (co), (co) 
+remains chosen for additional changes.<P>
+<B>10)* Syllabic Form Backspace (UnEnter Diacritical 
+Mark)</B><P>
+	A character just entered remains at the top of the edit 
+queue<B> </B>until some new character is keyed.  A 
+"backspace" or "delete"<B> </B>key would have the effect of 
+undoing the last vowel entry and<B> </B>returns the glyph to its 
+previous form.  Item (6) and (7) may<B> </B>be combined.  
+Example : (he) has just been keyed in, "backspace" is hit and (he) 
+-&gt  (h).  An "a" is now keyed and (h) -&gt  (ha),<B> </B>the 
+edit is complete.<P>
+<B>11)* Selective Word Separator On/Off 
+Toggle</B><P>
+	The need may arise for the user to exchange the Latin 
+word<B> </B>separator, " ", with the Ethiopic, ":" or the Ethiopic 
+for<B> </B>Latin.  A toggle key or menu option may provide 
+this to a<B> </B>section of selected ("highlighted") text, where 
+all word<B> </B>separators are exchanged within the bounds of 
+the selection.<P>
+<B>12)* Julian Date Stamp</B><P>
+ 	A menu item that offers conversion between the Ethio-
+Julian and Gregorian calendar systems will be an asset of high 
+value<B> </B>to the user.<P>
+<B>13)* Old Style Typewriter Entry</B><P>
+	Support for the Italian devised system for keyed entry 
+is<B> </B>desirable as the input method remains in popular 
+use.<P>
+<B>File I/O</B><P>
+<B>1) Software Native I/O</B><P>
+	Considered arbitrary.<P>
+<B>2) Latin Transliteration.</B><P>
+	Transliteration into a common 7-bit system of mixed 
+Ethiopic<B> </B>and a foreign script is desirable for simple 
+import/exportation<B> </B>between the software of different 
+vendors.  Transliteration is also required for encoded file transfer 
+on 7-bit data networks.<P>
+	<B>a) </B>The system of transliteration be along logical 
+and phonetic<B> </B>guidelines such that the transliterated 
+document may be read<B> </B>readily in encoded form.<P>
+	<B>b)</B> The transliteration system permits output for 
+the phonetical<B> </B>logics of  other Ethiopian languages like 
+Tigrigna, Amharic<B> </B>etc. without causing conflict for 
+input.<P>

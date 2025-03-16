@@ -1,0 +1,1186 @@
+
+=====================================================================
+
+System for Ethiopic Representation in ASCII (SERA)
+
+Dedicated to the work and memory of Abraham Demoz (1925 - 1994) 
+
+In the time since the original publication of our paper
+in "The Journal of EthioSciences" Volume 3 Number 1 on the
+topic of representation of Fidel in 7-bit ASCII, the need
+became apparent to extend the system to encompass
+representation for Ethiopic numerals, punctuation, and mixed
+script notations.  In the same period more was learned about
+the treatment of certain characters outside of Amharic that
+allowed for simplification of the ASCII representation.  The
+following is a recapitulation of the original publication and
+an assessment of some of the more recent developments.  A
+complete discussion of many of these changes are available at
+the Rensselar Polytechnic Institute ftp archive under the file
+name SERA-94.
+
+As we have indicated before, this system, though well
+developed, is still not in its final form.  Further refinements
+will only come after many have had the chance to use it and
+test its strengths and weaknesses on their own.  As Abraham
+Demoz, to whom we have dedicated this work, noted [1]: 
+
+	"...script reform calls not only for a competent 
+ 	professional assessment of the technical aspects of 
+	the script but also for a careful weighing of these 
+	against the psychological and socio-political factors 
+	that have a bearing on the written word and all that
+	it stands for" 
+
+(Demoz, "Amharic Script Reform Efforts".  ETHIOPIAN
+STUDIES. S. Segert and A.J.E. Bodrogligeti, Eds. 1983).
+
+Any and all feed back will be greatly appreciated.
+ 
+   
+ 
+                                     dan'El yaqob (Daniel Yacob)
+                                     yTna frdyweq (Yitna Firdyiwek)
+ 
+ 
+ 
+ =============================================================================
+
+
+
+Contents
+
+ 1.   The SERA Table
+ 2.   Considerations We Took in the Development of SERA
+ 3.   Developments of the System
+ 4.   Some Commonly Asked Questions
+ 5.   A Full Sample Text with Statistics
+ 6.   Appendices
+
+
+
+
+
+1.  The System for Ethiopic Representation of ASCII (SERA) Table
+
+
+Although some questions still remain to be answered regarding
+the number of "forms" to use for the ASCII/ETHIOPIC table, we
+have retained the original arrangement of twelve (12) for SERA
+pending decisions relating to the Unicode/ISO standards
+currently under discussion.  We do not believe a change in the
+matrix of the table will affect the work discussed in this paper.
+
+
+              The Ethiopic Script in ASCII 
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+      1     2     3     4     5     6     7     8      9     10     11     12 
+     g`Iz  ka`Ib sals  rab`I hams  sads  sab`I  diqala -->
+  
+ 1    he    hu    hi    ha    hE    h     ho
+ 2    le    lu    li    la    lE    l     lo    lWa
+ 3    H2e   Hu    Hi    Ha    HE    H     Ho
+ 4    me    mu    mi    ma    mE    m     mo    mWa
+ 5   `se   `su   `si   `sa   `sE   `s    `so
+ 6    re    ru    ri    ra    rE    r     ro    rWa
+ 7    se    su    si    sa    sE    s     so    sWa
+ 8    xe    xu    xi    xa    xE    x     xo    xWa
+ 9    qe    qu    qi    qa    qE    q     qo    qWe    qWu   qWi    qWa    qWE
+ 10   Qe    Qu    Qi    Qa    QE    Q     Qo    QWe    QWu   QWi    QWa    QWE
+ 11   be    bu    bi    ba    bE    b     bo    bWa         (Q is Tigrignia)
+ 12   ve    vu    vi    va    vE    v     vo    vWa
+ 13   te    tu    ti    ta    tE    t     to    tWa
+ 14   ce    cu    ci    ca    cE    c     co    cWa
+ 15  `he   `hu   `hi   `ha   `hE   `h    `ho    hWe    hWu   hWi    hWa    hWE
+ 16   ne    nu    ni    na    nE    n     no    nWa
+ 17   Ne    Nu    Ni    Na    NE    N     No    NWa
+ 18    e\a   u\U   i     A     E    I      o\O   e3         (e3 as in "e3re!") 
+ 19   ke    ku    ki    ka    kE    k     ko    kWe    kWu   kWi    kWa    kWE
+ 20  `ke   `ku   `ki   `ka   `kE   `k    `ko                (`k is Chaha) 
+ 21   Ke    Ku    Ki    Ka    KE    K     Ko    KWe    KW    KWi    KWa    KWE
+ 22   Xe    Xu    Xi    Xa    XE    X     Xo                (X is Chaha )
+ 23   we    wu    wi    wa    wE    w     wo
+ 24   `e    `u    `i    `a   `E    `I     `o
+ 25   ze    zu    zi    za    zE    z     zo    zWa
+ 26   Ze    Zu    Zi    Za    ZE    Z     Zo    ZWa
+ 27   ye    yu    yi    ya    yE    y     yo
+ 28   de    du    di    da    dE    d     do    dWa
+ 29   De    Du    Di    Da    DE    D     Do                (D is Oromiffa)
+ 30   je    ju    ji    ja    jE    j     jo
+ 31   ge    gu    gi    ga    gE    g     go    gWe    gWu   gWi    gWa    gWE
+ 32   Ge    Gu    Gi    Ga    GE    G     Go                (G is Chaha)
+ 33   Te    Tu    Ti    Ta    TE    T     To    TWa
+ 34   Ce    Cu    Ci    Ca    CE    C     Co    CWa
+ 35   Pe    Pu    Pi    Pa    PE    P     Po
+ 36   Se    Su    Si    Sa    SE    S     So    SWa
+ 37  `Se   `Su   `Si   `Sa   `SE   `S    `So
+ 38   fe    fu    fi    fa    fE    f     fo    fWa
+ 39   pe    pu    pi    pa    pE    p     po
+ 
+ 
+ (Letters will be referred to both by their ASCII spelling and by their
+ position on the above number matrix (e.g. "he" or 1/1).  The columns are also
+ known as "forms" (e.g., first form, second form, . . .etc.) or by their
+ Ethiopic names: e.g. g`Iz, ka`Ib, sals, . . .etc.) 
+ 
+						
+
+2.  Considerations We Took in the Development of SERA
+
+
+We have taken the following two considerations in coming up
+with our proposed standard
+
+      a)   The system must be easy to type on a 101 keyboard.  This entails:
+ 
+           --   finding the closest match between the Latin and Ethiopic
+                phonetic system (while being as systematic as possible with
+                the inevitable exceptions),
+ 
+           --   limiting the number of keystrokes necessary for each Ethiopic
+                character to a minimum, and 
+ 
+           --   placing the most frequently used keys as close as possible to
+                the "home keys" row of the 101 keyboard
+ 
+      b)   The system must also be easy for machine translation.  In this
+           case, the systematicity of the mapping of Ethiopic to ASCII is
+           exploited to make the machine translation between ASCII and 
+           Ethiopic script (in word processors, for example) as fast as
+           possible.
+
+
+
+
+3.  Development of the System
+ 
+
+ It may first occur to one when attempting to write Ethiopic script
+ with Latin letters, to represent the 7 forms with numbers as so:
+ 
+      Consonants:
+      h1   h2   h3   h4   h5   h6   h7
+ 
+      Independent Vowels:
+      a1   a2   a3   a4   a5   a6   a7
+ 
+ It is soon found in practice, however, that while this is a very simple
+ system for representing the Ethiopic characters, it is not so simple to read
+ or write in it (e.g., "T5n1y6s6T6l6N6", "a1d5s6 a1b1b4").  This is true
+ largely because our minds are not trained to associate the Latin script with
+ Arabic numbers to form words.  One will soon wonder why not use the Latin
+ vowel letters to denote the 7 forms of the Ethiopic characters.  This is
+ where the trouble begins:  How do you represent the standard 7 Ethiopic forms
+ (plus the "W" forms) with only 5 Latin vowels?   
+ 
+ The first step we took was to assign a punctuation mark (the apostrophe ')
+ and "I" for the two extra Ethiopic vowels (plus "W" for forms 8-12).  So, 
+ following phonetic guide lines we came up with the following system:
+ 
+      Consonants:
+      h'   hu   hi   ha   he   hI   ho
+ 
+      Independent Vowels:
+      a'   au   ai   aa   ae   aI   ao
+ 
+ Again, after some trial use (e.g., "Ten'yIsITIlINI", "a'disI a'b'ba") we
+ found that the writing can be made more readable if we used only one
+ character for the pure vowel form.  Then the system reduces to:
+ 
+      Consonants:
+      l'   lu   li   la   le   lI   lo
+ 
+      Independent Vowels:
+       '    u    i    a    e    I    o
+ 
+ and our sample text would look like:  "TenayIsITIlINI", "'disI 'b'ba"
+ which becomes a little easier to read and to type.
+ 
+ After a short time a reader is likely to find that trying to "read a sound"
+ from punctuation proves too difficult.  Our minds have been conditioned for
+ too long already to skip over apostrophes when reading possesive and
+ contracted words.  We introduce the principle now that whenever possible
+ punctuation be avoided to represent spoken sounds and seek another alphabetic
+ character to replace the apostrophe.  
+
+ We find a suitable substitute in "E" but recognize right away the draw back
+ of the extra "shift" required to type it.  With only a small intuitive feeling
+ one will come to realize that the 5th form letters are used less often in
+ writing than are 1st form.  Hence a swap between the two forms makes the use
+ of "E" a little easier and gives us the new table :
+
+      Consonants:
+      le   lu   li   la   lE   lI   lo
+ 
+      Independent Vowels:
+       e    u    i    a    E    I    o
+
+ and our sample text appears a little more naturally as:  
+     "TEnayIsITIlINI", "edisI ebeba"
+
+
+ It is at this point that we began to notice two problems:  
+ 
+      1)   the 6th (or "sadis") form of the Ethiopic characters occurs more
+           often than any other form (about a third more often), and 
+ 
+      2)   the use of "e" for the first vowel makes the "look" of some familiar
+           Amharic words peculiar, and the sound association is poor.
+ 
+ The quick solution:  
+ 
+      1)   stop using "I" for the sadis (sixth form) consonants, letting the
+           consonants stand by themselves, and 
+ 
+      2)   allow the use of "a" for the first form independent vowel with "e", 
+           and introduce "A" for the 4th form independent vowel.
+ 
+ 
+      Consonants:
+      le   lu   li   la   lE   l    lo
+ 
+      Independent Vowels:
+       e\a  u    i    A    E    I    o
+ 
+      Examples: 
+            TEna ysTlN
+            adis abeba
+            Indemn kermachWal
+            zarE Tewat suq hEjE neber
+            manew smh? manew smx?
+ 
+ 
+ Ambiguity Problem with The Independent Vowel
+ 
+ This system is easier to read and type, but there is still a problem.  If
+ you have never before seen the word "Tena" how will you know if you
+ are reading 2 Ethiopic characters or 4 -- "TE-na" or "T-E-n-a"?  This problem
+ of ambiguity usually occurs because it is not clear whether a consonant
+ letter is a sadis (6th) form followed by an independent vowel form, or a
+ syllable made up of the consonant and following vowel form.  Of course, this
+ is a problem only if the reader does not know the language.  An Amharic
+ speaker would not make such a mistake.  
+ 
+ In another scenario, the name "Gabriel" can be read "ge-b-r-E-l" (correctly),
+ or "ge-b-rE-l" (not quite correct, but okay when speaking fast).  Though the
+ ambiguity is there, whether you interpret the Latin as showing 5 (ge-b-r-E-l)
+ characters or 4 (ge-b-rE-l) makes almost no difference.  
+ 
+ These conditions may not always be true, however, and the difference does
+ become a big problem for word processors and computer software for
+ translation.  It is better then to insure that the characters are
+ unmistakably represented.  To accomplish this, our decision was to recycle
+ the apostrophe ' as a separator for independent vowels that appear after a 
+ sadis (sixth form) consonant.  Thus, we can rewrite Gabriel as "gabr'El" and
+ modify our system, which now includes a third category, accordingly:
+ 
+      Consonants:
+      le   lu   li   la   lE   l    lo
+ 
+      Independent Vowels:
+       e\a  u    i    A    E    I    o
+ 
+      Independent Vowels Following a 6th Form Consonant:
+      l'e   l'u   l'i   l'A   l'E   l'I   l'o
+      l'a   lU                            lO     <--also
+ 
+ If we consider now an application for the remaining uppercase vowels; "U"
+ and "O", we find that in some instances, as shown in the 2nd row of the 
+ third category, the use of the apostrophe may be omitted without confusion.
+ 
+
+
+4.  Some Commonly Asked Questions
+
+ 
+      1.   Why not use "sh" for "x" and "ie" or "y" for "E"?
+ 
+           These would make logical choices for readers familiar with rules in 
+           English but may not make sence in non-English speaking nations where
+           a form of the Latin script is used.  It is desirable also to keep
+           the keystrokes to a minimum for humans, the parsing requirements of
+           computers as simple as possible, also media and transfer sizes to a
+           minimum by avoiding multiple character representations when possible.
+           
+           Further, the reader is left to infer the meaning "sh" as one or two
+           Fidel characters.  The separator ' presents a solution here but again
+           complicates parsing and introduces special case rules vs generalized.
+           The acception to the general rules also lends towards greater
+           occurences of spelling errors.
+
+           "ie" may be an easier keystroke than "E" but again introduces
+           inference and parsing complexity.  The choice is not always logical
+           as a phonetic model for the "ay" sound with Latin letters when
+           considering such examples as "die", "vie", "pie", "lie", and "tie".
+
+           "y" occurs more commonly in speech and written text as a consonant
+           than as the 5th syllabic form.  Hence the lowercase Latin character
+           is better reserved for the consonant to save on keystrokes.
+
+           When an Ethiopic interface is available, these kinds of questions 
+           become input method issues and not file IO and transfer which SERA 
+           was primarily designed for.
+
+ 
+      2.   What if I wish to show more sound for a sadis consonant?
+ 
+           It is not always accurate to say that the vowel component of the
+           sadis consonant is not spoken.  For many words the vowel in the 6th
+           form consonant is clearly enounced.  If you wish to write in a more
+           phonetic manner with out loss of clarity; this may be accomplished
+           by writing the 2 character representation form of the sadis
+           consonant when it is needed.  As you will recall we have redefined
+           the 2 character form of the 6th consonant as "l|".  We can mix the
+           two character and one character forms together in the same word to
+           show when the vowel portion is voiced:
+ 
+                ysTlN  =  y|sT|l|N
+                tgrNa  =  tg|r|Na
+                alfelgm  =  alfel|g|m
+                TrE  =  T|rE
+ 
+           Writing with both the one and two character representations of the
+           6th form consonant together may be more laborious to the typist but
+           has the advantage of giving the reader a better demonstration of
+           the word's sound when spoken.   The mixed representation is not
+           ambiguous and does not pose any problem for machine translation
+           when going from Latin to Ethiopic.  If it would become a common
+           practice to mix the two systems, we may wish to try alternate
+           characters in place of the pipe ( "|" ).
+ 
+      3.   I see the ' used in other ways, what are the complete rules? 
+ 
+           The apostrophe was introduced as a separator to indicated that
+           a vowel after a 6th form consonant does not modify the form of
+           the consonant, ie "nE" is one Fidel letter and "n'E" is two. The
+           principle of the separator may be applied elsewhere when it enhances 
+           clarity.  For instance between vowels as in "beadis" vs "be'adis"
+           or "keityoPya" vs "ke'ityoPya".  Here, the ' helps prevent the reader
+           from slipping back into rules of English where the vowels would be
+           combined into a single sound.  Also ' following a consonant as in 
+           "t'" may be treated as another definition for the 6th form
+           representation when convenient.
+ 
+      4.   Why Are Numbers Used With Letters?
+ 
+           A problem that occurs when trying to represent Ethiopic script
+           phonetically in Latin is the presence of Ethiopic letters that are
+           phonetic equivalents.  These cases are encountered with the two
+           Ethiopic characters for "s" and "S" and the 4 characters for "h".
+           Representing one of the 2nd forms with an unused Latin character,
+           say F, R, or V, would be a digression from phonetic norms and adds
+           a level of complication to the reading.  In the case of what would
+           be h4 the uppercase "K" is chosen for representation.  This choice
+           models the husky "kh" sound that the character has in Tigrignia and
+           other languages.
+ 
+           For the more common type of email exchanges omitting the number 2
+           or 3 does not result in a loss of interpretation.  The use of the
+           ordinals becomes more important later if the text is to be read and
+           translated into Ethiopic script by computer.  
+ 
+      5.   Why Does "s2" Come Before "s" ?
+ 
+           The "2" is only needed to distinguish the difference between the
+           two "s"s in Ethiopic script.  In modern writing it is the the 2nd "s"
+           appearing in the fidel  that finds the most frequent use in the
+           spelling of words.  The first "s" is represented as "s2" because it
+           occurs less frequently in writing.  Were the 2nd "s" labeled as "s2"
+           it would give the typist considerably more finger work to perform.
+ 
+      6.   How was "e3" arrived at for the 8th vowel?
+
+           The choice of "e3" is thought to be the best model for the sound of
+           the character.  The sound of the character is in Amharic the same as
+           that of "e" (the first vowel) in Tigrigna.  The choice of a numeral
+           to follow "e" will detract from the reading quality of the character,
+           which should come at a small cost when its infrequent use is
+           considered.
+
+      7.   Why is The Capital "W" Used For Diqala Forms?
+ 
+           The uppercase "W" is used to remain phonetically consistent with 
+           the sound of the diqala forms (forms 8 - 12).  The lower case "w" is 
+           reserved exclusively for consonant 21 with the "w" sound.  Thus
+           confusion and ambiguity is avoided with use of the uppercase "W".
+ 
+      8.   Why is "Wu" Used For the Letter I learned was "W"?
+
+           Actually both are valid under SERA.  In different geographic regions,
+           and at different times within the same region, people have been
+           taught two different sounds for the 2nd form labiovelar (which one
+           may have learned as a 6th form).  Phonetic representations as "kWu"
+           "kW" and "kW'", in example, are permitted for both ways a person may
+           have been taught.  Each form is no more right or wrong than the
+           other.
+
+      9.   Why is "hWa" used in place of "`hWa" or "h2Wa"? 
+ 
+           This is a break in consistency from how forms 1 through 7 of "h2"
+           were represented.  However, as "h" does not have forms after
+           the sab`I (the 7th form) there is no opportunity for confusion to
+           arise from the omitted "2" of "h2W".  Hence "hW" will be uniquely
+           identifiable as representing diqala forms of the h2 consonant.  The
+           advantage of dropping the "2" in the diqalawoc range, will be the
+           keystroke saved for typists.
+ 
+     10.   What is done with the left-over Latin letters?
+
+           The "left over" Latin uppercase consonants; B, F, J, L, M, R, V, and 
+           Y, are now recognized as equivalent to their lowercase counterparts.
+           That is "Y" in transliteration would be interpretted identically as
+           "y" etc.  These same Latin characters are considered to be on a
+           "reserve" status to model some overlooked sound in an Eritrean or
+           Ethiopian language.
+
+
+5.  A Full Sample Text with Statistics
+ 
+
+ WORD COUNT : 170
+ 
+ CONSONANT COUNT
+ Form1 : 161     Form2 : 21      Form3 : 35      Form4 : 106
+ Form5 : 14      Form6 : 216     Form7 : 25      Form8 : 3
+ 
+ VOWEL COUNT
+ Form1 : 25      Form2 : 0       Form3 : 5       Form4 : 2
+ Form5 : 1       Form6 : 13      Form7 : 1
+ 
+ 
+ 
+     From the Ethiopian Examiner January 1994 
+ 
+ yeselamna yeIrqu konferans gizEyawiw mengst keslTan Indiwerd Teyeke
+ 
+     bekefateNa gugut siTebeq yeneberew yeselamna ye`Irq gubae, ketahsas 
+ 9-13 1986 `a.m. beadis abeba ketema baderegew yeamst qen sbseba, 
+ beih`adEg yemimeraw gizEyawi mengst slTanun Indiyasrekb Teyeqe.
+ 
+     qedem blo paris lay sbsebaw  Indidereg keTeyequt sebat teqawami
+ budnoc wsT, yesostun abalat wede ageracew sigebu awroplan Tabiya lay
+ bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefu adrgWacewal.
+ yetasrut abalat, ato abera yemaneab, we/rit genet grma, ato mesfn
+ tefera, ato alemayehu dErEsana ato genenew asefa (keidE`haq): ato seyum 
+ zenebe (kemed`hn) Ina ato ibsa gutema (keoneg) nacew.
+ 
+     mengst Inezihu sewoc lay yewesedew yeIsrat Irmja sewocn beselamawi
+ menged beageracew yepoletika hidet wesT Indaysatefa slemiyaderg bzu sewocn
+ aseqoTtWal.  beadis abeba yemigeNu diplomatocm yKEw yemengst Irmja 
+ yesbsebawn tesatafiwoc farhat lay bmeTal sbsebaw mnm bego wTEt IndayameTa 
+ yaderg yhonal bemalet hesabacewn gel`Sewal.
+ 
+     yeityoPya gizEyawi mengst (iH'adEg) besbsebaw lay saysatef qertWal.
+ lezihum begizEyawi prEzidEntu beato meles zEnawi yeteseTew mknyat sbsebaw
+ lepropaganda `alama bca yemidereg kentu sbseba new yemil new.
+
+
+=====================================================================
+
+ Notes:
+
+      [2]  Syllabaries in general do not distinguish between vowels and
+      consonants. They do not have a regularity, symmetry, or any kind of
+      matrix. The ancient Cypriot syllabary, the newly invented (1821?)
+      Cherokee syllabary, and even the modern Japanese Katakana system have
+      very little regularity.  The syllables are arbitrary marks that contain
+      the consonant and vowel in one symbol that does not allow any disassembly
+      into constituent phonetic parts.  This aspect of syllabaries is
+      sometimes used to show that they are a less developed form of writing
+      system.
+
+      Fidel, the Ethiopic syllabary, on the other hand, is highly regular and
+      has a quite clearly defined set of vowel markings which were *added* to
+      a base consonant/radical.  In fact, just looking at the Fidel one can
+      see a clearly outlined alphabetic underpinning.  It seems that what we
+      have in the Ethiopic system is not a sort of pre-alphabetic syllabary,
+      but an outright further development of an alphabet--the Sabaean alphabet
+      (1) which, like Hebrew and Arabic had no vowel representation.  It is more
+      plausible to see in Ethiopic a move from the Sabaean alphabet back into
+      a syllabic form, but with a standardization based on awareness of the
+      explicit relationship between consonants and vowels.  To dismiss
+      Ethiopic as an underdeveloped writing system is to overlook an example
+      (perhaps the only one) of post-alphabetic development in writing
+      systems.
+
+      As Coulmas Observes :
+
+      "     Old Ethiopic was first written in the typical Semitic manner
+      without vowel signs, but in the fourth century AD the writing of
+      Ethiopic underwent drastic changes.  The resulting script is interesting
+      because of its unusual and quite un-Semitic vowel indication. " (2)
+
+
+      [3]  The traditional matrix of the Ethiopic script is in rows of seven
+      columns with the base "W" form (here column 8), and the other "W" forms
+      (here column 9-12) presented separately at the end of the list as
+      extensions to the core set.   We felt a 37 x 12 matrix would be a more
+      natural arrangement both because of the similarity of the characters
+      as well as the efficiency it provides for machine access and
+      manipulation of the characters.
+
+
+=====================================================================
+
+
+ APPENDIX A:  Questionnaire and Sample Text
+ 
+ 
+ 
+ Greetings to Ethiopic Script Readers,
+ 
+ 
+ 
+      Following you will find a sample Amharic text (an article
+ fragment from Ethiopian Examiner) written in 5 systems of representation.  
+ It is not the purpose of this document to discuss the development
+ of the systems or to debate the merits and faults of each.  I solicit
+ your opinion with respect to where you find the most comfort and ease 
+ of reading.  Please return to me a ranking of the various systems in
+ your order of preference (e.g. 3,5,1,4,2; 3 is best, 2 worst).  Any 
+ additional comments are welcomed.  Please pass this letter on to your
+ friends and colleagues.  Results of the survey will be posted when 
+ available.  A discussion of the latin representation system, along with
+ an ascii fidel, will be presented at that time. Note that the difference
+ between some systems is subtle, you may wish to print this article to
+ aid your evaluation.  Your help is much appreciated.
+ 
+ 
+     Thank You,
+ 
+ 
+                  danEl yaqob   (System 1,5)
+                  d'nEl y'qob   (System 2)
+                  da'nEl ya'qob (System 3)
+                  dan"l yaqob   (System 4)
+         
+ 
+                  yacob@apollo.aoe.vt.edu
+ 
+ 
+ 
+ 
+ System 1:
+ ~~~~~~~
+ 
+ Consonants:
+ l'   lu   li   la   le   l    lo
+ 
+ Independent Vowels:
+  a    u    i    '    e    I    o
+ 
+ Independent Vowel Following a 6th Form Consonant:
+ lA   lU   l|i  l"   lE   lI   lO
+ 
+     b'k'ft'Na gugut siT'b'q y'n'b'r'w y's'lamna y'Irq gubae, k'tahsas
+ 9-13 1986 '.m. b'adis ab'ba k't'ma bad'r'g'w y'amst q'n sbs'ba,
+ b'ihAdeg y'mim'raw gizeyawi m'ngst slTanun Indiyasr'kb T'y'q'.
+ 
+     q'd'm blo paris lay sbs'baw  Indid'r'g k'T'y'qut s'bat t'qawami
+ budnoc wsT, y'sostun abalat w'd' ag'rac'w sig'bu awroplan Tabiya lay
+ b'polis b'masyazna bmas'r m'ngst bzihu sbs'ba lay Indaysat'fu adrgWac'wal.
+ y'tasrut abalat, ato ab'ra y'man'ab, w'/rit g'n't grma, ato m'sfn
+ t'f'ra, ato al'may'hu deresana ato g'n'n'w as'fa (k'idehaq): ato s'yum 
+ z'n'b' (k'm'dhn) Ina ato ibsa gut'ma (k'on'g) nac'w.
+ 
+ 
+ System 2:
+ ~~~~~~~
+ 
+ la   lu   li   l'   le   l    lo
+  a    u    i    '    e    I    o
+ lA   lU   l|i  l"   lE   lI   lO
+ 
+     bakaftaN' gugut siTabaq yanabaraw yasal'mn' yaIrq gub'e, kat'hs's
+ 9-13 1986 '.m. baadis abab' katam' b'daragaw yaamst qan sbsab',
+ baihAdeg yamimar'w gizey'wi mangst slT'nun Indiy'srakb Tayaqa.
+ 
+     qadam blo p'ris l'y sbsab'w  Indidarag kaTayaqut sab't taq'w'mi
+ budnoc wsT, yasostun ab'l't wada agar'caw sigabu awropl'n T'biy' l'y
+ bapolis bam'sy'zn' bm'sar mangst bzihu sbsab' l'y Ind'ys'tafu adrgWacaw'l.
+ yat'srut ab'l't, ato abar' yam'naab, wa/rit ganat grm', ato masfn
+ tafar', ato alam'yahu deres'n' ato gananaw asaf' (kaideh'q): ato sayum
+ zanaba (kamadhn) In' ato ibs' gutam' (kaonag) n'caw.
+ 
+ 
+ System 3:
+ ~~~~~~~
+ 
+ la   lu   li   la'   le   l    lo
+  a    u    i    a'    e    I    o
+ lA   lU   l|i  lA'   lE   lI   lO
+ 
+     bakaftaNa' gugut siTabaq yanabaraw yasala'mna' yaIrq guba'e, kata'hsa's
+ 9-13 1986 a'.m. baadis ababa' katama' ba'daragaw yaamst qan sbsaba',
+ baihAdeg yamimara'w gizeya'wi mangst slTa'nun Indiy'srakb Tayaqa.
+ 
+     qadam blo pa'ris la'y sbsaba'w  Indidarag kaTayaqut saba't taqa'wa'mi
+ budnoc wsT, yasostun aba'la't wada agara'caw sigabu awropla'n Ta'biya' la'y
+ bapolis bama'sya'zna' bma'sar mangst bzihu sbsaba' la'y Inda'ysa'tafu 
+ adrgWacawa'l.
+ yata'srut aba'la't, ato abara' yama'naab, wa/rit ganat grma', ato masfn
+ tafara', ato alama'yahu deresa'na' ato gananaw asafa' (kaideha'q): ato sayum
+ zanaba (kamadhn) Ina' ato ibsa' gutama' (kaonag) na'caw.
+ 
+ System 4:
+ ~~~~~~~
+ 
+ le   lu   li   la   l'   l    lo
+  a    u    i    e    '    I    o
+ lA   lU   l|i  lE   l"   lI   lO
+ 
+     bekefteNa gugut siTebeq yeneberew yeselamna yeIrq guba', ketahsas
+ 9-13 1986 e.m. beadis abeba ketema baderegew yeamst qen sbseba,
+ beihAd'g yemimeraw giz'yawi mengst slTanun Indiyasrekb Teyeqe.
+ 
+ 
+     qedem blo paris lay sbsebaw  Indidereg keTeyequt sebat teqawami
+ budnoc wsT, yesostun abalat wede ageracew sigebu awroplan Tabiya lay
+ bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefu adrgWacewal.
+ yetasrut abalat, ato abera yemaneab, we/rit genet grma, ato mesfn
+ tefera, ato alemayehu d'r'sana ato genenew asefa (keid'haq): ato seyum
+ zenebe (kemedhn) Ina ato ibsa gutema (keoneg) nacew.
+ 
+ 
+ System 5:
+ ~~~~~~~
+ 
+ le   lu   li   la   l'   l    lo
+  a    u    i    '    e    I    o
+ lA   lU   l|i  l"   lE   lI   lO
+ 
+     bekefteNa gugut siTebeq yeneberew yeselamna yeIrq gubae, ketahsas
+ 9-13 1986 '.m. beadis abeba ketema baderegew yeamst qen sbseba,
+ beihAd'g yemimeraw giz'yawi mengst slTanun Indiyasrekb Teyeqe.
+ 
+ 
+     qedem blo paris lay sbsebaw  Indidereg keTeyequt sebat teqawami
+ budnoc wsT, yesostun abalat wede ageracew sigebu awroplan Tabiya lay
+ bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefu adrgWacewal.
+ yetasrut abalat, ato abera yemaneab, we/rit genet grma, ato mesfn
+ tefera, ato alemayehu d'r'sana ato genenew asefa (keid'haq): ato seyum
+ zenebe (kemedhn) Ina ato ibsa gutema (keoneg) nacew.
+ 
+ 
+ 
+=====================================================================
+
+ APPENDIX B:  On The Character Specific Representation of Numbers:
+
+
+ For most practical email exchanges it is enough to type "1987" to communicate
+ to the reader the year nineteen-hundred-and-eighty-seven.  But for a machine
+ to interpret the Arabic numbers into Ethiopic, "1987" becomes a highly 
+ ambiguous sequence of numbers.  The following is offered to present a method to
+ represent Ethiopic numbers with Arabic for simple computer translation.  
+
+ In our example, "1987", though understood as a Christian year could easily
+ have been a part of a phone number, a street address, or most anything in 
+ another context.  As there are 20 Ethiopic numbers (21 if the letter "xi",
+ used for 1,000 is counted) we are presented with the problem of interpreting
+ then, which numbers the typist had intended to communicate.
+
+ In example:  is 1987 to be read as the  6 Ethiopic numbers 10-100-9-100-80-7.
+ Or the 5 numbers 10-9-100-80-7, or the 4 numbers 10-9-80-7 , 10-9-8-7,
+ 1-90-8-7, or finally (skipping a few other possibilities) 1-9-8-7.
+
+ Writing each of the 20 Ethiopic numbers discreetly avoids the ambiguity problem
+ and the Christian year 1987 is written as 109100807. 
+
+ It may seem a little ungainly to have to type 9 Arabic numbers so that a
+ computer can understand that 5 Ethiopic numbers are desired.  This problem
+ can be affected slightly by applying some of the same philosophy that was
+ presented for denoting the forms of consonants for Ethiopic letters.
+ With the same method applied here the numbers 1,2,3,4...9 are thought of
+ as consonants and the vowels are then 0, 00, 000, and 0000 to denote the
+ forms "tens", "hundreds", "thousands", and "ten-thousands" (analogous to
+ "g`Iz", ka`Ib , sals, and rab`I).  We then have a fidel for numbers : 
+
+
+ ones   tens   hundreds  thousands  ten-thousands ....
+          0       00        000         0000
+
+  1      10      100       1000        10000
+  2      20      200       2000        20000
+  3      30      200       3000        30000
+  4      40      400       4000        40000
+  .
+  .
+  9      90      900       9000        90000
+
+
+ and we may write the same 5 Ethiopic numbers for the year 1987 with the
+ 8 Arabic numbers 10900807.  It is intrinsic in this system that when the
+ number of zeros, 0, following a one (1,2,3...9) is greater than 2, that
+ 2 Ethiopic numbers are being represented.  That is, it is understood that
+ 200 is equivalent to the Ethiopic 2-100 and 2000 is 20-100.  If one wishes 
+ to use "xi" as a number, 2000 should then be written as 2xi.  A small computer 
+ algorithm that determines Ethiopic numbers with the system described, is 
+ available from the authors.
+
+ As a last thought on the representation of Ethiopic numbers with Arabic
+ we suggest that if commas "," or decimals "." be used to denote orders
+ of a thousand as in $5,362 , that the number be interpreted strictly as a
+ summation.  In this instance 5,362 = 5000 + 300 + 60 + 2 and is written in
+ Ethiopic as either the 5 characters 50-100-400-60-2 or 5-xi-400-60-2.
+
+
+=====================================================================
+
+
+ APPENDIX C:  Generalized Pseudo-Code for Latin --> Ethiopic Translation
+
+
+ When programming for applications for Ethiopic script consideration must be
+ made for the presence of the user.  During the ascii interpretation from any
+ input source there will be updating made to a character as its form number is
+ determined from subsequent characters.  We identify and discuss two scenarios
+ where a computer is called upon to perform the interface between Latin-Ascii
+ and Ethiopic.
+ 
+ The first case is document composition, or the active entry and interpretation
+ of Ethiopic from Ascii.  If a user is keying in a document or chatting with a
+ friend with an Ethiopic version of Unix "talk", considerable aesthetic appeal
+ is found by the user when he or she is rewarded with an Ethiopic character for
+ each keystroke.  
+
+ With the convention presented in this document it is the sadis or 6th form 
+ Ethiopic character that is represented with a single letter from the Latin
+ alphabet.  Hence after one keystrike a vowel or sadis consonant character is 
+ sent to the screen.  If the user then strikes a vowel (lowercase) the last
+ character, if it was a consonant, is deleted from the screen and is replaced
+ with the appropriate form represented by the vowel.  If a vowel is not struck,
+ then the new character is sent to the screen and becomes the next candidate
+ in the entry cycle available for updating. 
+
+ The basic rules for updating the last character entered are :
+
+ 1)  only consonants may be updated by lowercase vowels and the letter "W". 
+ 2)  vowels will have their screen address modified by the number 2. 
+ 3)  the consonants h, s, and S will have their screen address modified by
+     the number 2 (and 3 for e) and remain consonants.  Thus they remain
+     updatable for form number by a following vowel.
+ 4)  a character is sent to the screen after each update, replacing the
+     original.
+
+ The standard entry synopsis is depicted in the illustration below.
+
+ Active Entry Logical Flow For Latin Conversion into Ethiopic :
+   _____
+  |     |
+  |    \|/
+  |  read new;
+  |  determine new type; 
+  |  if edit flag  ------->  update last address with new;
+  |     |                    new = updated last;
+  |     |                    back-delete over last screen char;
+  |     |          <-------  continue
+  |     |
+  |  if number   --------->  check if number is 2 and last is h,
+  |     |                             s, S, or vowel, OR number
+ /|\    |                             is 3 and last is e;
+  |     |          <-------  If not true continue (number is displayed);
+  |     |                    If true :
+  |    \|/                      update last address with new;
+  |     |                       new = updated last;
+  |     |                       back-delete over last screen char;
+  |     |          <-------  continue
+  |     |
+  |  display new;
+  |  last = new;
+  |_____|
+
+
+ The edit flag can be set only when the new character (or updated character 
+ in the cases of h2, s2 and S2) is recognized as a consonant.  In the case
+ of vowels and consonants with 2nd or 3rd forms, the numbers 2 and 3 will act to
+ modify the previous address.  
+
+ The second case occurs when the user is not involved with the ascii to Ethiopic
+ conversion.  For the translation of a text file, for instance, it is not 
+ necessary to follow the same steps as it would be for keyed entry.  In fact it
+ would be inefficient to do so.  The same rules follow as for active entry
+ except that we do not display the character each time it is updated.  Rather,
+ after an update has occurred, the reading cycle starts over, the updated
+ character now becoming the last.  Rule 4 becomes:
+
+ 4) An Ethiopic character is only sent to output after it has been entirely
+    identified.
+
+ The following illustration is given to aid in the description of this process.
+
+ File Read-In Logical Flow For Latin Conversion into Ethiopic : 
+   _____ _____________________________/_____________________________
+  |     |                             \                             |
+  |    \|/                                                         /|\
+  |  last = new;                                                    |
+  |  read new;                                                      |
+  |  determine new type;                                            |
+  |  if edit flag  ------->  update last address with new;          |
+  |     |                    new = updated last;                    |
+  |     |                    break.  -------------------->----------|
+  |     |                                                           |
+  |  if number   --------->  check if number is 2 and last is h,    |
+  |     |                             s, S, or vowel, OR number     |
+  |     |                             is 3 and last is e;           |  
+ /|\    |          <-------  If not true continue;                 /|\
+  |     |                    If true :                              |
+  |     |                       update last address with new;       |
+  |    \|/                      new = updated last;                 |
+  |     |                       break.  ---------------->-----------|
+  |     |
+  |     |
+  |  display last;
+  |_____|
+
+
+ The generic form code below presents the logic sequences that would follow in
+ machine translation described in the above for arbitrary input and output
+ streams.  Specifics on character addressing and the association of characters
+ with addresses is left out in this elementary presentation.  The logic shown is
+ given for clarity, its form is reducible in application.  Fully function C
+ language routines are available from the authors that perform both kinds of
+ Ascii to Ethiopic interfacing.
+ 
+ Pseudo Code for SERA-101*  Machine Translation :
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ BEGIN LOOP :
+ {
+ 
+  last = new;   
+  new  = read_char(file); 
+
+ [ Determine new's character type : vowel, consonant, number, or punctuation ]
+ 
+   
+  if (new = vowel) 
+     then 
+        if (edit = 1  AND new is lowercase)        // last = consonant
+           then 
+                new = last + last + form#_of_new;   // update consonant to form
+                edit = 0;                           // of new
+                [restart loop OR delete last and continue] 
+        end if 
+  end if 
+
+
+  if (new = "W")
+     then
+        new = last + form#_of_new;  
+        if (last has 12 forms)
+           then
+               sadis = 1;         // will be edited to form 8-12 in next cycle
+           else
+               read_char(new);   // 8 forms only, following "a" read & discarded
+           end if
+           [restart loop OR delete last and continue] 
+  end if
+
+
+  if (new = number) 
+     then 
+        if ( (new = "2" AND last = "a", "h","s", or "S")   OR 
+                    (new = "3" AND last = "e")         )
+           then
+               new = last + address_change_to_2nd_form;
+               if (last NOT = "a") edit = 1;
+               [restart loop OR delete last and continue] 
+        end if
+  end if
+
+
+ // Printing to the Screen or to An Output File is Done Below
+
+  out_put(last);                   // or out_put(new) if delete last was used
+
+  if (new = vowel && edit = 0)
+     then
+           [restart loop] 
+  end if
+
+  if (new = consonant)
+     then
+          edit = 1; 
+     else    
+          edit = 0;                // new was a number or punctuation
+  end if                          //  and will not be edited next cycle
+
+ } END LOOP, REPEAT LOOP
+        
+
+ * SERA-101 :  System for Ethiopic Representation in Ascii for 101 Keyboards.
+               A more formal name for "System 6" used in previous sections.
+
+=====================================================================
+
+APPENDIX D : A Convention for Mixed Script Notation
+
+Punctuation and Rules for Mixed Script Notation
+
+
+  For mixed script compositions, a set of interpretation rules have have
+  been devised for SERA text files.  Upon initial analysis the escape rules
+  may appear inconsistant.  Their logical use should become apparent when
+  working with them, as they are designed in part to go naturaly with their
+  frequency of use.
+
+
+The \ Text Escape
+
+    \  Followed any undefined char, toggles the script interpretter
+       mode (Ethiopic<->Latin).  An alphabetic (readible) character
+       may not be used as an escape sequence following the \ text
+       escape.  The defined escapes sequences may have different
+       functions in the two script modes.  When followed by a blank
+       space " ", the mode toggle occurs and the space is deleted.
+
+    \\         Sends "\" from either mode.
+          _
+    \.     |
+    \,     |   Sends the equivalent punctuation
+    \;     |   of the OTHER mode to the screen.
+    \:    _|
+
+                                    _
+    \_     Eth. Word Separator       |  Sends the defined Ethiopic 
+    \*     Eth. Paragraph Terminator |  character from both modes.
+    \1..9  Eth. Numerals             |
+    \<     Eth. Left Quote (<<)      | 
+    \>     Eth. Right Quote (>>)    _|  
+
+          _
+    \|     |   In Ethiopic mode |, ' or ` is sent to the screen.
+    \'     |   In Latin mode, the toggle is made to Ethiopic
+    \`    _|   and |,` or ' is treated as the first char in the
+               text segment and treated with the normal rules
+               (i.e. just the stanard toggle into Ethiopic).
+
+    \!         The "Hard Mode Toggle".  The switch toggles modes but
+               treats all text until the ending \! as one script.
+               This allows extended use of \ and \~ without the
+               requirement for \\ and \\~ but at the cost of using only
+               one script within the text region.  
+
+   \~ Graphic Escape
+
+    ~  If followed by a defined character, the appropraite event occurs.
+       It is left to software houses to recognize each others' graphic
+       escape sequences and provide filters.  ~ is recommended as a means 
+       to denote the nonstandard characters of a font set in ascii.
+
+   Default
+    \~x      "x" is undefined in an application, then "x" is ignored. 
+             and nothing appears when transliterated.  Also true if
+             x = " ".
+     
+
+If a user truly wants to toggle modes and  have _ , <, >, !, *, ~ 
+or an Arabic number apear as the first character in the new mode,
+the simple solution is to type the character before toggle 
+such as :
+
+        ~\      <\
+        _\      >\
+        *\      !\
+
+
+=====================================================================
+
+
+APPENDIX E :  Changes From SERA System 5
+ 
+[Revision:  10/30/94, Originally the ADDENDUM Document]
+
+The Ethiopic Fidel in ASCII 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+he    hu    hi    ha    hE    h    ho
+le    lu    li    la    lE    l    lo    lWa
+He    Hu    Hi    Ha    HE    H    Ho
+me    mu    mi    ma    mE    m    mo    mWa
+s2e   s2u   s2i   s2a   s2E   s2   s2o         *
+re    ru    ri    ra    rE    r    ro    rWa
+se    su    si    sa    sE    s    so    sWa
+xe    xu    xi    xa    xE    x    xo    xWa
+qe    qu    qi    qa    qE    q    qo    qWe    qWu   qWi    qWa    qWE
+Qe    Qu    Qi    Qa    QE    Q    Qo    QWe    QWu   QWi    QWa    QWE
+be    bu    bi    ba    bE    b    bo    bWa        (Q is Tigrigna/Chaha)
+ve    vu    vi    va    vE    v    vo    vWa
+te    tu    ti    ta    tE    t    to    tWa
+ce    cu    ci    ca    cE    c    co    cWa
+h2e   h2u   h2i   h2a   h2E   h2   h2o   hWe    hWu   hWi    hWa    hWE    *
+ne    nu    ni    na    nE    n    no    nWa
+Ne    Nu    Ni    Na    NE    N    No    NWa
+ e/a   u/U   i     A     E    I     o     O
+ke    ku    ki    ka    kE    k    ko    kWe    kWu   kWi    kWa    kWE
+`ke   `ku   `ki   `ka   `kE   `k   `ko             (`k is Chaha)   *
+Ke    Ku    Ki    Ka    KE    K    Ko    KWe    KW    KWi    KWa    KWE
+Xe    Xu    Xi    Xa    XE    X    Xo              (X is Chaha )
+we    wu    wi    wa    wE    w    wo    wWa
+`e    `u    `i    `a    `E   `I    `o            *
+ze    zu    zi    za    zE    z    zo    zWa
+Ze    Zu    Zi    Za    ZE    Z    Zo    ZWa
+ye    yu    yi    ya    yE    y    yo
+de    du    di    da    dE    d    do    dWa
+De    Du    Di    Da    DE    D    Do              (D is Afan Oromiffa)
+je    ju    ji    ja    jE    j    jo
+ge    gu    gi    ga    gE    g    go    gWe    gWu   gWi    gWa    gWE
+Ge    Gu    Gi    Ga    GE    G    Go              (G is Bileen/Chaha)
+Te    Tu    Ti    Ta    TE    T    To    TWa
+Ce    Cu    Ci    Ca    CE    C    Co    CWa
+Pe    Pu    Pi    Pa    PE    P    Po
+Se    Su    Si    Sa    SE    S    So    SWa
+S2e   S2u   S2i   S2a   S2E   S2   S2o           *
+fe    fu    fi    fa    fE    f    fo    fWa
+pe    pu    pi    pa    pE    p    po
+
+
+*  The characters written with either ` or 2 may be written in an alternate
+   form as shown:
+
+s2e   s2u   s2i   s2a   s2E   s2   s2o = `se   `su   `si   `sa   `sE   `s   `so 
+S2e   S2u   S2i   S2a   S2E   S2   S2o = `Se   `Su   `Si   `Sa   `SE   `S   `So 
+h2e   h2u   h2i   h2a   h2E   h2   h2o = `he   `hu   `hi   `ha   `hE   `h   `ho 
+
+`ke   `ku   `ki   `ka   `kE   `k   `ko = k2e   k2u   k2i   k2a   k2E   k2   k2o 
+`e    `u    `i    `a    `E    `I   `o  = a2    u2    i2    A2    e2    I2   o2    
+
+A Discussion of Changes Made in SERA System 6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Ascii Fidel :
+
+A part of the original design premise of the SERA Ascii Fidel (AF) was that it
+take advantage of the sounds found in all languages that use Ethiopic for their
+written script.  During discussions with tgrNa (Tigrigna) speakers at the Dehai
+network's Eritrea-Info, it was learned that the first and second "h" in the
+fidel do not have the same sound as they do in amarNa (Amharic).  The rationale
+for the appendage of "2" following a consonant was to denote a second character
+that was the phonetic equivalent of some other.  In spoken Ge'ez tables the 2nd
+"h" of the fidel is represented with phonetic symbology as "h" with a "."
+underneath.  It is consistent with the choices of the upper case "T", "C", "S",
+and "P" to then use "H" for what had been "h2".  This is indeed the same
+character used in the Dehai fidel as well as "K" for h4 or what had previously
+been "H" in SERA.  The Dehai convention is now adopted in the SERA Ascii Fidel. 
+Further, h3 logically became h2.  These changes allow for a simpler use by
+members of any language group where Ethiopic script is used as well as for some
+simplification in transliteration computer code.
+
+The second set of vowels in the AF were also updated to reflect more of the way
+that tgrNa relates to the fidel.  The 2nd set of vowels are more important in
+written and spoken tgrNa and do not have the same sounds as does (are not
+homophonic to) the first vowel group.  This second set of vowels (or perhaps
+vowels-like letters) will be represented with the ` character used by many
+Ge'ez and Arabic tables for the "`ain".  The original system of "a2" may also
+be used if the typist finds the ` more difficult to reach or if thinking by the
+sounds the characters have in the typist's language, "a2" becomes a more natural
+choice in agreement with the logic for h2, s2, and S2.
+
+2nd Vowel Set   `e    `u    `i    `a    `E   `I    `o
+     also -->   a2    u2    i2    A2    E2   I2    o2
+
+It can be argued that the 2nd vowel group now depicts a higher degree of
+syllabic thinking.  This arises from how the characters relate to each other
+through the ` , vs the first vowel group where each character is symbolically
+independent (and indicate then a more alphabetic thinking).  The original lone
+vowel ordering of the first form vowels will maintain their Amharic bias.
+
+Likewise the same alternate denotation was applied to the characters h2, s2,
+and S2.  The use of ` here to imply a different pronunciation for the
+letters is valid when considering the original sounds of the characters in
+spoken g`Iz (Ge'ez).  The choice is left to the typist then to select the
+prefixed ` or appended 2 form.  Which s/he may do so based upon the ease of
+reach of the character or by the sound of the character that the typist wish
+to impart with the modifier.
+
+
+
+The Ordering of The First 7 Forms:
+
+----------------------------------------------------------------------
+SERA-101 System 6c
+~~~~~~~~~~~~~~~~~~
+          Consonants:
+           le    lu    li    la    lE    l    lo
+ 
+          Independent Vowels:
+            e\a   u\U   i     A     E    I     o    e3    (as in e3re!)
+
+Rule :    First Vowel Set Following a 6th Form Consonant:
+           l'e   l'u   l'i   l'A   l'E   l'I   l'o   
+also -->   l'a   lU                      lI    lO         (minimal punctuation)
+
+The writer may choose to use ' as a separator between vowels for clarity:
+
+		keErtra  = ke'Ertra
+		leabebe = le'abebe = le'ebebe = leebebe
+--------------------------------------------------------------------
+
+The primary changes from System 5 are the use of "E" for the hams and "A" for
+the lone rab`I vowel.  This comes in part from early user comments that
+punctuation requires one to "...stop and remember what the letter is."  In
+System 6 all forms of consonants and all of the vowels are given by alphabetic
+(readable) ascii characters except for the sads consonants which in a special
+instance have a two character form.  It is believed that the elimination of
+punctuation for the vowels will allow for easier reading.  Particularly in tgrNa
+where a4 may occur more commonly than a1 and in Gurage languages where a8 is
+found more often than other vowels.  The character | is retained to imply that
+the vowel element of a sads consonant is enunciated.
+
+The dual use of "e" and "a" for the first form vowel is introduced now to
+permit the logical choices in ascii for the sounds of the character in amarNa
+and for the majority of Ethiopian and Eritrean languages that use the
+stricter, traditional, writing conventions.  Allowing dual representation does 
+not introduce conflicts for computer transliterators, as it is valid only for
+the lone vowel and not for consonant forms.  It is hoped the system will work
+naturally for humans, the letter choices being in agreement with how one would
+think of the vowel's sound from his or her language in Latin form.
+
+The choice of "e3" is thought to be the best model for the sound of the
+character -the 8th vowel.  The sound of the character is in Amharic the same as
+that of "e" (the first vowel) in Tigrigna.  The choice of a numeral to follow
+"e" will detract from the reading quality of the character, which should come
+at a small cost when its infrequent use is considered.
+
+Finally, the "left over" Latin uppercase consonants; B, F, J, L, M, R, V, and 
+Y, are now recognized as equivalent to their lowercase counterparts.  That is
+"Y" in transliteration would be interpretted identically as "y" etc.  These
+same Latin characters are considered to be on a "reserve" status to model some
+overlooked sound in an Ethiopian or Eritrean language.
+
+A test document written with System 5 and the previous Ascii Fidel was rewritten
+with the new logic presented here and showed a "cleaner", easier to read form.
+This was primarily do to the reduction of punctuation of for the hams forms as
+well as the trade described for "2" and ` .
+
+
+The reader is reminded at this point that SERA was not intended to close the
+book on the subject of the Ascii representation of Ethiopic -merely to offer a
+better place to start.  System 6 represents the first step in the advancement
+of improved representation after the gain of new insight and additional input
+from users of the previous system proposed.  The Ascii representation of Ge'ez
+script will remain an evolving process as computer users continue to find ways
+to make natural language communication with the Ascii medium both easier to
+write and read.
+
+
+=====================================================================
+
+
+ REFERENCES
+
+
+ 1.  Demoz, "Amharic Script Reform Efforts".  ETHIOPIAN STUDIES. 
+     S. Segert and A.J.E. Bodrogligeti, Eds. 1983.
+
+ 2.  Diringer, David, Writing, New York, NY, Frederick A. Praeger Inc., 1962.
+
+ 3.  Coulmas, Florian, The Writing Systems of The World, New York, NY,
+     B. Blackwell, 1989.
+
+ 4.  Committee for Standardization of Ethiopian Script, "View and Recommendation
+     on The Unicode Technical Report #1 Draft Proposal on Ethiopian Script",
+     unpublished, August, 1993.
+

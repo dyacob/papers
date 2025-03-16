@@ -1,0 +1,245 @@
+% This file contains accents common to text roman and italic fonts.
+% Character codes \0022--\0030, \0040, \0136--\0137, \0175--\0177 are generated.
+
+% (Actually the accents in positions \0040, \0137, and \0175 are not generated
+% unless |ligs>0|, since other symbols are substituted
+% for those accents in non-ligature fonts.)
+
+cmchar "Grave accent";
+beginchar(oct"022",9u#,min(asc_height#,2x_height#),0);
+adjust_fit(0,0);
+if serifs: pickup crisp.nib; x1-.5stem=hround 2u; x2=2/3[x1,w-x1];
+ y1+.5stem=h+eps; y2=max(2/3[h,x_height],x_height+o+hair);
+ numeric theta; theta=angle(z2-z1)+90;
+ pos1(stem,theta); pos2(hair,theta);
+ filldraw circ_stroke z1e--z2e;  % diagonal
+else: pickup fine.nib; pos1(stem,0); pos2(vair,0);
+ lft x1l=hround 1.5u; rt x2r=hround(.5w+.25u+.5vair);
+ top y1=h; bot y2=vround 2/3[h,x_height];
+ filldraw stroke z1e--z2e; fi  % diagonal
+penlabels(1,2); endchar;
+
+
+cmchar "The letter d-accent";
+beginchar(oct "023",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,0)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+penpos9(1.3stem,0); penpos10(1.3stem,0); penpos11(1.3stem,0);
+x9r+.5u=x10r=.6w; x11r=x10r-.5u; y9=.85h; y10=h; y11=y10+.05h;
+filldraw stroke z9e---z10e{up}...{left}z11e;
+penlabels(9,10,11); endchar;
+
+%cmchar "Acute accent";
+%beginchar(oct"023",9u#,min(asc_height#,2x_height#),0);
+%italcorr h#*slant-if serifs: 1.5 fi u#;
+%adjust_fit(0,0);
+%if serifs: pickup crisp.nib; x1+.5stem=hround(w-2u); x2=2/3[x1,w-x1];
+% y1+.5stem=h+eps; y2=max(2/3[h,x_height],x_height+o+hair);
+% numeric theta; theta=angle(z2-z1)+90;
+% pos1(stem,theta); pos2(hair,theta);
+% filldraw circ_stroke z1e--z2e;  % diagonal
+%else: pickup fine.nib; pos1(stem,0); pos2(vair,0);
+% rt x1r=hround(w-1.5u); lft x2l=hround(.5w-.25u-.5vair);
+% top y1=h; bot y2=vround 2/3[h,x_height];
+% filldraw stroke z1e--z2e; fi  % diagonal
+%penlabels(1,2); endchar;
+
+% Program name:---------------- ethiop.mf
+cmchar "The letter Ethiopic punctuation Rassigea";
+beginchar(oct "024",11u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric x_bar; x_bar:=2u;
+
+penpos6(stem,0); penpos7(stem,0); x6=.5w; x7=.5w; y6=h+o; y7=h;
+lft_half_ellipse(6,x_bar); rt_half_ellipse(7,x_bar);
+penlabels(1,2,2',3,4,6,7); endchar;
+
+% Program name:---------------- ethiop.mf
+cmchar "The letter Ethiopic punctuation Girigea";
+beginchar(oct "025",11u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric x_bar; x_bar:=2.25u;
+
+x3=.675w; y3=-.1h;  rt_wing(3,1.75u,0);
+x4=.675w; y4=-.1h;  lft_wing(4,1.75u,0);
+penlabels(3,4); endchar;
+
+def upper_left_wing(suffix @)=
+      pickup fine.nib;  pos@g(vair,90); pos@i(vair,90);
+      x@g=x@; x@i=x@-1.5u; y@g=y@i=y@; filldraw stroke z@g.e--z@i.e;
+      x@a=x@-1.52u; y@a=y@;
+      x@b=x@-3.9u;  x@c=x@-3.7u;  x@d=x@-4.2u;  x@e=x@-2.5u;   x@f=x@-2.5u;
+      y@b=y@-oo; y@c=y@+.07h; y@d=y@+.15h; y@e=y@+.14h;  y@f=y@-oo;
+      filldraw  flex(z@b,z@c,z@d) & flex(z@d,z@e,z@a) & flex(z@a,z@f,z@b) & cycle;
+      labels(x@,@a,@b,@c,@d,@e,@f,@g,@i);
+enddef;
+
+def upper_right_wing(suffix $)=
+      pickup fine.nib; pos$a(vair,90); pos$b(vair,90);
+      x$a=x$; x$b=x$+1.5u; y$a=y$b=y$; filldraw stroke z$a.e--z$b.e;
+      x$g=x$+1.52u; y$g=y$;
+      x$i=x$+3.9u;  x$j=x$+3.7u;  x$k=x$+4.2u;  x$l=x$+2.5u;   x$m=x$+2.5u;
+      y$i=y$-oo; y$j=y$+.07h; y$k=y$+.15h; y$l=y$+.14h;  y$m=y$-oo;
+      filldraw flex(z$i,z$j,z$k) & flex(z$k,z$l,z$g) &  flex(z$g,z$m,z$i) & cycle;
+      labels(x$,$g,$i,$j,$k,$l,$m,$a,$b);
+enddef;
+
+% Program name:---------------- ethiop.mf
+cmchar "The letter Ethiopic punctuation Rass";
+beginchar(oct "026",11u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+numeric x_bar; x_bar:=2.25u;
+
+x14=.5w; x15=.5w; y14=y15=h;
+upper_left_wing(14); upper_right_wing(15);
+penlabels(1,2,2',3,4,6,7); endchar;
+
+% Program name:---------------- ethiop.mf
+cmchar "The letter Ethiopic punctuation nettebitabe";
+beginchar(oct "027",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,0);
+
+pickup fine.nib;
+
+pos1(curve,0); pos2(curve,90);
+x1=x2=.5w; y2=.95h; y1=.5[y2r,y2l]; dot(1,2);
+
+pos3(curve,0); pos4(curve,90);
+x3=x4=.5w; y4=.05h; y3=.5[y4r,y4l]; dot(3,4);
+
+pos5(curve,0); pos6(curve,90);
+x5=x6=.5w; y6=.5h; y5=.5[y6r,y6l]; dot(5,6);
+
+pos7(curve,0); pos8(curve,90);
+x7=x8=.25w; y8=.5[y6,y2]; y7=.5[y8r,y8l]; dot(7,8);
+
+pos9(curve,0); pos10(curve,90);
+x9=x10=.25w; y10=.5[y6,y4]; y9=.5[y10r,y10l]; dot(9,10);
+
+pos11(curve,0); pos12(curve,90);
+x11=x12=.75w; y12=.5[y6,y2]; y11=.5[y12r,y12l]; dot(11,12);
+
+pos13(curve,0); pos14(curve,90);
+x13=x14=.75w; y14=.5[y6,y4]; y13=.5[y14r,y14l]; dot(13,14);
+penlabels(1,2,2',3,4,6,7); endchar;
+
+cmchar "Cedilla accent";
+beginchar(oct"030",8u#,0,.875desc_depth#);
+adjust_fit(0,0);
+x1=.5w+.5u;
+if serifs: pickup crisp.nib; pos1(stem,0); pos2(stem,0);
+ pos3(vair,90); pos4(stem,0); pos5(vair,-90);
+ x1=x2; z3l=z2l; x4=x2+1.5u; x5=x3-1.5u;
+ bot y1=-o; bot y2=-vround 2/7d-o; y4=.5[y3,y5]; bot y5=-d-o;
+ filldraw stroke z1e--z2e;  % stem
+ filldraw stroke z3e{right}...z4e{down}...{left}z5e;  % hook
+else: pickup fine.nib; pos1(vair,0); top y1=-o-2;
+ pos2(.5[vair,stem],0); bot y2=-d-o; x2=x1-1.25u;
+ filldraw stroke z1e--z2e; fi  % diagonal
+penlabels(1,2,3,4,5); endchar;
+
+iff ligs>0: cmchar "Cross for Polish l and L";
+if unknown l_width#:
+ l_width#:=5u#+2serif_fit#; fi  % nominal width of `l'
+if unknown L_stem#:
+ L_stem#:=cap_serif_fit#+max(2u#+.5cap_stem#,3u#); fi  % center of `L' stem
+ligtable oct"040": "l" kern -l_width#-2letter_fit#,
+ "L" kern -.5l_width#-L_stem#-2letter_fit#;
+beginchar(oct"040",l_width#,x_height#,0);
+adjust_fit(stem_shift#,-stem_shift#);
+pickup crisp.nib; x2-x1=max(4u,2.8u+stem); .5[x1,x2]=.5w;
+y1-.5bar=.2[bar_height,x_height]; y2+.5bar=.8[bar_height,x_height];
+numeric theta; theta=angle(z2-z1)+90;
+pos1(bar,theta); pos2(bar,theta);
+filldraw stroke z1e--z2e;  % diagonal
+penlabels(1,2); endchar;
+
+cmchar "Circumflex (hat) accent";
+beginchar(oct"136",9u#,min(asc_height#,2x_height#),0);
+if serifs: italcorr .5[x_height#,h#]*slant+.5hair#-1.75u#;
+ adjust_fit(0,0);
+ pickup crisp.nib; pos2(.5[vair,curve],90); top y2r=h; x2=.5w;
+ x1=w-x3=good.x 2.25u; y1=y3=.5[x_height,y2];
+ pos1(hair,angle(z2-z1)+90); pos3(hair,angle(z3-z2)+90);
+ filldraw stroke z1e--z2e--z3e;  % diagonals
+else: italcorr 2/3[x_height#,h#]*slant-.5stem#+.5vair#-.75u#;
+ adjust_fit(0,0);
+ pickup fine.nib; pos1(vair,0); pos3(vair,0); x1=w-x3;
+ pos2(stem,0); top y2=h; x2=.5w; bot y1=bot y3=vround 2/3[h,x_height]-eps;
+ lft x1l=hround(rt x2r-3.25u-.5vair); % same slope as in the acute accent
+ z0=whatever[z1r,z2r]=whatever[z2l,z3l];
+ y4l=y4r=y2; x4l=good.x .2[x2l,x2]; x4r=w-x4l;
+ filldraw z4l--z1l--z1r--z0--z3l--z3r--z4r--cycle; fi  % diagonals
+penlabels(0,1,2,3,4); endchar;
+
+iff ligs>0: cmchar "Dot accent";
+numeric dot_diam#; dot_diam#=max(dot_size#,cap_curve#);
+beginchar(oct"137",5u#,min(asc_height#,10/7x_height#+.5dot_diam#),0);
+define_whole_blacker_pixels(dot_diam);
+italcorr h#*slant+.5dot_diam#-2u#;
+adjust_fit(0,0);
+pickup tiny.nib; pos1(dot_diam,0); pos2(dot_diam,90);
+x1=x2=.5w; top y2r=h+1;
+if bot y2l<x_height+o+slab: y2l:=min(y2r-eps,x_height+o+slab+.5tiny); fi
+y1=.5[y2l,y2r]; dot(1,2);  % dot
+penlabels(1,2); endchar;
+
+iff ligs>0: cmchar "Long Hungarian umlaut accent";
+beginchar(oct"175",9u#,min(asc_height#,2x_height#),0);
+italcorr h#*slant-u#;
+adjust_fit(0,0);
+x3-x1=x4-x2=hround 3u; y3=y1; y4=y2;
+if serifs: pickup crisp.nib; x3+.5stem=hround(w-1.5u); x2=2.5u;
+ y1+.5stem=h; y2=max(2/3[h,x_height],x_height+o+hair);
+ numeric theta; theta=angle(z2-z1)+90;
+ pos1(stem,theta); pos2(hair,theta);
+ pos3(stem,theta); pos4(hair,theta);
+ filldraw circ_stroke z1e--z2e;  % left diagonal
+ filldraw circ_stroke z3e--z4e;  % right diagonal
+else: pickup fine.nib; pos1(stem,0); pos2(vair,0);
+ pos3(stem,0); pos4(vair,0);
+ rt x3r=hround(w-1.5u); lft x4l=hround(.5w+u-.5vair);
+ top y1=h; bot y2=vround 2/3[h,x_height];
+ filldraw stroke z1e--z2e;  % left diagonal
+ filldraw stroke z3e--z4e; fi  % right diagonal
+penlabels(1,2,3,4); endchar;
+
+cmchar "Tilde (squiggle) accent";
+beginchar(oct"176",9u#,min(asc_height#,10/7x_height#+.5dot_size#),0);
+italcorr h#*slant-u#;
+adjust_fit(0,0);
+if serifs: numeric theta; theta=angle(1/6(6u-vair),1/4(h-x_height));
+ pickup crisp.nib; numeric mid_width; mid_width=.4[vair,stem];
+ pos1(vair,theta+90); pos2(vair,theta+90);
+ pos3(vair,theta+90); pos4(vair,theta+90);
+ z2-z1=z4-z3=(mid_width-crisp)*dir theta;
+ lft x1r=w-rt x4l=hround 1.5u; top y4r=h;
+ bot y1l=vround(bot y1l+min(2/3[x_height,h],y3l-.25vair)-top y1r);
+ pair delta; ypart delta=3(y3l-y1l); delta=whatever*dir theta;
+ filldraw z1l..controls(z1l+delta)and(z3l-delta)..z3l..z4l
+  --z4r..controls(z4r-delta)and(z2r+delta)..z2r..z1r--cycle;  % stroke
+else: pickup fine.nib; pos1(vair,180); pos2(vair,90);
+ pos3(.5[vair,slab],90); pos4(vair,90); pos5(vair,180);
+ lft x1r=w-rt x5l=hround 1.5u; x2-x1=x3-x2=x4-x3=x5-x4;
+ bot y1=bot y4l=vround(.75[x_height,h]-vair);
+ top y2r=top y5=h; y3=.5[y2,y4];
+ filldraw stroke z1e{up}...z2e{right}..z3e..{right}z4e...{up}z5e; fi % stroke
+penlabels(1,2,3,4,5); endchar;
+
+cmchar "Umlaut (double dot) accent";
+numeric dot_diam#,dot_diam;
+dot_diam#=max(dot_size#,cap_curve#);
+beginchar(oct"177",9u#,min(asc_height#,10/7x_height#+.5dot_diam#),0);
+dot_diam=max(tiny.breadth,hround(max(dot_size,cap_curve)-2stem_corr));
+italcorr h#*slant+.5dot_diam#-2.25u#;
+adjust_fit(0,0);
+pickup tiny.nib; pos1(dot_diam,0); pos2(dot_diam,90);
+x1=x2=2.75u; top y2r=h+1;
+if bot y2l<x_height+o+slab: y2l:=min(y2r-eps,x_height+o+slab+.5tiny); fi
+y1=.5[y2l,y2r]; dot(1,2);  % left dot
+pos3(dot_diam,0); penpos4(y2r-y2l,90); y3=y4=y1; x3=x4=w-x1;
+dot(3,4);  % right dot
+penlabels(1,2,3,4); endchar;

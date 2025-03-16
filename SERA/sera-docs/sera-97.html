@@ -1,0 +1,197 @@
+<html>
+<head>
+  <title>Changes In SERA-97</title>
+</head>
+<body>
+
+<h1 align="center">
+<hr size=3 width=60%>
+                   T<font size=-1>he</font> 
+                <u>S</u><font size=-1>ystem for</font> 
+                <u>E</u><font size=-1>thiopic</font> 
+                <u>R</u><font size=-1>epresentation in</font>
+                <u>A</u><font size=-1>SCII</font><p>
+                 -1997 Standard-
+<hr size=3 width=25%>
+</h1>
+
+
+<h3>Why SERA-97?</h3>
+
+<p>What is being called ``SERA-97'' is the accumulation of adjustments that
+occurred during the year 1996.  More so than not, changes in ``SERA-97'' are
+simplifications.  The new SERA standard will be compatible with the bulk
+of existing documents. This document describes adjustments and their
+rationale, <a href="sera97-summary.html">a summary</a> is also available.</p>
+
+<p>The necessity for change arose when the <a href="sera-95.html">SERA-95</a>
+multilingual mechanisms were implemented in software and found to be overly
+cumbersome.  Further SERA was too self imposing of its escape rules within
+the domains of other scripts.  Simplification of SERA's multilingual and
+punctuation escapes will make it a better citizen in multilingual
+transliterated documents.  New escapes have also been added so that users 
+default preferences can, optionally of course, be transported in a document.</p>
+
+<p>The core of SERA remains the transliteration specification for Ethiopic
+text. The adjustments to escapes are superfluous to the general user with
+the average email software. The escape adjustment however assures developers
+that they can apply SERA and maintain a documents integrity while still in
+human readable form.  SERA-97 changes are now covered in the order of
+importance to the Ethiopic composer writing in ASCII
+(<cite>See the <a href="sera-faq.html">SERA FAQ</a> for the complete
+specification</cite>).</p>
+
+
+<h3>New Transliteration for <img src="fidels/e3.gif" alt="e3"></h3>
+
+<p>The 8th vowel used in Amharic was represented in SERA as e3.  The sound of
+the character of course is ``e''.  The rationale being that ``ea'' is a little
+easier to read and easier on the eyes than ``e3'' -associating sounds with 
+digits is unnatural.  ``ea'' is an unlikely construct in a word and should not
+present conflicts with literal ``e''``a'' (i.e. 
+<img src="fidels/e.gif"><img src="fidels/e.gif"> in Amharic or 
+<img src="fidels/e.gif"><img src="fidels/A.gif"> in Tigrigna).  
+If two and not one character is truly desired the SERA separator <b>'</b> may be
+applied as per `` e<b>'</b>a ''.</p>
+
+
+<h3>Transliteration for <img src="fidels/Ornament.gif" align="absmiddle"></h3>
+
+<p>An icon used infrequently and primarily in advertisements and not literature,
+is <img src="fidels/ornament.gif" align="bottom" alt="[Image]">.  The glyph may
+be found in one font marketed by Monotype since 1989.  The icon is temporarily 
+referred to as ``ornament'' (<em>if you know a <b>real</b> name please send 
+<a href="mailto:Daniel_Yacob_at_UNECA@un.org">email</a></em>) corresponding
+to its usage as decorative or ``ornamental''.  The SERA assignment is \~X  
+which applies the private use escape system.  Otherwise, without using special
+escapes the above is treated erroneously as a punctuation and not as a glyph.</p>
+
+
+<h3>Ethiopic Numbers</h3>
+
+Ethiopic numbers are now given by Arabic numbers, as before, but prefixed
+with <b>`</b> rather than \ .  This change has been informally documented
+in early 1996.  The rationale is to reserve \ strictly for escapes use with
+the premise that all Ethiopic text should be represented in ASCII with out
+the use of escapes.  This shift also formalizes the role of <b>`</b> as
+an ``alternate'' modifier as it has played previously with phonically
+equivalent syllables (i.e. se vs <b>`</b>se for <img src="fidels/se.gif"
+alt="[Image]"> and <img src="fidels/s2e.gif" alt="[Image]">).
+
+
+<h3>Default Setting Escapes</h3>
+
+<p>SERA allows for adjustable transliteration for different writing practices
+applied with Ethiopic text.  Such practices lead to different transliteration
+preferences into Roman script.  Generally these preferences would be set as
+application defaults and transcribed into and out of Ethiopic without loss
+of content -given the same preference settings. To communicate these
+preferences between applications and to assure the character integrity of the
+document the default settings have thus far been defined:
+<pre>
+      \~`:    Use : for Ge'ez Wordspace `: (The Default if Unspecified)
+
+      \~-:    Use : for Ge'ez Colon -:
+
+      \~?     Use  ? for Ge'ez Stylized Question Mark  (The Default)
+              Use `? for Ge'ez 3-Dot Question Mark     (The Default)
+
+      \~`|    Use  ? for Ge'ez 3-Dot Question Mark
+              Use `? for Ge'ez Stylized Question Mark
+</pre>
+Other preferences may be implicit to language selection.  In example the
+transliterated value of ``a'' for Amharic 
+(<img src="fidels/e.gif" alt="[Image]">) vs Tigrigna.
+(<img src="fidels/A.gif" alt="[Image]">)</p> 
+
+
+<h3>The Verbatim Mode Escape</h3>
+
+<p>SERA has defined a special purpose ``Verbatim Mode'' whereby  all escapes are
+ignored until the closing verbatim mode escape.  While little used, the verbatim
+mode escape does offer a convenience to authors when called upon.  The verbatim
+mode escape is now redefined in SERA-97 as \~! where previously it had been \! .
+The rationale here is to avoid confusion with the punctuation escape rules and to
+assert more strongly that \~ be required for special text processing.  The verbatim
+mode in SERA is recognized now as special text processing.</p>
+
+<h3>Multilingualism and Escapes</h3>
+
+<p>During 1995 and 1996 changes have been creeping into SERA to make it 
+more <em>language</em> and less <em>script</em> based.  This shift was 
+necessary to meet the different needs of languages that use Ethiopic script
+for writing.  Generally SERA documents are bilingual (English and Amharic for
+example) but the foresight is also required for multilingualism (Arabic, 
+Amharic, and Japanese, etc).  In practice however, simplification of the rules
+initially introduced was found to be necessary.</p>
+
+<p>There remains the inherent assumption that SERA documents will be bilingual
+and the concept of a ``Primary'' and ``Secondary'' Languages are applied.
+These are the languages traditionally toggled by \ in SERA.  They may now be
+set explicitly by:
+
+     <p><code>\~languagePrimary~languageSecondary</code></p>
+
+     <p>which again sets the interpretation for an unadorned \ .
+     <code>languagePrimary</code> and <code>languageSecondary</code> are ISO 639 
+     <a href="http://www.stonehand.com/unicode/standard/iso639.html">two</a>
+  or
+     <a href="http://www.stonehand.com/unicode/standard/cd639-2.html">three</a>
+     character language names (i.e. \~amh~eng for Amharic and English).</p>
+
+    Example Usage:
+
+    <pre>
+    <code>\~amh~eng</code>   this is amharic        (Set Primary/Secondary)
+    <code>\~tir</code>       this is tigrigna       (New Third Language)
+    <code>\</code>           this is amharic        (Return To Primary)
+    <code>\</code>           this is english        (Secondary)
+    <code>\~ar~gz</code>     this is arabic         (Reset Primary/Secondary)
+    <code>\</code>           this is ge'ez          (Secondary)
+    </pre>
+
+
+<h3>Undefined from SERA-95</h3>
+
+<p>SERA-95 introduced a number of important ideas with ultimately poor
+implementations.  As SERA documentation has indicated throughout 1996
+the concept of a ``Mode for ASCII-Glyph Based Composition of Ethiopic
+Punctuation'' is discarded.  Though the punctuations intruded in the
+SERA-95 document are retained.  An exception would be the definition of
+\? for the archaic 3-dot question mark which is now defined by `? (though
+configurable as a writing practice preference).</p>
+
+
+<h3>In The Future for SERA?</h3>
+
+<p>We <em>hope</em> at this point changes in the basic transliteration system 
+will not occur -but it is <em>impossible</em> to rule out future adjustments.
+As more is learned about orthographic practices in Eritrea and Ethiopia; 
+additions may be made albeit increasingly minor.</p>
+
+<p>Ethiopic character have been found at the Academy of Ethiopian Languages 
+that were devised for Sidamigna and related languages.  More needs to be 
+learned about their sounds and actual use in print.  Possible SERA assignments
+for this series of 28 characters might follow:
+
+<table width="40%">
+  <tr valign="middle"><td align="right"><font size=+3><b>Le or `le = </b></font><td><img src="fidels/l2e.gif" alt="[Image]"></tr>
+  <tr valign="middle"><td align="right"><font size=+3><b>Me or `me = </b></font><td><img src="fidels/m2e.gif" alt="[Image]"></tr>
+  <tr valign="middle"><td align="right"><font size=+3><b>Re or `re = </b></font><td><img src="fidels/r2e.gif" alt="[Image]"></tr>
+  <tr valign="middle"><td align="right"><font size=+3><b>      `ne = </b></font><td><img src="fidels/n2e.gif" alt="[Image]"></tr>
+</table>
+
+</p>
+
+<p>Another issue that needs to be addressed is handling of the often observed 
+writing practice where ``go'' and ``ko'' are written when for the glyphs 
+<img src="fidels/gWe.gif" alt="(gWe)"> and <img src="fidels/kWe.gif" alt="(kWe)">
+instead of the more rigorously penned <img src="fidels/ko.gif" alt="(ko)"> and
+<img src="fidels/go.gif" alt="(ko)">.  This writing practice is prevalent enough
+for Ethiopic that it may be useful in SERA to set the glyph preferences with 
+\~gWe and \~kWe or something similar.</p>
+
+<p><hr><p>
+
+</body>
+</html>

@@ -1,0 +1,806 @@
+=======================================================
+ETHIOPIAN SCIENCE & TECHNOLOGY
+=======================================================
+Vol. 3 No. 1 ---------------- < for cleo community > --------- February 1994
+
+
+###Ethio Science & Technology### is a column
+presented to the Cleo community frequently. It covers various
+issues in the science; in particular, those of more related to
+Ethiopia. Your contribution is welcomed.
+
+CONTENTS
+
+Note from the Editor
+
+To the Reader ............................................Section 1/7
+
+The Ethiopic Script in ASCII .............................Section 2/7
+
+INTRODUCTION .............................................Section 3/7
+
+DEVELOPMENT OF THE SYSTEM ................................Section 4/7
+
+FINAL TOUCHES AND CONCLUSION .............................Section 5/7
+
+APPENDIX A:
+
+Questionnaire and Sample Text ............................Section 6/7
+
+APPENDIX B :
+
+Full Sample Text in System 5 With Statistics .............Section 7/7
+
+Note from the Editor
+
+* This is the first issue of 'Ethio Science & Technology' for 1994.
+
+* Today, the column comes with an important document written
+  by Yitna and Daniel about the work they done in the area of
+  representing the Ethiopian script with Latin and key entry
+  scheme.
+
+* Their work is extremely invaluable and should not be taken
+  lightly. Those who are in Computer Science and in particular
+  typography will find it creative and educational.
+
+* The editor believes that if the reader has any questions and
+  comments, may forward them to Cleo in order to allow the
+  participation of wide audience. Those who would like just to talk
+  the authors can contact Yitna and Daniel off-line.
+
+* The editor would like to thank Yitna and Daniel for their
+  contribution to this column. Enjoy it!
+
+Section 1/7
+
+To The Reader:
+
+The following is presented for your consideration as means of
+representing Ethiopic script with Latin (or ASCII) letters. The
+system presented has evolved extensively in the year that we have
+used it for our personal correspondences through email. We
+believe at this point the system is well developed but not in its
+final form. Further refinements will only come after many have
+had the chance to apply the system on their own. Any and all feed
+back will be appreciated.
+
+Our thanks,
+
+danEl yaqob (Daniel Yacob)
+
+yTna frdyweq (Yitna Firdyiwek)
+
+Section 2/7
+
+The Ethiopic Script in ASCII
+
+1 2 3 4 5 6 7 8 9 10 11 12 
+
+gIz kaIb sals rabI hams sads sabI Dikala --> 
+
+1 he hu hi ha h' h ho
+
+2 le lu li la l' l lo lWa
+
+3 h2e h2u h2i h2a h2' h2 h2o
+
+4 me mu mi ma m' m mo mWa
+
+5 s2e s2u s2i s2a s2' s2 s2o
+
+6 re ru ri ra r' r ro rWa
+
+7 se su si sa s' s so sWa
+
+8 xe xu xi xa x' x xo xWa
+
+9 qe qu qi qa q' q qo qWe qWu qWi qWa qWe
+
+10 Qe Qu Qi Qa Q' Q Qo QWe QWu QWi QWa QWe
+
+11 be bu bi ba b' b bo bWa (Q is Tigrinia)
+
+12 ve vu vi va v' v vo vWa
+
+13 te tu ti ta t' t to tWa
+
+14 ce cu ci ca c' c co cWa
+
+15 h3e h3u h3i h3a h3' h3 h3o hWe hWu hWi hWa hWe
+
+16 ne nu ni na n' n no nWa
+
+17 Ne Nu Ni Na N' N No NWa
+
+18 a u i ' e I o ` (` as in '`re!') 
+
+19 ke ku ki ka k' k ko kWe kWu kWi kWa kWe
+
+20 He Hu Hi Ha H' H Ho HWe HWu HWi HWa HWe
+
+21 we wu wi wa w' w wo (HW is Tigrinia)
+
+22 a2 u2 i2 '2 e2 I2 o2
+
+23 ze zu zi za z' z zo zWa
+
+24 Ze Zu Zi Za Z' Z Zo ZWa
+
+25 ye yu yi ya y' y yo
+
+26 de du di da d' d do dWa
+
+27 De Du Di Da D' D Do (D is Oromiffa)
+
+28 je ju ji ja j' j jo
+
+29 ge gu gi ga g' g go gWe gWu gWi gWa gWe
+
+30 Ge Gu Gi Ga G' G Go (G is Chaha)
+
+31 Te Tu Ti Ta T' T To TWa
+
+32 Ce Cu Ci Ca C' C Co CWa
+
+33 Pe Pu Pi Pa P' P Po
+
+34 Se Su Si Sa S' S So SWa
+
+35 S2e S2u S2i S2a S2' S2 S2o
+
+36 fe fu fi fa f' f fo fWa
+
+37 pe pu pi pa p' p po
+
+(Letters will be refered to both by their ASCII spelling and
+by their position on the above number matrix (e.g. 'he'
+or 1/1). The columns are also known as 'forms' (e.g.,
+first form, second form, etc..) or by their Ethiopic names: e.g.
+gIz, kaIb, sals, . . .etc.)
+
+Section 3/7
+
+Part I. INTRODUCTION
+
+A. Why does Ethiopic need ASCII?
+
+The purpose of our proposal is to help in the creation of a
+standard that will allow for the use of Ethiopic languages in
+networked communications such as this one on Cleo. Even though
+some attempts are made now and then to write in Amharic using
+ASCII, the results (mostly salutations or short sayings) are not
+always clear, consistent, or extended. We believe that a standard
+might help encourage more online use of languages such as
+Amharic, instead of being limited to English, even though the
+text will be in ASCII form. In addition, two other areas of
+development would be possible:
+
+1) Word processor translation of e-mail: With such a standard
+in place, word processors can be developed that can read e-mail
+messages written using the ASCII/Ethiopic standard and translate
+them into Ethiopic script. In reverse, the word processors can
+translate text written in Ethiopic script into Ethiopic/ASCII for
+uploading as an e-mail message.
+
+2) Direct connection (e.g. X-windows): Developments in
+creating Ethiopic fonts for client/server software could take
+advantage of this standard and make direct synchronous
+communication using Ethiopic script possible.
+
+Software development in these areas have already been tried
+out.
+
+B. Considerations in Developing the Standard
+
+We have taken the following two considerations in coming up
+with our proposed standard:
+
+1) The system must be easy to type on a 101 keyboard. This
+entails:
+
+-- finding the closest match between the Latin and Ethiopic
+phonetic system (while being as 
+
+systematic as possible with the inevitable exceptions),
+
+-- limiting the number of keystrokes necessary for each
+Ethiopic character to a minimum, and 
+
+-- placing the most frequently used keys as close as possible
+to
+
+the 'home keys' row of the 101 keyboard
+
+2) The system must also be easy for machine translation. In
+this case, the systematicity of the mapping of Ethiopic to ASCII
+is exploited to make the machine translation between ASCII and
+Ethiopic script (in word processors, for example) as fast as
+possible.
+
+C. Terminology:
+
+1) Alphabet vs Syllabary: Though the concepts behind
+these two forms of writing are rather simple, they carry a
+history of controversy regarding which is 'better,'
+'simpler,' 'more useful,' etc. [1] Without
+getting into justifications for preferring one over the other, we
+would only point out for our own purposes that
+'alphabet' refers to the Latin or ASCII set in which
+consonants and vowels are independently manipulated, and
+'syllabary' refers to the Ethiopic script in which each
+character is defined by a consonant + vowel combination. (We use
+Latin and ASCII interchangeably.)
+
+2) Consonants and Vowels in the Ethiopic Syllabary: The
+Ethiopic syllabary contains 37 rows by 12 columns [2].
+Thirty-five of the 37 rows contain a consonant (sometimes called
+a 'radical') which is transformed in a fairly
+consistent manner as it is combined with the 7 standard vowel
+forms plus the 5 labialized (W) forms. This constitutes the 12
+columns.
+
+The only exceptions in this 'consonant + vowel'
+structure are row 18 (a) and row 22 (a2). In these two rows, the
+Ethiopic syllabary contains 'independent' or 'pure
+vowels' that can stand without a consonant. (This is
+important to note because of the complications it creates when
+Ethiopic interacts with the Latin alphabet.)
+
+Section 4/7
+
+Part II. DEVELOPMENT OF THE SYSTEM
+
+It may first occur to one when attempting to write Ethiopic
+script with Latin letters, to represent the 7 forms with numbers
+as so:
+
+Consonants:
+
+h1 h2 h3 h4 h5 h6 h7
+
+Independent Vowels:
+
+a1 a2 a3 a4 a5 a6 a7
+
+It is soon found in practice, however, that while this is a
+very simple system for representing the Ethiopic characters, it
+is not so simple to read or write in it (e.g.,
+'T5n1y6s6T6l6N6', 'a1d5s6 a1b1b4'). This is
+true largely because our minds are not trained to associate the
+Latin script with Arabic numbers to form words. One will soon
+wonder why not use the Latin vowel letters to denote the 7 forms
+of the Ethiopic characters. This is where the trouble begins: How
+do you represent the standard 7 Ethiopic forms (plus the
+'W' forms) with only 5 Latin vowels? 
+
+The first step we took was to assign a punctuation mark (the
+apostrophe ') and 'I' for the two extra Ethiopic vowels
+(plus 'W' for forms 8-12). So, following phonetic guide
+lines we came up with the following system:
+
+Consonants:
+
+h' hu hi ha he hI ho
+
+Independent Vowels:
+
+a' au ai aa ae aI ao
+
+Again, after some trial use (e.g., 'Ten'yIsITIlINI',
+'a'disI a'b'ba') we found that the writing can be made
+more readable if we used only one character for the pure vowel
+form. Then the system reduces to:
+
+Consonants:
+
+l' lu li la le lI lo
+
+Independent Vowels:
+
+' u i a e I o
+
+and our sample text would look like: 'TenayIsITIlINI',
+''disI 'b'ba' which becomes a little easier to read and
+to type.
+
+It is at this point that we began to notice two problems: 
+
+1) the 6th (or 'sadis') form of the Ethiopic
+characters occurs more often than any other form (about twice as
+often), and 
+
+2) the use of punctuation makes the 'look' of some
+familiar words peculiar.
+
+The quick solution: 
+
+1) stop using 'I' for the sadis (sixth form)
+consonants, letting the consonants stand by themselves, and 
+
+2) switch the ASCII letters for the 1st and 4th forms of the
+independent vowels.
+
+Consonants:
+
+l' lu li la le l lo
+
+Independent Vowels:
+
+a u i ' e I o
+
+Examples: 
+
+Tena ysTlN
+
+adis ab'ba
+
+Ind'mn k'rmachWal
+
+zare T'wat suq heje n'b'r
+
+man'w smh? man'w smx?
+
+Ambiguity Problem with The Independent Vowel
+
+This system is easier to read and type, but there is still a
+problem. If you have never before seen the word 'Tena'
+how will you know if you are reading 2 Ethiopic characters or 4
+-- 'Te-na' or 'T-e-n-a'? This problem of
+ambiguity usually occurs because it is not clear whether a
+consonant letter is a sadis (6th) form followed by an independent
+vowel form, or a syllable made up of the consonant and following
+vowel form. Of course, this is a problem only if the reader does
+not know the language. An Amharic speaker would not make such a
+mistake. 
+
+In another scenario, the name 'Gabriel' can be read
+'g'-b-r-el' (correctly), or 'g'-b-re-l' (not
+quite correct, but okay when speaking fast). Though the ambiguity
+is there, whether you interpret the Latin as showing 5
+(g'-b-r-e-l) characters or 4 (g'-b-re-l) makes almost no
+difference. 
+
+These conditions may not always be true, however, and the
+difference does become a big problem for word processors and
+computer software for translation. It is better then to insure
+that the characters are unmistakably represented. To accomplish
+this, our decision was to use capital (uppercase) letters for
+independent vowels that appear after a sadis (sixth form)
+consonant. Thus, we can rewrite Gabriel as 'gabrEl' and
+modify our system, which now includes a third category,
+accordingly:
+
+Consonants:
+
+l' lu li la le l lo
+
+Independent Vowels:
+
+a u i ' e I o
+
+Independent Vowels Following a 6th Form Consonant:
+
+lA lU l|i l' lE lI lO
+
+We believe, however, that this third form will not be used
+very much since most of the words in which a sadis precedes an
+independent vowel allow (sometimes even require) a glide to occur
+in which the sadis changes to whatever the independent vowel
+dictates. Again, the concern here is for possible problems with
+machine translation and not for ambiguity in the way people would
+use the system.
+
+(You will note that the pipe, '|', symbol is used to
+separate 'i' after the sadis consonant. This is
+necessary because we have already chosen the capital
+'I' to represent the sadis vowel. We anticipate the
+need to use '|' will be extremely uncommon. As a
+footnote, however, the 2 character representation of the sadis
+consonant can be 'l|'. See Commonly Asked Questions #3
+below.)
+
+Section 5/7
+
+III. FINAL TOUCHES AND CONCLUSION
+
+This last system seen above developed through applied use over
+the past year and has been successfully adapted to an
+experimental version of a marketed Ethiopic word processor.
+However, at the last minute, it was found that though easy to
+write, reading the text remained visually challenging because of
+the frequent occurrence of the punctuation mark used to represent
+the first form consonants. We experimented with the system in
+various ways to reduce the occurances of punctuation without
+straying too far from the phonetic norms we had already
+established and came up with five experimental alternatives.
+
+System 1:
+
+l' lu li la le l lo
+
+a u i ' e I o
+
+lA lU l|i l' lE lI lO
+
+System 2:
+
+la lu li l' le l lo
+
+a u i ' e I o
+
+lA lU l|i l' lE lI lO
+
+System 3:
+
+la lu li la' le l lo
+
+a u i a' e I o
+
+lA lU l|i lA' lE lI lO
+
+System 4:
+
+le lu li la l' l lo
+
+a u i e ' I o
+
+lA lU l|i lE l' lI lO
+
+System 5:
+
+le lu li la l' l lo
+
+a u i ' e I o
+
+lA lU l|i l' lE lI lO
+
+Using the five systems we produced a few paragraphs of Amharic
+text and asked readers at soc.culture.africa to vote on which
+system they found most readable. (See Appendix A for the
+questionnaire and sample text we sent out.) The system most
+favored was number five which we now represent in this proposal:
+
+Consonants:
+
+le lu li la l' l lo
+
+Independent Vowels:
+
+a u i ' e I o
+
+Independent Vowel Following a 6th Form Consonant:
+
+lA lU l|i l' lE lI lO
+
+Our effort at representing the Ethiopic script with
+Latin/ASCII has been a fairly straight forward matter. The reader
+is now encouraged to review our proposal.
+
+Notes:
+
+[1] Syllabaries in general do not distinguish between vowels
+and consonants. They do not have a regularity, symmetry, or any
+kind of matrix. The ancient Cypriot syllabary, the newly invented
+(1821?) Cherokee syllabary, and even the modern Japanese Katakana
+system have very little regularity. The syllables are arbitrary
+marks that contain the consonant and vowel in one symbol that
+does not allow any disassembly into constituent phonetic parts.
+This aspect of syllabaries is sometimes used to show that they
+are a less developed form of writing system. 
+
+Fidel, the Ethiopic syllabary, on the other hand, is highly
+regular and has a quite clearly defined set of vowel markings
+which were *added* to a base consonant/radical. In fact, just
+looking at the Fidel one can see a clearly outlined alphabetic
+underpinning. It seems that what we have in the Ethiopic system
+is not a sort of pre-alphabetic syllabary, but an outright
+further development of an alphabet--the Sabean alphabet which,
+like Hebrew and Arabic had no vowel representation. It is more
+plausible to see in Ethiopic a move from the Sabean alphabet back
+into a syllabic form, but with a standardization based on
+awareness of the explicit relationship between consonants and
+vowels. To dismiss Ethiopic as an undeveloped writing system is
+to overlook an example (perhaps the only one) of post-alphabetic
+development in writing systems.
+
+[2] The traditional matrix of the Ethiopic script is in rows
+of seven columns with the base 'W' form (here column
+8), and the other 'W' forms (here column 9-12)
+presented separately at end of the list as extensions to the core
+set. We felt a 37 x 12 matrix would be a more natural arrangement
+both because of the similarity of the characters as well as the
+efficiency it provides for machine access and manipulation of the
+characters.
+
+Some Commonly Asked Questions not addressed above:
+
+1. Why not use uppercase vowels at all times?
+
+This could be done. It would require that a different
+character be chosen for either the 3rd or 6th form vowel to
+maintain the single character representation. The primary reason
+not to use capitals at all times for the vowels is that it
+requires of the typist an extra keystroke (the 'shift'
+key). It is preferable to type with as little effort as possible.
+
+2. What if I wish to show more sound for a sadis consonant?
+
+It is not always accurate to say that the vowel component of
+the sadis consonant is not spoken. For many words the vowel in
+the 6th form consonant is clearly enounced. If you wish to write
+in a more phonetic manner with out loss of clarity; this may be
+accomplished by writing the 2 character representation form of
+the sadis consonant when it is needed. As you will recall we have
+redefined the 2 character form of the 6th consonant as
+'l|'. We can mix the two character and one character
+forms together in the same word to show when the vowel portion is
+voiced:
+
+ysTlN = y|sT|l|N
+
+tgrNa = tg|r|Na
+
+alf'lgm = alf'l|g|m
+
+Tre = T|re
+
+Writing with both the one and two character representations of
+the 6th form consonant together may be more laborious to the
+typist but has the advantage of giving the reader a better
+demonstration of the word's sound when spoken. The mixed
+representation is not ambiguous and does not pose any problem for
+machine translation when going from Latin to Ethiopic. If it
+would become a common practice to mix the two systems, we may
+wish to try alternate characters in place of the pipe (
+'|' ).
+
+3. Why Are Numbers Used With Letters?
+
+A problem that occurs when trying to represent Ethiopic script
+phonetically in Latin is the presence of Ethiopic letters that
+are phonetic equivalents. These cases are encountered with the
+two Ethiopic characters for 's' and 'S' and
+the 4 characters for 'h'. Representing one of the 2nd
+forms with an unused Latin character, say F, R, or V, would be a
+digression from phonetic norms and adds a level of complication
+to the reading. In the case of what would be h4 the uppercase
+'H' is chosen for representation. This choice models
+the husky 'kh' sound that the character has in Tigrinia
+and other languages.
+
+For the more common type of email exchanges omitting the
+number 2 or 3 does not result in a loss of interpretation. The
+use of the ordinals becomes more important later if the text is
+to be read and translated into Ethiopic script by computer. 
+
+4. Why Does 's2' Come Before 's' ?
+
+The '2' is only needed to distinguish the difference
+between the two 's's in Ethiopic script. In modern
+writing it is the newer 's' (the 2nd 's'
+appearing in the fidel) that finds the most frequent use in the
+spelling of words. The first 's' is represented as
+'s2' because it occurs less frequently in writing. Were
+the 2nd 's' labeled as 's2' it would give the
+typist more considerably finger more work to perform.
+
+5. Why is The Capital 'W' Used For Dikala Forms?
+
+The uppercase 'W' is used to remain phonetically
+consistent with the sound of the dikala forms (forms 8 - 12). The
+lower case 'w' is reserved exclusively for consonant 21
+with the 'w' sound. Thus confusion and ambiguity is
+avoided with use of the uppercase 'W'.
+
+6. Why is 'hWa' used in place of 'h3Wa'? 
+
+This is a break in consistency from how forms 1 through 7 of
+'h3' were represented. However, as 'h' and
+'h2' do not have forms after the sabI (the 7th form)
+there is no opportunity for confusion to arise from the omitted
+'3' of 'h3W'. Hence 'hW' will be
+uniquely identifiable as representing dikala forms of the h3
+consonant. The advantage of dropping the '3' in the
+dikala range, will be the keystroke saved for typists.
+
+Section 6/7
+
+APPENDIX A: Questionnaire and Sample Text
+
+Greetings to Ethiopic Script Readers,
+
+Following you will find a sample Amharic text (an article
+fragment from Ethiopian Examiner) written in 5 systems of
+representation. It is not the purpose of this document to discuss
+the development of the systems or to debate the merits and faults
+of each. I solicit your opinion with respect to where you find
+the most comfort and ease of reading. Please return to me a
+ranking of the various systems in your order of preference (e.g.
+3,5,1,4,2; 3 is best, 2 worst). Any additional comments are
+welcomed. Please pass this letter on to your friends and
+colleagues. Results of the survey will be posted when available.
+A discussion of the latin representation system, along with an
+ascii fidel, will be presented at that time. Note that the
+difference between some systems is subtle, you may wish to print
+this article to aid your evaluation. Your help is much
+appreciated.
+
+Thank You,
+
+danEl yaqob (System 1,5)
+
+d'nEl y'qob (System 2)
+
+da'nEl ya'qob (System 3)
+
+dan'l yaqob (System 4)
+
+    yacob@apollo.aoe.vt.edu
+
+System 1:
+
+Consonants:
+
+l' lu li la le l lo
+
+Independent Vowels:
+
+a u i ' e I o
+
+Independent Vowel Following a 6th Form Consonant:
+
+lA lU l|i l' lE lI lO
+
+b'k'ft'Na gugut siT'b'q y'n'b'r'w y's'lamna y'Irq gubae,
+k'tahsas 9-13 1986 '.m. b'adis ab'ba k't'ma bad'r'g'w y'amst q'n
+sbs'ba, b'ihAdeg y'mim'raw gizeyawi m'ngst slTanun Indiyasr'kb
+T'y'q'.
+
+q'd'm blo paris lay sbs'baw Indid'r'g k'T'y'qut s'bat t'qawami
+budnoc wsT, y'sastun abalat w'd' ag'rac'w sig'bu awroplan Tabiya
+lay b'polis b'masyazna bmas'r m'ngst bzihu sbs'ba lay Indaysat'fa
+adr'gWac'wal. y'tasrut abalat, ato abra y'man'ab, w'/rit g'n't
+grma, ato m'sfn t'f'ra, ato almy'hu deresana ato g'n'n'w as'fa
+(k'idehaq): ato s'yum z'n'b' (k'mdhn) Ina ato ibsa gut'ma
+(k'on'g) nac'w.
+
+System 2:
+
+la lu li l' le l lo
+
+a u i ' e I o
+
+lA lU l|i l' lE lI lO
+
+bakaftaN' gugut siTabaq yanabaraw yasal'mn' yaIrq gub'e,
+kat'hs's 9-13 1986 '.m. baadis abab' katam' b'daragaw yaamst qan
+sbsab', baihAdeg yamimar'w gizey'wi mangst slT'nun Indiy'srakb
+Tayaqa.
+
+qadam blo p'ris l'y sbsab'w Indidarag kaTayaqut sab't taq'w'mi
+budnoc wsT, yas'stun ab'l't wada agar'caw sigabu awropl'n T'biy'
+l'y bapolis bam'sy'zn' bm'sar mangst bzihu sbsab' l'y Ind'ys'taf'
+adragWacaw'l. yat'srut ab'l't, ato abr' yam'naab, wa/rit ganat
+grm', ato masfn tafar', ato almyahu deres'n' ato gananaw asaf'
+(kaideh'q): ato sayum zanaba (kamdhn) In' ato ibs' gutam'
+(kaonag) n'caw.
+
+System 3:
+
+la lu li la' le l lo
+
+a u i a' e I o
+
+lA lU l|i lA' lE lI lO
+
+bakaftaNa' gugut siTabaq yanabaraw yasala'mna' yaIrq guba'e,
+kata'hsa's 9-13 1986 a'.m. baadis ababa' katama' ba'daragaw
+yaamst qan sbsaba', baihAdeg yamimara'w gizeya'wi mangst slTa'nun
+Indiy'srakb Tayaqa.
+
+qadam blo pa'ris la'y sbsaba'w Indidarag kaTayaqut saba't
+taqa'wa'mi budnoc wsT, yasa'stun aba'la't wada agara'caw sigabu
+awropla'n Ta'biya' la'y bapolis bama'sya'zna' bma'sar mangst
+bzihu sbsaba' la'y Inda'ysa'tafa' adragWacawa'l. yata'srut
+aba'la't, ato abra' yama'naab, wa/rit ganat grma', ato masfn
+tafara', ato almyahu deresa'na' ato gananaw asafa' (kaideha'q):
+ato sayum zanaba (kamdhn) Ina' ato ibsa' gutama' (kaonag) na'caw.
+
+System 4:
+
+le lu li la l' l lo
+
+a u i e ' I o
+
+lA lU l|i lE l' lI lO
+
+bekefteNa gugut siTebeq yeneberew yeselamna yeIrq guba',
+ketahsas 9-13 1986 e.m. beadis abeba ketema baderegew yeamst qen
+sbseba, beihAd'g yemimeraw giz'yawi mengst slTanun Indiyasrekb
+Teyeqe.
+
+qedem blo paris lay sbsebaw Indidereg keTeyequt sebat teqawami
+budnoc wsT, yesastun abalat wede ageracew sigebu awroplan Tabiya
+lay bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefa
+adregWacewal. yetasrut abalat, ato abra yemaneab, we/rit genet
+grma, ato mesfn tefera, ato almyehu d'r'sana ato genenew asefa
+(keid'haq): ato seyum zenebe (kemdhn) Ina ato ibsa gutema
+(keoneg) nacew.
+
+System 5:
+
+le lu li la l' l lo
+
+a u i ' e I o
+
+lA lU l|i l' lE lI lO
+
+bekefteNa gugut siTebeq yeneberew yeselamna yeIrq gubae,
+ketahsas 9-13 1986 '.m. beadis abeba ketema baderegew yeamst qen
+sbseba, beihAd'g yemimeraw giz'yawi mengst slTanun Indiyasrekb
+Teyeqe.
+
+qedem blo paris lay sbsebaw Indidereg keTeyequt sebat teqawami
+budnoc wsT, yesastun abalat wede ageracew sigebu awroplan Tabiya
+lay bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefa
+adregWacewal. yetasrut abalat, ato abra yemaneab, we/rit genet
+grma, ato mesfn tefera, ato almyehu d'r'sana ato genenew asefa
+(keid'haq): ato seyum zenebe (kemdhn) Ina ato ibsa gutema
+(keoneg) nacew.
+
+Section 7/7
+
+APPENDIX B : Full Sample Text in System 5 With Statistics
+
+WORD COUNT : 170
+
+CONSONANT COUNT
+
+Form1 : 158 Form2 : 20 Form3 : 35 Form4 : 105
+
+Form5 : 13 Form6 : 223 Form7 : 24 Form8 : 3
+
+VOWEL COUNT
+
+Form1 : 25 Form2 : 0 Form3 : 5 Form4 : 2
+
+Form5 : 1 Form6 : 13 Form7 : 1
+
+From the Ethiopian Examiner January 1994
+
+yeslamna yeIrqu konferens giz'yawiw mengst keslTan Indiwerd
+Teyeke
+
+bekefateNa gugut siTebeq yeneberew yeselamna yeI2rq gubae,
+ketahsas 9-13 1986 '2.m. beadis abeba ketema baderegew yeamst qen
+sbseba, beih2Ad'g yemimeraw giz'yawi mengst slTanun Indiyasrekb
+Teyeqe.
+
+qedem blo paris lay sbsebaw Indidereg keTeyequt sebat teqawami
+budnoc wsT, yesastun abalat wede ageracew sigebu awroplan Tabiya
+lay bepolis bemasyazna bmaser mengst bzihu sbseba lay Indaysatefa
+adregWacewal. yetasrut abalat, ato abra yemaneab, we/rit genet
+grma, ato mesfn tefera, ato almyehu d'r'sana ato genenew asefa
+(keid'h3aq): ato seyum zenebe (kemdh3n) Ina ato ibsa gutema
+(keoneg) nacew.
+
+mengst Inezihu sewoc lay yewesedew yeIsrat Irmja sewocn
+beselamawi menged beageracew yepoletika hidet wesT Indaysatefa
+slemiyaderg bzu sewocn aseqoTtWal. beadis abeba yemigeNu
+diplomatocm yH'w yemengst Irmja yesbsebawn tesatafiwoc farhat lay
+bmeTal sbsebaw mnm bego wT't IndayameTa yaderg yhonal bemalet
+hesabacewn gelS2ewal.
+
+yeityoPya giz'yawi mengst (ih2Ad'g) besbsebaw lay saysatef
+qertWal. lezihum begiz'yawi pr'zid'ntu beato meles z'nawi
+yeteseTew mknyt sbsebaw lepropaganda '2lama bca yemidereg kentu
+sbseba nw yemil nw.
+
+--- Cheers
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Abass B. Alamnehe /
+
+abassa@neosoft.com /

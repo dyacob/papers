@@ -1,0 +1,107 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+README.DOC                                                      V 1.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+These are Ethiopian METAFONT fonts.  They are part of the EthTeX Package.
+
+Since the Ethiopian script consists more than 256 glyphs, it was necessary
+to have two font files for each set. Therefore, for one set of font there
+are two parameter files. For example, ETHIOB10 and ETHXXB10 are used for
+one set.  Because of this fact, there are also two driver files, namely 
+ETHIODVR and ETHXXDVR.
+
+NOTE: When these fonts are run with different resolution, possible errors
+      might arise indicating "Strange path (turning number is zero).'' I 
+      am still working on the problem, but should not prevent anyone from
+      running the fonts.
+
+* Font files
+
+  The fonts are organzied according to their syllabic charactristic into
+  different files.
+
+ accent.mf
+ comlig.mf
+ esibling.mf
+ ethioa.mf
+ ethiob.mf
+ ethioc.mf
+ ethioch.mf
+ ethiod.mf
+ ethioe.mf
+ ethiof.mf
+ ethiog.mf
+ ethioh.mf
+ ethiohh.mf
+ ethiohu.mf
+ ethioi.mf
+ ethioj.mf
+ ethiok.mf
+ ethiol.mf
+ ethiom.mf
+ ethion.mf
+ ethionum.mf
+ ethioo.mf
+ ethiop.mf
+ ethiopp.mf
+ ethioq.mf
+ ethioqq.mf
+ ethior.mf
+ ethios.mf
+ ethiosh.mf
+ ethiot.mf
+ ethioth.mf
+ ethiott.mf
+ ethiov.mf
+ ethiow.mf
+ ethioxxg.mf
+ ethioxxh.mf
+ ethioxxk.mf
+ ethioxxq.mf
+ ethioyn.mf
+ ethioz.mf
+ ethiozz.mf
+ ethromp.mf    
+ punct.mf      
+ romand.mf	
+ romsub.mf
+
+* driver files
+
+ ethiodvr.mf
+ ethxxdvr.mf
+ ethmath.mf
+
+* parameter files
+
+ ETHIO10.MF   ETHXX10.MF 
+ ETHIO6.MF    ETHXX6.MF 
+ ETHIO7.MF    ETHXX7.MF 
+ ETHIO8.MF    ETHXX8.MF 
+ ETHIOB10.MF  ETHXXB10.MF 
+ ETHIOB11.MF  ETHXXB11.MF 
+ ETHIOB12.MF  ETHXXB12.MF 
+ ETHIOB14.MF  ETHXXB14.MF 
+ ETHIOB18.MF  ETHXXB18.MF 
+ ETHIOB24.MF  ETHXXB24.MF 
+ ETHIOB36.MF  ETHXXB36.MF 
+ ETHIOB9.MF   ETHXXB9.MF 
+ ETHSLB10.MF  ETXSLB10.MF  
+ ETHSLB11.MF  ETXSLB11.MF 
+ ETHSLB12.MF  ETXSLB12.MF  
+ ETHSLB14.MF  ETXSLB14.MF
+ ETHSLB18.MF  ETXSLB18.MF 
+ ETHSLB24.MF  ETXSLB24.MF 
+ ETHSLB36.MF  ETXSLB36.MF 
+ ETHSLB9.MF   ETXSLB9.MF 
+ ETHTT10.MF   ETXTT10.MF 
+ ETHSLM10.MF 
+
+
+
+
+
+
+
+
+

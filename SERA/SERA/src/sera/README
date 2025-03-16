@@ -1,0 +1,6 @@
+
+After installing the ethiopic fonts where you wish, updated the font path
+shown in "main.tex" then compile the tex document as per 
+
+% latex main.tex
+

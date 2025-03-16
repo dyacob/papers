@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>Summary of Changes in SERA-97</title> 
+</head>
+
+<body>
+
+<h3>
+  Summary of Changes in <a href="sera-97.html">SERA-97</a>
+  <hr align="left" width="50%">
+</h3>
+
+<ol>
+  <b><li></b>ea is now used for <img src="fidels/e3.gif" alt="(e3)">.
+  <p>
+  <b><li></b>e3 is now interpreted as <img src="fidels/e.gif" alt="(e)">3.
+  <p>
+  <b><li></b>\~X is added for 
+     <img src="fidels/ornament.gif" alt="``Ornament''"
+	 align="bottom"> .
+  <p>
+  <b><li></b>Ethiopic numbers are now prefixed by <b>`</b> rather than \ .
+  <p>
+  <b><li></b>SERA escapes are recognized only in Ethiopic text zones
+     except for \ , \\ , and \~lang  which should be detected
+     by SERA lexers that also lex non-Ethiopic text.
+  <p>
+  <b><li></b>Except for the bilingual escape, all escapes <em><strong>MUST</em></strong> 
+     be terminated by white space (" " \n \r \t etc.) or the start of another escape 
+     (ala T<sub><big>E</big></sub>X).
+  <p>
+  <b><li></b>Escapes to set document defaults are:
+    <pre>
+      \~`:    Use : for Ge'ez Wordspace `: (The Default if Unspecified)
+
+      \~-:    Use : for Ge'ez Colon -:
+
+      \~?     Use  ? for Ge'ez Stylized Question Mark  (The Default)
+              Use `? for Ge'ez 3-Dot Question Mark     (The Default)
+
+      \~`|    Use  ? for Ge'ez 3-Dot Question Mark
+              Use `? for Ge'ez Stylized Question Mark
+    </pre>
+
+  <b><li></b>The Verbatim Mode escape, \! , is now given by \~! .
+  <p>
+
+  <b><li></b>Primary and Secondary Languages may set by:
+
+     <p><code>\~languagePrimary~languageSecondary</code></p>
+
+     <p>which sets the interpretation for an unadorned bilingual escape \ .
+     <code>languagePrimary</code> and <code>languageSecondary</code> are ISO 639 
+     <a href="http://www.stonehand.com/unicode/standard/iso639.html">two</a>
+  or
+     <a href="http://www.stonehand.com/unicode/standard/cd639-2.html">three</a>
+     character language names (i.e. \~amh~eng for Amharic and English).</p>
+
+    Example Usage:
+
+    <pre>
+    <code>\~amh~eng</code>   this is amharic        (Set Primary/Secondary)
+    <code>\~tir</code>       this is tigrigna       (New Third Language)
+    <code>\</code>           this is amharic        (Return To Primary)
+    <code>\</code>           this is english        (Secondary)
+    <code>\~ar~gz</code>     this is arabic         (Reset Primary/Secondary)
+    <code>\</code>           this is ge'ez          (Secondary)
+    </pre>
+</ol>
+
+<hr>
+</body>
+</html>

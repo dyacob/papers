@@ -1,0 +1,148 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOL.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+def lsix_ring(suffix $)(expr theta) =
+   pickup tiny.nib;  transform t; t=identity rotatedaround((.5w,.5h),theta);
+   x$a=x$c=x$+1.75u; x$b=x$b'=x$; x$d=x$d'=x$a+2u; x$e=x$f=x$+1.75u;
+   y$a=y$b=y$d'=y$+.25h; y$b'=y$d=y$c=y$-.05h; y$e=y$+.2h; y$f=y$;
+   path p, q; p=z$a..z$b..z$b'..z$c..z$d..z$d'..cycle;  q=z$e..z$f..cycle;
+   fill p transformed t;   unfill q transformed t;
+   penlabels(z$a,z$b,z$b',z$c,z$d,z$d',z$e,z$f);
+enddef;
+
+
+ % Program name:---------------- l1.mf
+cmchar "The letter l1";
+beginchar(oct "154",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(.5u#, .25u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(1.2stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+.5stem; x6l=x7l-.75stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; 
+rt x1r=hround(x0r-stem);  rt x3r=.5[x0r,x4]-.2stem;
+bot y7= bot y0=0; y2=.6h; y1=y6=.5[y2,y0]; top y4=h+o; y3=y3'=y5l=.45[y4,y2];
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l2.mf
+cmchar "The letter l2";
+beginchar(oct "310",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#, 3.5u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(1.2stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+.5stem; x6l=x7l-.75stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; 
+rt x1r=hround(x0r-stem);  rt x3r=.5[x0r,x4]-.2stem;
+bot y7= bot y0=0; y2=.6h; y1=y6=.5[y2,y0]; top y4=h+o; y3=y3'=y5l=.45[y4,y2];
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+x8=x2l; y8=y2-.1h; rt_wing(8,2u,.015h);
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l3.mf
+cmchar "The letter l3";
+beginchar(oct "311",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#, 4u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(1.2stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+.5stem; x6l=x7l-.75stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; 
+rt x1r=hround(x0r-stem);  rt x3r=.5[x0r,x4]-.2stem;
+bot y7= bot y0=0; y2=.6h; y1=y6=.5[y2,y0]; top y4=h+o; y3=y3'=y5l=.45[y4,y2];
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+x8=x0; y8=y0; rt_half_ellipse(8,1.5u);
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l4.mf
+cmchar "The letter l4";
+beginchar(oct "312",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#, 0);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(1.2stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+stem; x6l=x7l-.5stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; rt x1r=hround(x0r-stem);  
+rt x3r=.5[x0r,x4]-.2stem;
+bot y7=.25h; bot y0=0; y2=.6h; y6=.5[y7,y3];
+y1=.5[y2,y0]; top y4=h+o; y3=y3'=.45[y4,y2]; y5l=y3-.1h;
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l5.mf
+cmchar "The letter l5";
+beginchar(oct "313",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#, 3u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+.5stem; x6l=x7l-.75stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; rt x1r=hround(x0r-stem);  
+rt x3r=.5[x0r,x4]-.2stem;
+bot y7= bot y0=0; y2=.6h; y1=y6=.5[y2,y0]; top y4=h+o; y3=y3'=y5l=.45[y4,y2];
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+x8=x0-fine; y8=y0; half_ring(8);
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l6.mf
+cmchar "The letter l6";
+beginchar(oct "314",11u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#, 0);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,10); penpos5(stem,0); penpos6(stem,0); penpos7(.8stem,18);
+x7l=hround max(.5u,1.25u-.5curve); x5l=x7l+.5stem; x6l=x7l-.25stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.75stem; rt x1r=hround(x0r-stem);  
+rt x3r=.5[x0r,x4]-.2stem;
+bot y7-.75stem=0;  bot y0=0; y2=.6h; y1=y6=.5[y2,y0];
+top y4=h+o; y3=y3'=.45[y4,y2]; y5l=y3-.1h;
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+x9=x7-.75u;  y9=y7+.025h; lsix_ring(9,18)
+penlabels(1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- l7.mf
+cmchar "The letter l7";
+beginchar(oct "315",9u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#,6u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,10); penpos5(stem,0); penpos6(stem,0); penpos7(stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+.5stem; 
+x6l=x7l-.75stem; rt x4r=rt x3'l=.5w;
+x0r=w-x7l; rt x2r=x0r+.75stem; rt x1r=x0r-stem;  rt x3r=.5[x0r,x4]-.2stem;
+bot y7= bot y0=0; y2=.6h; y1=y6=.5[y2,y0]; top y4=h+o; y3=y3'=y5l=.45[y4,y2];
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+x8=x2l; x8'=x8+3u; y8=y2; y8'=y2+.05h; draw z8--z8';
+x9=x8'; y9=y8'-.3h; large_ring(9,7);
+penlabels(1,2,3,4,5,6,7); endchar;

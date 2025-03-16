@@ -1,0 +1,44 @@
+\documentclass[twocolumn,a4paper]{article}
+\pagestyle{empty}
+\include{epsf}
+
+\newfont{\washra}{/usr/lib/texmf/fonts/ethiopian/wshr10.300pk}
+\newfont{\washrx}{/usr/lib/texmf/fonts/ethiopian/wshrx10.300pk}
+\newfont{\washry}{/usr/lib/texmf/fonts/ethiopian/wshry10.300pk}
+\newfont{\washrz}{/usr/lib/texmf/fonts/ethiopian/wshrz10.300pk}
+\newfont{\Washra}{/usr/lib/texmf/fonts/ethiopian/wshr12.300pk}
+\newfont{\Washrx}{/usr/lib/texmf/fonts/ethiopian/wshrx12.300pk}
+\include{fidelmap2}
+\include{frenchquote}
+%\def\Sost{\raisebox{ 0.40ex}{\Gspace}{\hspace{-0.052in}\raisebox{-0.30ex}{\Gspace}}}
+%\def\Sabat{\Gspace\hspace{-0.008in}\Sost\Gspace}
+%\def\Sabat{\Gspace\hspace{-0.015in}\Sost\Gspace}
+\def\noi{\noindent}
+
+\begin{document}
+\title{The System for Ethiopic Representation in ASCII} 
+
+\author{ {\Washra \y\T\na \ \bi\ni\ya\m \ \f\r\d\y\we\q} \\ 
+         Yitna Firdyiwek, \emph{ybf2u@curry.edschool.virginia.edu} \\
+         {\Washra \da\n\E\l \ \ya{\Washrx \II}\qo\b \ \me{\Washrx \kWe}\n\n} \\
+%        Daniel Yaqob, \emph{dmulholl@cs.indiana.edu} }
+         Daniel Yaqob, \emph{yacob@padis.gn.apc.org} }
+
+\date{1993 - 1997}
+
+
+\maketitle
+\thispagestyle{empty}
+\input{abstract}
+\input{preface}
+\input{serax}
+\input{punct3}
+\input{escapes}
+\input{numbers}
+\input{conclude}
+\pagebreak
+\input{bib}
+\cleardoublepage
+\input{examples}
+
+\end{document}

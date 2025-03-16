@@ -1,0 +1,89 @@
+This is TeX, Version 3.1415N (C version 6.1) (format=latex 94.9.13)  5 MAY 1997 17:13
+**tables.tex
+(tables.tex
+LaTeX2e <1994/06/01> patch level 3
+Hyphenation patterns for english, usa, german, swedish, loaded.
+(/usr/lib/texmf/tex/latex/latex/article.cls
+Document Class: article 1994/07/13 v1.2u Standard LaTeX document class
+(/usr/lib/texmf/tex/latex/latex/size10.clo
+File: size10.clo 1994/07/13 v1.2u Standard LaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\@input{epsf.aux}
+(/usr/lib/texmf/tex/dvips/epsf.tex
+\epsffilein=\read1
+\epsfxsize=\dimen103
+\epsfysize=\dimen104
+\epsftsize=\dimen105
+\epsfrsize=\dimen106
+\epsftmp=\dimen107
+\pspoints=\dimen108
+)
+\@input{frenchquote.aux}
+No file frenchquote.tex.
+\@input{fidelmap.aux}
+(fidelmap.tex) (tables.aux)
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Info: Redefining \" on input line 19.
+LaTeX Info: Redefining \" on input line 19.
+ (seramap.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+
+Overfull \hbox (0.55812pt too wide) in paragraph at lines 72--72
+[]\washry ^^f8 
+ []
+
+
+Overfull \hbox (44.64465pt too wide) in paragraph at lines 5--118
+ [] 
+ []
+
+) (unisera.tex
+Overfull \hbox (101.21387pt too wide) in paragraph at lines 15--128
+ [] 
+ []
+
+) [1
+
+
+
+
+
+
+
+] [2] [3] (tables.aux) ) 
+Here is how much of TeX's memory you used:
+ 738 strings out of 10935
+ 4281 string characters out of 67003
+ 158115 words of memory out of 262141
+ 3639 multiletter control sequences out of 9500
+ 8581 words of font info for 27 fonts, out of 200000 for 512
+ 14 hyphenation exceptions out of 607
+ 21i,11n,18p,194b,339s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on tables.dvi (3 pages, 42212 bytes).

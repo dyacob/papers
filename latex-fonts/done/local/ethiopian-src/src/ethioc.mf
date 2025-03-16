@@ -1,0 +1,187 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOC.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program name:---------------- c1.MF
+cmchar "The letter c1.MF";
+beginchar(oct "143",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,0)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c2.MF
+cmchar "The letter c2.MF";
+beginchar(oct "222",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,3.5u#)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+x6=x3r; y6=.45h; rt_wing(6,2u,0);
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c3.MF
+cmchar "The letter c3.MF";
+beginchar(oct "223",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,3.5u#)
+numeric x_bar; x_bar:=1.25u;
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+x6=x4r; bot y6=o; rt_half_ellipse(6,x_bar);
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c4.MF
+cmchar "The letter c4.MF";
+beginchar(oct "224",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,0)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  y8=.25h; y8'=.35h;
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c5.MF
+cmchar "The letter c5.MF";
+beginchar(oct "225",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,2.5u#)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+x6=x4; bot y6=0; half_ring(6);
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c6.MF
+cmchar "The letter c6.MF";
+beginchar(oct "226",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,0)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=.5w; x10=x9-u; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- c7.MF
+cmchar "The letter c7.MF";
+beginchar(oct "227",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(0,0)
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.625h;  y4=.25h;  y5=.8h; y4'=.35h;
+x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+y7=.5h;  bot y8=0; y8'=y4';
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+
+penpos9(stem,0); penpos10(1.2stem,5);
+x9=x10=.5w; y9=y5; top y10=h;
+filldraw stroke z9e---z10e;
+penlabels(3,4,4',5,7,8,8',9,10); endchar;

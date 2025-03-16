@@ -1,0 +1,118 @@
+%-----------------------------------------------------------------------------
+% This is ETHIOR.MF in text format  as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program name:---------------- R1.mf
+cmchar "The letter R1";
+beginchar(oct "162",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,0);
+
+pickup fine.nib; penpos0(stem,187);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270);   pos4(vair,360);
+x0l=w-2u; x1l=x0l-.25u; x2r=u; x3r=w-6u; x4=w-4u;
+top y0=.95h;  y1=.8h;  y2=.2h; bot y3=0; y4=.075h;
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e{right}..z4e;
+x11=x4; y11=y4; rt_half_ellipse(11,0);
+penlabels(0,1,2,3,4,5,6); endchar;
+
+
+% Program name:---------------- R2.mf
+cmchar "The letter R2";
+beginchar(oct "354",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(2u#,-u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+pickup fine.nib; penpos0(stem,180);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270);   penpos5(stem,0); penpos6(stem,0);
+penpos5'(stem,0);
+lft x0=lft x1=hround(w-6u);  x2l=u; x3l=w-6.5u; x4=x3;
+x5=x6=x4-.75u; x5'=x5-.5u;
+top y0=.95h;  y1=.85h;  y2=.45h; y3=.35h; y5=.35h; y4=.35h; 
+bot y6=0; y5'=y6+.075h;
+
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e{right};
+rt_wing(4,2u,.015h);
+filldraw stroke z5e---z5'e...z6e;
+penlabels(0,1,2,3,4,5,6); endchar;
+
+
+% Program name:---------------- R3.mf
+cmchar "The letter R3";
+beginchar(oct "355",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,0);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+pickup fine.nib; penpos0(stem,180);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270); pos4(vair,270);   penpos5(stem,0); penpos6(stem,10);
+x0l=x1l=w-1.5u;  x2r=u; x3=w-5.5u; x4=w-4.5u; x5r=w-u; x6r=x5r-.5u;
+top y0=.95h;  y1=.85h;  y2=.2h-o; bot y3=.025h; y4=.065h;  y5=.2h; y6=.3h;
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e---z4e..z5e{up}...z6e;
+penlabels(0,1,2,3,4,5,6); endchar;
+
+
+% Program name:---------------- R4.mf
+cmchar "The letter R4";
+beginchar(oct "356",12u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+pickup fine.nib; penpos0(stem,180);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270); pos4(vair,270);
+x0l=w-3.75u; x1l=x0l;  x2r=u; x3=w-7u; x4=w-6u;
+top y0=.95h;  y1=.85h;  y2=.2h-o; bot y3=00; y4=.05h;
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e---z4e;
+
+penpos5(1.3stem,195); pos6(vair,90);
+x5=x4; x6=x5+1.5u; y5=y4; y6=y5+.25h; filldraw stroke pulled_arc.e(6,5);
+x7=x6;  y7=y6;  rt_wing(7,2u,.015h);
+penlabels(0,1,2,3,4,5,6,7); endchar;
+
+
+% Program name:---------------- R5.mf
+cmchar "The letter R5";
+beginchar(oct "357",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,2u#);
+
+pickup fine.nib; penpos0(stem,187);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270);   pos4(vair,360);
+x0l=w-2u; x1l=x0l-.25u; x2r=u; x3r=w-6u; x4=w-4u;
+top y0=.95h;  y1=.8h;  y2=.2h; bot y3=0; y4=.075h;
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e{right}..z4e;
+x5=x4; y5=y4; large_ring(5,10);
+penlabels(0,1,2,3,4,5,6); endchar;
+
+
+% Program name:---------------- R6.mf
+cmchar "The letter R6";
+beginchar(oct "360",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,0);
+
+pickup fine.nib; pos0(vair,90);  pos0'(vair,90); pos1(stem,180);
+penpos2(stem,180); pos2'(stem,200); pos3(vair,270);
+x0=w-3.5u; x0'=x0-1.5u; x2r=u; x1r=1.75u; x2'r=x2r+.25h; x3=w-4u;
+top y0=.95h; top y0'=y0; y1=.75h; y2=.175h;  y2'=.05h-oo;  y3=.075h+o;
+filldraw stroke z0e...z0'e{left}...z1e..z2e{down}...z2'e...z3e;
+x7=x3; y7=y3; rt_half_ellipse(7,0);
+x8=x0l; y8=y0; r_wing(8);
+penlabels(0,1,2,2',3); endchar;
+
+
+% Program name:---------------- R7.mf
+cmchar "The letter R7";
+beginchar(oct "361",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,2u#);
+
+pickup fine.nib; pos0(vair,90);  pos0'(vair,90); pos1(stem,180);
+penpos2(stem,180); pos2'(stem,200); pos3(vair,270);
+
+x0=w-3.5u; x0'=x0-1.5u; x2r=u; x1r=1.75u; x2'r=x2r+.25h; x3=w-4u;
+top y0=.95h; top y0'=y0; y1=.75h; y2=.175h;  y2'=.05h-oo;  y3=.075h+o;
+filldraw stroke z0e...z0'e{left}...z1e..z2e{down}...z2'e...z3e;
+x7=x3; y7=y3; rt_half_ellipse(7,0);
+x8=x0; y8=y0-.225h; large_ring(8,5);
+penlabels(0,1,2,2',3); endchar;
+
+

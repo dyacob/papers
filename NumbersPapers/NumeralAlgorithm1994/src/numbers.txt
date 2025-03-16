@@ -1,0 +1,74 @@
+
+
+Selam EthioScience,
+
+  If you are like me you probably have not seen any Ethiopic numbers in any vaule larger than
+what would be used for writing years; and may be uncertain about the rules for writing numbers
+greater than 10,000.  Also if you are like me, infact you would have to be almost exactly like
+me, you were sketching out Arabic to Ethiopic number conversion algorithms during lunch today,
+and actually enjoying it.  But if you were this much like me you would also be writing now
+in which case one or both of us would cease to exist under The Cosmic Absurdity Theorem which
+by requirement initiates the collapse of the known universe.  So I hope it is just me...
+
+
+...If you do find numbers interesting then read on...
+
+
+The purpose of this posting is to get feedback to see if I am totally wrong on the mechanics of
+Ethiopic numbers as I have perceived them.  Converting an Ethiopic string of numbers into a
+second system is trivial, convering from another system into Ethiopic I found requires a little
+more care.
+
+
+Notation:   A^B    ==>  B is the exponent of A
+				A/B    ==>  integer division of A by B
+				A*B    ==>  A multiplied by A
+				A%B    ==>  A in the modulo class of B
+				(A)    ==>  ``A'' is the Fidel equivalent
+			 [A](B)   ==>  A instances of (B), Example: [3](B) = (B)(B)(B)
+
+
+
+Lets take an arbitrary string of what we call Arabic numerals:
+
+  EeDdCcBbAa
+
+  The decimal exapansion is the same in both systems, but to rewrite the string in Ethiopian
+numbers a delimitor of sorts appears:
+
+  (E*10)(e) + 10^8 + (D*10)(d) + 10^6 (C*10)(c) + 10^4 + (B*10)(b) + 10^2 + (A*10)(a)
+
+The delimitor that appears are the orders of 10 that must be inserted in the string as additional
+Ethiopic numberals.  Observing that they are the exponents are all divisible by 2 we perform
+a simple shift of this index:
+
+  (E*10)(e) + 100^4 + (D*10)(d) + 100^3 (C*10)(c) + 100^2 + (B*10)(b) + 100^1 + (A*10)(a)
+
+
+This form is more insightful as it becomes apparent soon that the orders-of-100 delimitors are
+really sequences of the two Ethiopic numbers meto (100) and asr xi (10,000)   -lets also
+abreviate (10,000) with (10K).
+
+The exponents ``i'' of 100^i then tells us how many (100) numbers and how many (10K) numbers are
+needed.  It is also quick to see that we only need the number (100) when i is odd.  We can take i-1
+(or i alone when i is even) to tell us how many (10K) numberals to write. Our string is then:
+
+  (E*10)(e)(10K)(10K)(D*10)(d)(100)(10K)(C*10)(c)(10K)(B*10)(b)(100)(A*10)(a)
+
+
+The compacted formula for 100^i interpretation:
+
+  100^i  = [i%2](100)[i/2](10K)
+
+
+An example I can verify is for a year such as 1988 which becomes:
+
+ 1988  =  (1*10)(9) + 100^1 + (8*10)(8)  =  (10)(9)(100)(80)(8)
+
+
+but this is a small number and again I truly don't know if dates are an acception or not.  I would
+hope counting rules work independ of their application.
+
+
+
+

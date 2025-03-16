@@ -1,0 +1,121 @@
+
+
+\section*{Punctuation And SERA Special Characters} 
+
+SERA uses three special characters for writing Fidel in ASCII documents.
+Backslash, $\backslash$ , is used to begin and end blocks of text written in 
+Fidel or other
+writing systems such as Roman, Arabic, Hebrew, etc.  Backslash can also separate
+blocks of text written in the same writing system but in different languages
+-this is useful to insure satisfactory transcription under different rules that
+languages can follow.  Script and language separation is the primary purpose of
+backslash.  We will see shortly that it can also be used for additional special
+purposes called ``escapes''. \\
+
+Apostrophe, ' , also called single quote, serves the purpose of separation in SERA.
+Apostrophe appearing in an Ethiopic block of SERA text will not appear in the
+Ethiopic transcription.  Apostrophe is usually used 
+after a 6$^{\textrm{th}}$ form consonant when a vowel follows. 
+Another use
+of apostrophe is between two vowels to make the ASCII reading a little clearer such as
+ke'ityoPya instead of keityoPya.  This use is left as a typist preference and makes no
+difference on the final outcome. \\
+
+Backquote, ` , also known as ``spacing grave'', usually has the function of providing
+an ``alternate'' of the token that follows.  Examples are the letters series `s, `h,
+`e, and `S for \sse, \hhe, \ee, and \SSe \  respectively.  Also punctuations and numbers in
+Ethiopic writing that have alternatives in purpose such as `?, `: and numbers `1\dots
+`10000. \\
+
+\noi
+{\large\bf Ethiopic Punctuation} \\
+\begin{tabular}{|c|c|} \hline
+   ,             & \Gcomma                       \\ \hline
+   ;             & \Gsemicolon                   \\ \hline
+   :-            & \Gprecolon                    \\ \hline
+  -:             & \Gcolon                       \\ \hline
+  `:             & \Gspace                       \\ \hline
+   :             & {\begin{tabular}{c|c} \Gcolon \   $\,$ & \ \ \Gspace \end{tabular}} \\ \hline
+   ?             & {\begin{tabular}{c|c} \Gqmark \ \ $\,$\hspace{0.01in} & \ \  \Sost  \end{tabular}} \\ \hline
+  `?             & {\begin{tabular}{c|c} \Sost   \ \ $\,$ & \ \  \Gqmark\end{tabular}} \\ \hline
+  `!             & \slaq                         \\ \hline
+  ::             & \Gperiod                      \\ \hline
+  :$|$:          & \Sabat                        \\ \hline
+  $<<$           & \raisebox{-0.2ex}{\Lquote}    \\ \hline
+  $>>$           & \raisebox{-0.6ex}{\Rquote}    \\ \hline
+  ''             & \Ggeminate                    \\ \hline
+  `'             & \parbox{0.75in}{\tiny{``Vocalized Sadis'' control character \\ \hspace*{0.12in}for linguists}} \\ \hline
+  `\ '           & {\tiny Ignored If Alone}      \\ \hline
+  `1\dots`10000  & \and\dots\asrxi               \\ \hline
+\end{tabular} 
+\hspace{0.20in}\parbox{2.50in} 
+  {\vspace*{-0.7in}The defaults for : and `? / ? use are presumed set by a user in the software
+    using SERA.  \Sost \ is the suggested default for `?  use while no default is suggested for colon.  
+ Defaults may be reset to the alternatives at any point; $\backslash\tilde{}\,`|$ would
+ set ? for \Sost \  which could be reset by $\backslash\tilde{}\,$? \.
+ It is useful to have fixed ASCII definitions for
+ \Gspace \ and \Gcolon \ (namely `: and -:) while : is available for one or the other. Colon
+ usage may be set and reset with $\backslash\tilde{}\,$-: $\backslash\tilde{}\,$`: \ .
+ To ensure the correct use of : and ? when exporting a document, the settings may be recorded at 
+ the start of the document.}
+
+
+%\vspace{0.5in}
+\newpage
+ 
+\noi
+{\large\bf Escapes} \\
+%\subsection*{Escapes}
+
+\noi
+%
+%  Not in SERA-97
+%
+% Escapes are universal in any region of text. \\
+%
+
+
+The core of SERA will always be its transliteration definition for the Fidel
+syllabary. SERA provides ``escapes'' or ``switches'' so that changes of
+language and scripts can be signaled to a reader without requiring special
+software to read the document. Special purpose escapes are also provided so
+that applications may communicate graphic elements and processing directives in
+an ASCII document. \\
+
+The backslash character then is chosen for escapes in SERA as it is in
+agreement with the existing conventions of Unix, \LaTeX, C, and other
+programming languages. Basic escapes are:\\
+
+
+\noi
+\begin{tabular}{|l|l|} \hline
+  $\backslash$   &   Script Toggle ... $\leftarrow$ fidel $\rightarrow$ $\backslash$ $\leftarrow$ latin $\rightarrow$ $\backslash$ $\leftarrow$ fidel $\rightarrow$ etc. \\
+                 &   One or more punctuation characters following $\backslash$ will not \\
+                 &   require a closing $\backslash$  The script toggle terminates when the \\
+                 &   first nonpunctuation charcter is reached. \\ \hline
+
+  $\backslash\backslash$    &   $\backslash$ The backslash escape is also in following with normal \\
+                 &    rules for punctuation. \\ \hline
+
+  $\backslash\tilde{}\,$!   &   Escapes are ignored until closing $\backslash\tilde{}\,$!  \\ \hline
+
+  $\backslash\tilde{}\,$xxx &  \\
+  $\backslash\tilde{}$\{do xxx\}    &       Perform ``xxx''  \\ \hline
+\end{tabular} \\
+
+\noi
+Whitespace is the required terminator for all escapes. When space, `` '',
+is the following whitespace terminator it will be removed from the transcribed
+output. 
+
+
+
+%\noi
+%A space `` '' following the above escapes will be removed from the transcribed
+%output. 
+%
+%  Not in SERA-97
+%
+% Space at the end of a punctuation list after $\backslash$ ( as in $\backslash$$\backslash$ or $\backslash$:$|$: ) will
+% be preserved.
+

@@ -1,0 +1,279 @@
+%\documentclass[twocolumn,a4paper]{report}
+%\setlength\topmargin{0pt}
+%\setlength\topmargin{-0.5in}
+\documentclass[a4paper]{article}
+%
+%  To make rotated tables {sidewaystable} use the below
+%
+% \documentclass[dvips,a4paper]{report}
+% \usepackage{rotating}
+%
+% \pagestyle{myheadings}
+% \markright{\today}
+% \markboth{}{\today}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \lhead{\textit{{\yeG}{\kaG}{\tiG}{\tG} {\asrG}{\amstG} {\qeG}{\nG} {\asrG}{\zeteNG}{\metoG}{\zeTanaG}{\andG}}}
+% \rhead{\textit{February 23, 1999}}
+\include{frenchquote} 
+%\include{portland}
+%\include{lscape}
+\include{epsf}
+\include{qobitree}
+\usepackage{ipa}
+\usepackage{array}
+\usepackage{psboxit}
+\usepackage{colortbl}
+\usepackage{supertabular}
+\usepackage{alltt}
+\usepackage{graphics}
+\thispagestyle{empty}      % No Number on First Page
+
+%\newfont{\washra}{/usr/lib/texmf/fonts/local/washra/pk/wshr10.300pk}
+%\newfont{\washrx}{/usr/lib/texmf/fonts/local/washra/pk/wshrx10.300pk}
+%\newfont{\washry}{/usr/lib/texmf/fonts/local/washra/pk/wshry10.300pk}
+%\newfont{\washrz}{/usr/lib/texmf/fonts/local/washra/pk/wshrz10.300pk}
+\newfont{\washra}{wshr10}
+\newfont{\washrv}{wshrv10}
+\newfont{\washrx}{wshrx10}
+\newfont{\washry}{wshry10}
+\newfont{\washrz}{wshrz10}
+
+%\newfont{\smallet}{/usr/lib/texmf/fonts/local/ethiopian/ethio8.300pk}
+%\newfont{\tinyet}{/usr/lib/texmf/fonts/local/ethiopian/ethio6.300pk}
+\newfont{\smallet}{ethio8}
+\newfont{\tinyet}{ethio6}
+
+%\newfont{\washrasl}{/usr/lib/texmf/fonts/local/ethiopian/ethslb10.300pk}
+\input{fidelmap}
+\input{mydefs}
+%\input{ethnfss}
+
+\begin{document}
+\title{The Search Goes On\ldots} 
+\author{Daniel Yacob} 
+% \title{System for Ethiopic Representation in ASCII} 
+
+% \author{ {\yG}{\TG}{\naG} \ {\beG}\ni{\yaG}{\mG} \ {\fG}{\rG}\d{\yG}{\weG}{\qG}  \\ 
+%          \I{\naG} \\ {\daG}{\nG}\E\l \ {\yaG}{\IIG}{\qoG}\b \ {\meG}{\kWeG}{\nG}{\nG}}
+
+% \date{1993 - 1996}
+\date{}
+
+%\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  The System
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{simplify}
+%\input{system}
+%\input{affixes}
+%\input{imtable}
+%\input{imtable2}
+%\input{ecosafidel4}
+%\input{regex}
+%\input{paper98}
+%\input{KidanTselote}
+%\input{Nebiey}
+%\input{Bealat2}
+%\input{extended}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Self Study
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{vocabulary}
+%\newpage   
+%\input{prepositions}
+%\newpage   
+%\input{sentence}
+%\newpage   
+%\input{bEt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Trees
+%   * These files are not insertable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  contingent.tex
+%  simplePerfect.tex
+%  simplePerfect-alt.tex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Reference Correlation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{correlate}
+%\newpage 
+%\input{terms}
+%\newpage 
+
+%\input{conjugated/test}
+%\newpage 
+%\input{conjugated/errortest}
+%\input{errortest2}
+%\input{errortest4}
+%\input{conjugated/errorsystem}
+%\input{conjugated/class1-x.tex}
+%\input{conjugated/class1-newest.tex}
+%\newpage 
+%\input{conjugated/thing}
+%\input{conjugated/class1-new}
+%\input{conjugated/class1-xx}
+%\subsection*{Class 1a Verbs}
+%\input{conjugated/class2}
+%\input{conjugated/class1a}
+%\input{conjugated/class1af}
+%\input{conjugated/class1b}
+%\input{conjugated/class1c}
+%\input{conjugated/class1ch}
+%\input{conjugated/class1h}
+%\input{conjugated/class1hf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Nouns
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{generalNouns}
+%\newpage   
+%\input{nouns-bnf}
+%\newpage
+%\input{derivedNouns}
+%\newpage
+%\input{derivedP}
+%\newpage
+%\input{derivedPronouns}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Adjectives
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{derivedAdjectives}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Adverbs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{derivedAdverbs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Verbs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% inflected
+
+%\newpage   
+%\input{verbStems}
+%\newpage   
+%\input{simpleThemes}
+%\newpage   
+%\input{simpleThemes-feleg}
+%\newpage   
+%\input{frequentativeThemes}
+%\input{negativeVerbs}
+%\newpage 
+%\input{irregularVerbs}
+
+% derived
+
+%\newpage   
+%\input{derivedContingent}
+%\input{derivedImperfect}
+%\input{derivedJussive}
+%\newpage   
+%\input{derivedSimplePerfect}
+%\input{derivedGerund}
+
+%\newpage   
+%\input{nexter/derivedContingent}
+%\newpage   
+%\input{nexter/derivedInfinitive}
+%\newpage   
+%\input{nexter/derivedRelative}
+%\newpage   
+%\input{nexter/derivedSimplePerfect}
+
+%\newpage   
+%\input{nexter/derivedGerund}
+%\newpage   
+%\input{nexter/derivedImperfect}
+%\newpage   
+%\input{nexter/derivedJussive}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Personal Inflections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{personalSuffixes}
+%\newpage   
+%\input{personifications}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Subject/Object Pronoun Ellisions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{pronouns4}
+%\newpage   
+%\input{gerund-pronouns}
+%\newpage   
+%\input{subject-vowel}
+%\newpage   
+%\input{object-vowel}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Vowel, Consonant Vowel Ellisions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage   
+%\input{new}
+%\newpage   
+%\input{noun-vowels}
+%\newpage   
+%\input{verb-vowels}
+%\newpage   
+%\input{possesive-vowel}
+%\newpage   
+%\input{vowels}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  From Bereket
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{cherokee.sty}
+\input{baye4/baye1}
+%\input{baye4/baye2}
+%\input{baye4/baye3}
+%\input{baye4/baye4}
+%\input{baye4/baye5}
+%\renewcommand{\@makefntext}[1]{\parindent\z@\noindent\makebox[1.8em][r]{\@makefnmark}{#1}}
+%\renewcommand{\@makefntext}[1]{\parindent 0pt \noindent\makebox[1.8em][r]{\@makefnmark}#1}
+
+%\noi
+%\subsection*{Class 7 Verbs}
+%\begin{tabular}{*{8}{|l|}} \hline
+%\input{/home/bereket/mule/class7}
+%\end{tabular}
+
+%\noi
+%\subsection*{Class 10 Verbs}
+%\begin{tabular}{*{8}{|l|}} \hline
+%\input{/home/bereket/mule/class10}
+%\end{tabular}
+
+\end{document}

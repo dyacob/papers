@@ -1,0 +1,434 @@
+%-----------------------------------------------------------------------------
+% This is ESIBLING.MF in text format as of February, 1993 by Abass B. Alamnehe.
+%-----------------------------------------------------------------------------
+
+% Program name:---------------- fsibling.mf
+cmchar "The letter fsibling";
+beginchar(oct "146",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(1u#,u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+pickup fine.nib; penpos0(1.2stem,185);  penpos1(1.1stem,180); 
+penpos2(1.1stem,180); pos3(stem,195);   penpos5(1.2stem,0); penpos5'(stem,0); 
+penpos6(stem,0); penpos6'(stem,0); pos3'(vair,270);
+
+x0=w-6u; x1=x0+.75u; x2l=2u; x3=x2l+u; x3'=w-4.5u; x4=x3';
+x7=x2; x6=x7+3.75u; x6'=x6+.5u;  x5=x7+3.75u;  x5'=x5-.5u;
+top y0=h;  y1=.9h;  y2=.45h; y3=.35h; y3'=.35h; y4=.35h; 
+y7=.6h-o; y6=.6h; y6'=y6-.1h; bot y5=0; y5'=y5+.075h;
+
+filldraw stroke z0e{right}..{down}z1e...z2e{down}...z3e---z3';
+rt_wing(4,2u,.015h);  draw z7..z6;
+filldraw stroke z6e{right}..{down}z6'e---z5'e{down}..{right}z5e;
+x20=x5'l; x21=x5'r; y20=y21=y5; lft_wing(20,1.5u,.015h); 
+rt_wing(21,1.5u,.015h);
+penlabels(0,1,2,3,4,5,6); endchar;
+
+
+%  % Program name:---------------- thsibling.mf
+% cmchar "The letter thsibling";
+% beginchar(oct "163",10u#,.55[cap_height#,x_height#],0);
+% adjust_fit(serif_fit#+stem_shift#,3.5u#);
+% numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+% if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% pickup fine.nib;
+% penpos0(stem,0);  penpos0'(stem,0); penpos1(stem,0); penpos2(stem,0);
+% penpos3(max(eps,light_vair-hair),90);
+% x0=w-7.75u; x0'=x0-.5u;  x1=.5w;   x2=w-2.5u;  x3=.5w;
+% bot y0=.2h; y1=.5h; bot  y0'=y0+.1(y1-y0); y2=.7h; top y3=.9h;
+% filldraw stroke z0e{left}..z0'e{up}...z1e...z2e...z3e{left};
+
+% penpos4(max(eps,light_vair-hair),-90);
+% penpos5(stem,0); penpos6(max(eps,light_vair-hair),90);
+% x4=.5w;  x5=w-x2; x6=.5w; top y4=.9h;  y5=.7h;  y6=.5h;
+% filldraw stroke z4e{left}...z5e...z6e{right};
+
+% penpos7(max(eps,light_vair-hair),90); penpos8(stem,0); penpos9(stem,0);
+% penpos9'(stem,0);
+% y7=.47h-o; y8=.37h; bot y9=00; y9'=y9+.25(y7-y9); 
+% x7=.45w;  x8=.78w;  x9=w-1.25u; x9'=x9-.5u;
+% filldraw stroke z7e{right}...z8e{down}..z9'e{down}..{right}z9e;
+% x20=x9'l; x21=x9'r; y20=y21=y9; lft_wing(20,1.5u,.015h); 
+% rt_wing(21,1.5u,.015h);
+% penlabels(1,2,3,4,5,6,7,8,9,10,11); endchar;
+
+
+% Program name:---------------- jjsibling.mf
+cmchar "The letter jjsibling";
+beginchar(oct "145",16u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,3.25u#);
+
+pickup fine.nib; penpos2(stem,5); penpos2'(stem,0); penpos3(stem,5);
+pos4(vair,105); penpos5(stem,180); penpos6(stem,185); penpos5'(stem,180);
+pos7(vair,90); penpos8(stem,0); penpos9(stem,0); penpos10(stem,5);
+
+x2=x2'-oo=.5w; x3=x2+.75u; x4r=x2l; x5'r=1.5u; x5r=1.25u; x6r=x5r+u;
+x7=x2r-oo; x8r=x9r-o=w-x5r-.15u; x10r=x9r+.5u;
+
+y2=.65h; y2'=.125h; bot y3=.05h;
+y4r=y2-o; y5=.075h; y5'=.35h; bot y6=.05h;
+top y7r=y2-o; y8=y2-.15h; y9=.025h; bot y10=-.05h;
+
+filldraw stroke z2e--z2'e{down}..{right}z3e;
+filldraw stroke z4e{left}..z5'e...z5e{down}..{right}z6e;
+filldraw stroke z10e{left}..{up}z9e{up}...z8e...z7e;
+x11=x3; y11=y3; jj_ring(11);
+x12=x6-.25u; y12=y6; jj_ring(12);
+x20=x10l; x21=x10r; y20=y21=y10; lft_wing(20,1.5u,.02h); 
+rt_wing(21,1.25u,.02h);
+penlabels(2,2',3,4,5,5',6,7,8,9,10); endchar;
+
+
+% Program name:---------------- ttsibling.mf
+cmchar "The letter ttsibling";
+beginchar(oct "170",14u#,.5[cap_height#,x_height#],0);
+adjust_fit(0,3.5u#);
+
+pickup fine.nib; penpos2(stem,5); penpos2'(stem,0); penpos3(stem,5);
+pos4(vair,105); penpos5(stem,180); penpos6(stem,185); penpos5'(stem,180);
+pos7(vair,90); penpos8(stem,0); penpos9(stem,0); penpos10(stem,5);
+
+x2=x2'-oo=.5w; x3=x2+.5u; x4r=x2l; x5'r=1.5u; x5r=1.25u; x6r=x5r+.25u;
+x7=x2r-oo; x8r=x9r-o=w-x5r-.15u; x10r=x9r+.5u;
+
+y2=.65h; y2'=.125h; bot y3=.05h; y4r=y2-o; y5=.075h; y5'=.35h; bot y6=.05h;
+top y7r=y2-o; y8=y2-.15h; y9=.075h; bot y10=0;
+
+filldraw stroke z2e--z2'e{down}..{right}z3e;
+filldraw stroke z4e{left}..z5'e...z5e{down}..{right}z6e;
+filldraw stroke z10e{left}..{up}z9e{up}...z8e...z7e;
+
+x20=x10l; x21=x10r; y20=y21=y10; lft_wing(20,1.5u,.015h); 
+rt_wing(21,1.25u,.015h);
+penlabels(2,2',3,4,5,5',6,7,8,9,10); endchar;
+
+
+% Program name:---------------- dsibling.mf
+cmchar "The letter dsibling";
+beginchar(oct "144",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-.5u#,5u#);
+numeric x_bar;
+
+% THE RIGHT TOP ARC
+pickup fine.nib; pos0(vair,270); penpos1(stem,180); penpos2(stem,180);
+penpos2'(stem,180); pos3(vair,105);
+
+x1=w-4.5u; x2r=w-7u;  x2'r=x2r+.2u; x3=w-3.5u; x0=w-2.5u;
+y1=.25h; y0=y1-o; y2=.65h; y2'=.5h; top y3=.975h;
+filldraw stroke z3e{left}...{down}z2e..z2'e---z1e{right}---z0e;
+
+penpos4(curve,0); pos5(vair,270);
+x5=x2l; x4r=w-.75u;  y5=.55h;  y4=.85h;
+filldraw stroke z5e{right}..{up}z4e{up}..{left}z3e;
+
+x6=x1r; y6=y1; lft_wing(6,u,.025h);
+x9=x0; y9=y0; rt_wing(9,0,0);
+
+x20=x0+2u; x21=x20; y20=y21=y0-.175h; lft_wing(20,2.5u,.015h); 
+rt_wing(21,2.25u,.015h);
+penlabels(0,0',1,2,2',3,4,5,6,7); endchar;
+
+
+% Program name:---------------- zzsibling.mf
+cmchar "The letter zzsibling";
+beginchar(oct "001",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(2.5u#,4u#)
+
+%LEFT STEM
+pickup fine.nib;
+penpos0(stem,5); pos1(vair,105); penpos0'(stem,0); penpos1'(stem,-0);
+x0'l=1.75u; x0l=x0'l+.5u;   x1'l=x0'l+.8u;  x1l=x1'l-1u;
+y0=.25h; y1=.85h; y0'=.15(y1-y0)+y0; y1'=.8(y1-y0)+y0;
+filldraw stroke pulled_arc.e(1,1')---z0'e{down}..{right}z0e;
+
+%RIGHT STEM
+pos3(vair,90); penpos3'(stem,180); penpos2(stem,185); penpos2'(stem,180);
+x2'l=w-x0'l; x2l=x2'l+.5u; x3'l=x2'l+.8u; x3l=x3'l+1u;
+top y3=.9h; bot y2=00; y3'=.8(y3-y2)+y2; y2'=.15(y3-y2)+y2;
+filldraw stroke pulled_arc.e(3,3')---z2'e{down}..{right}z2e;
+
+% BAR
+pos4(vair,90); pos5(vair,105);
+x4=.5[x0r,x1r]; x5=.5[x3r,x2r]; y4=.55h; y5=.6h; filldraw stroke z4e--z5e;
+
+% LEFT WING
+x6=x1; y6=y1; lft_wing(6,.75u,o);
+x7=x3; y7=y3; rt_wing(7,.75u,o);
+x20=x2r; x21=x2l; y20=y21=y2; lft_wing(20,1.75u,.015h); 
+rt_wing(21,1.25u,.015h);
+penlabels(0,1,2,3,4,5); endchar;
+
+
+% Program name:---------------- zsibiling.mf
+cmchar "The letter zsibling";
+beginchar(oct "172",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-1u#,3.5u#)
+
+%LEFT STEM
+pickup fine.nib;
+penpos0(stem,5); penpos1(stem,5); penpos0'(stem,0); penpos1'(stem,0);
+x0'l=1.75u; x0l=x0'l+.5u;   x1'l=x0'l+.8u;  x1l=x1'l-.5u;
+y0=.25h; y1=.85h; y0'=.15(y1-y0)+y0; y1'=.85(y1-y0)+y0;
+filldraw stroke z1e{right}..{down}z1'e--z0'e{down}..{right}z0e;
+
+%RIGHT STEM
+penpos3(stem,5); penpos3'(stem,0); penpos2(stem,5); penpos2'(stem,0);
+x2'r=w-x0'l; x2r=x2'r+.5u; x3'r=x2'r+.8u; x3r=x3'r-.5u;
+top y3=.925h; bot y2=00; y3'=.85(y3-y2)+y2; y2'=.15(y3-y2)+y2;
+filldraw stroke z3e{right}..{down}z3'e--z2'e{down}..{right}z2e;
+
+% BAR
+pickup fine.nib; pos4(vair,90); pos5(vair,90);
+x4=.5[x0,x1]; x5=.5[x3,x2]; y4=.55h; y5=.6h; filldraw stroke z4e--z5e;
+x20=x2l; x21=x2r; y20=y21=y2; lft_wing(20,2u,.015h); 
+rt_wing(21,1.5u,.015h);
+penlabels(0,1,2,3,4,5); endchar;
+
+
+% Program name:---------------- rsibling.mf
+cmchar "The letter rsibling";
+beginchar(oct "162",12u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,u#);
+numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+pickup fine.nib; penpos0(stem,180);  penpos1(stem,180); penpos2(stem,180);
+pos3(vair,270); pos4(vair,270);
+x0l=w-3.75u; x1l=x0l;  x2r=u; x3=w-7u; x4=w-6u;
+top y0=.95h;  y1=.85h;  y2=.2h-o; bot y3=00; y4=.05h;
+filldraw stroke z0e{down}...z1e...z2e{down}...z3e---z4e;
+
+penpos5(1.3stem,195); pos6(vair,90);
+x5=x4; x6=x5+1.5u; y5=y4; y6=y5+.25h; filldraw stroke pulled_arc.e(6,5);
+x7=x6;  y7=y6;  rt_wing(7,2u,.015h);
+
+x14=x0r+.25u; x15=x0l; y14=y15=y0-oo;
+upper_left_wing(14); upper_right_wing(15);
+penlabels(0,1,2,3,4,5,6,7); endchar;
+
+
+% Program neme:---------------- ynsibling.mf
+cmchar "The letter ynsibling";
+beginchar(oct"157",12u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,0);
+
+pickup fine.nib; pos0(vair,90); pos1(vair,105); penpos2(stem,180);
+penpos3(stem,180); pos4(vair,270); penpos5(stem,187); penpos6(stem,180);
+penpos7(stem,180); penpos8(stem,180);
+x0=w-4.5u; x1=.45w; x2r=1.75u; x3r=2.5u; x4=w-6u;
+x5=x4; x6=x5+.5u; x7=x5; x8=x5+.5u;
+y0=.8h; y1=.8h+.025h; y2=.55h; y3=.425h; y4=.45h; y5=y4; y6=y4-.1h; 
+y7=.075h; bot y8=0;
+
+filldraw stroke z0e{left}...z1e{left}...{down}z2e...z3e{right}..z4e;
+filldraw stroke z5e{right}...{down}z6e---z7e{down}...{right}z8e;
+x9=x0; y9=y0+o; rt_wing(9,0,-o);
+
+penpos12(stem,0); penpos11(stem,0); x12+.25u=x11=x7; y12=y0; y11=y12+.175h;
+filldraw stroke z12e--z11e;
+x14=x12l+.25u; x15=x12r; y14=y15=y11;
+upper_left_wing(14); upper_right_wing(15);
+x20=x8r; x21=x8l; y20=y21=y8; lft_wing(20,2u,.015h); 
+rt_wing(21,1.25u,.015h);
+penlabels(0,1,2,3,4,5,6,7,8,10,11); endchar;
+
+
+% Program neme:---------------- nsibling.mf
+cmchar "The letter nsibling";
+beginchar(oct"156",12u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-.5u#,0);
+
+pickup fine.nib; pos0(vair,90); pos1(vair,105); penpos2(stem,180);
+penpos3(stem,180); pos4(vair,270); penpos5(stem,187); penpos6(stem,180);
+penpos7(stem,180); penpos8(stem,180);
+
+x0=w-5u; x1=.45w; x2r=1.75u; x3r=2.5u; x4=w-6u;
+x5=x4; x6=x5+.5u; x7=x5; x8=x5+.5u;
+y0=.9h; y1=.9h-o; y2=.55h; y3=.425h; y4=.45h; y5=y4; 
+y6=y4-.1h; y7=.075h; bot y8=0;
+
+filldraw stroke z0e{left}...z1e{left}...{down}z2e...z3e{right}..z4e;
+filldraw stroke z5e{right}...{down}z6e---z7e{down}...{right}z8e;
+x9=x0; y9=y0+o; rt_wing(9,0,-o);
+
+x20=x8r; x21=x8l; y20=y21=y8; lft_wing(20,2u,.015h); 
+rt_wing(21,1.25u,.015h);
+penlabels(0,1,2,3,4,5,6,7,8); endchar;
+
+
+% Program neme:---------------- chsibling.mf
+cmchar "The letter chsibling";
+beginchar(oct "166",10u#,.5[cap_height#,x_height#],0);
+adjust_fit(1.5u#,1.5u#);
+numeric x_bar; x_bar:=1.75u;
+
+% STEM
+pickup fine.nib; penpos1(stem,7); penpos2(stem,0); penpos2'(stem,5);
+x1=w-4.75u; x2=x1-.75u; x2'=x1;
+y1=.95h; y2=.075h; bot y2'=0;
+filldraw stroke z1e---z2e{down}...{right}z2'e;
+
+% WINGS
+x3=.5[x1r,x2'r]; y3=.65h;  rt_wing(3,2u,.02h);
+x4=.5[x1l,x2l]; y4=.65h;  lft_wing(4,2u,.02h);
+
+penpos6(stem,0); penpos7(stem,0); x6=x1l; x7=x1r; y7=y6=y1;
+lft_half_ellipse(6,x_bar); rt_half_ellipse(7,x_bar);
+
+x20=x2'l; x21=x2'r; y20=y21=y2'; lft_wing(20,2u,.02h); 
+rt_wing(21,1.25u,.02h);
+penlabels(1,2,2',3,4,6,7); endchar;
+
+
+% Program neme:---------------- tsibling.mf
+cmchar "The letter tsibling";
+beginchar(oct"164",12u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(0,.5u#);
+
+pickup fine.nib; penpos0(1.2stem,5); penpos0'(stem,0); penpos1(1.2stem,5);
+penpos1'(stem,0);
+x0=.5w; x0'=x0+.5u; x1'=x0-.5u; x1=x1'+.5u;
+top y0=h; y0'=y0-.1h; y1'=.1h; bot y1=0;
+
+filldraw stroke z0e{right}...{down}z0'e---z1'e{down}...{right}z1e;
+x2=.5[x0'r,x0r]+oo; x2'=.5[x0'l,x1'l]; y2=.65h; y2'=y2-oo;
+rt_wing(2,2u,.02h);     lft_wing(2',2u,.02h);
+x20=x1l; x21=x1r; y20=y21=y1; lft_wing(20,2u,.02h); 
+rt_wing(21,1.25u,.02h);
+penlabels(0,0',1,1',2,2'); endchar;
+
+
+% Program name:---------------- bsibling.mf
+cmchar "The letter bsibling";
+beginchar(oct "142",10u#,.5[cap_height#,x_height#],paren_depth#);
+adjust_fit(-.5u#,4u#)
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.75h;  bot y4=0;  y5=.95h; y4'=.1h;
+x4'r=x3r-o=w-1.75u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r-.25u; x8r=x8'r+.5u;
+y7=.6h;  y8=.25h; y8'=.35h;
+filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}
+...z8'e...z8e{right};
+x20=x4l; x21=x4r; y20=y21=y4; lft_wing(20,2u,.015h); 
+rt_wing(21,1.25u,.015h);
+penlabels(1,2,3,4,5,6,7,8);  endchar;
+
+
+% Program name:---------------- shsibling.mf
+cmchar "The letter shsibling";
+beginchar(oct "165",10u#,.5[cap_height#,x_height#],paren_depth#);
+italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+adjust_fit(.5u#,3.5u#)
+numeric x_bar; x_bar:=1.25u;
+
+% THE RIGHT STEM AND ARC
+pickup fine.nib;
+penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+y3=.6h;  bot y4=0;  y5=.75h; y4'=.1h;
+x4'r=x3r-o=w-1.75u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+x8'r=x7r+oo=w-x3r-.25u; x8r=x8'r+.5u;
+y7=.45h;  y8=.25h; y8'=.35h;
+filldraw stroke z4e{left}...{up}z4'e{up}..z3e{up}..z5e...
+ z7e{down}...z8'e{down}...{right}z8e;
+
+penpos9(stem,0); penpos10(stem,5); x9=x10=.5w; y9=y5; top y10=.975h;
+filldraw stroke z9e--z10e;
+x14=x10l+.25u; x15=x10r; y14=y15=y10-oo; upper_left_wing(14); upper_right_wing(15);
+x20=x4l; x21=x4r; y20=y21=y4;lft_wing(20,2u,0); rt_wing(21,1.75u,0);
+penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+%% Program name:---------------- csibling.mf
+% cmchar "The letter csibling";
+% beginchar(oct "163",10u#,.5[cap_height#,x_height#],paren_depth#);
+% italcorr asc_height#*slant-serif_fit#+.5stem#-2u#;
+% adjust_fit(0,4u#)
+% numeric light_vair; light_vair=vair;  if hefty:-vround 2vair_corr fi;
+% if light_vair < fine.breadth:light_vair :=fine.breadth; fi
+
+% THE RIGHT STEM AND ARC
+% pickup fine.nib;
+% penpos3(stem,0);   penpos4(1.2stem,7); pos5(vair,105); penpos4'(stem,0);
+% y3=.625h;  bot y4=0;  y5=.8h; y4'=.1h;
+% x4'r=x3r-o=w-1.5u; x4r=x4'r+.5u;  x5=.5w;
+
+% THE LEFT STEM AND ARC
+% penpos7(stem,180); penpos8(1.2stem,187); penpos8'(stem,180);
+% x8'r=x7r+oo=w-x3r; x8r=x8'r+.5u;
+% y7=.5h;  y8=.25h; y8'=.35h;
+% filldraw stroke z4e{left}..z4'e{up}..z3e{up}..z5e...z7e{down}...z8'e...z8e{right};
+
+% penpos9(stem,0); penpos10(1.2stem,5);
+% x9=x10=.5w; y9=y5; top y10=h;
+% filldraw stroke z9e---z10e;
+% x20=x4l; x21=x4r; y20=y21=y4; lft_wing(20,2u,.015h); 
+% rt_wing(21,1.75u,.015h);
+% penlabels(3,4,4',5,7,8,8',9,10); endchar;
+
+
+% Program name:---------------- msibling.mf
+cmchar "The letter msibling";
+beginchar("m",16u#,.5[cap_height#,x_height#],0);
+adjust_fit(-.2u#,3u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+pos0(vair,90); pos1(vair,90); pos0'(vair,90); penpos2(stem,-180); 
+penpos3(stem,180); penpos4(vair,200); pos5(vair,270); penpos5'(stem,-0);
+penpos6(stem,-0); penpos6'(stem,0); penpos7(stem,180); penpos11(stem,180);
+penpos8(stem,180); pos8'(vair,270); penpos9(stem,0);
+penpos9'(stem,0); penpos10(stem,180); penpos14(stem,0);
+pos12(vair,270);  penpos13(stem,0); penpos13'(stem,0);
+
+lft x2r=hround u; x9'l=hround(w); x9r=x9'l-.5stem; x0'=x9;
+x5'=x5l=w-.625w; x1=x5l+stem;
+lft x4r=hround(x2r+1.25stem); x6=x5l+stem; x12l=x8r=w-.375w; x7r=x8r-.5u;
+x3=.5[x6,x2r]; x11r=hround(x7r-stem); y6=.5[y0,y1]-oo; x8'r=x9r-u;
+x10r=hround(x7r+stem); x13=w-3u; x13'=x13-stem;
+
+top y0=top y0'=h+o; y9=h+oo; top y1=.98h+o;  y2=y1-.3h; bot y4=.55h; 
+ y3=.5[y1,y2]; y5'=y4+oo;
+y7=.5[y0,y1]; y12=y8=y4+.05h-oo; y11=y8+.1h; y8'=y8+oo;
+y10=y7-.1h; bot y13=00; y13'=.25(y9-y13)+y13; y9'=.8(y9-y13)+y13;
+
+filldraw stroke z6e--z5'e...{left}z4e..super_arc.e(2,1)---z0'e;
+filldraw stroke z8'e{left}...z12e;
+filldraw stroke z9e..controls z9'e and z13'e ..z13e;
+pickup fine.nib; filldraw stroke z7e..controls z10e and z11e..z8e{right};
+
+x20=x13l; x21=x13r; y20=y21=y13; lft_wing(20,2u,.015h);
+rt_wing(21,1.75u,.015h);
+penlabels(0,1,2,3,4,5,5',6,7,8,8',9,10,11,12); endchar;
+
+
+% Program name:---------------- lsibling.mf
+cmchar "The letter lsibling";
+beginchar(oct "154",9.5u#,.55[cap_height#,x_height#],0);
+adjust_fit(+.5u#,4u#);
+if .5w <> good.x .5w :change_width; fi pickup fine.nib;
+
+penpos0(1.2stem,0); penpos1(stem,0); penpos2(stem,0); penpos3(stem,0); 
+penpos3'(stem,-20);
+penpos4(stem,20); penpos5(stem,0); penpos6(stem,0); penpos7(1.2stem,0);
+x7l=hround max(.75u,1.5u-.5curve); x5l=x7l+stem; x6l=x7l-.5stem; 
+rt x4r=rt x3'l=.5w; x0r=w-x7l; rt x2r=x0r+.25stem; rt x1r=hround(x0r-stem);  
+rt x3r=.5[x0r,x4]-.2stem;
+bot y7=.25h; bot y0=0; y2=.6h; y6=.5[y7,y3];
+y1=.5[y2,y0]; top y4=h+o; y3=y3'=.45[y4,y2]; y5l=y3-.1h;
+filldraw stroke z0e..controls z1e and z2e..z3e..z4e;
+filldraw stroke z7e..controls z6e and z5e..{up}z3'e;
+
+x20=x0l; x21=x0r; y20=y21=y0; lft_wing(20,2u,.015h); 
+rt_wing(21,1.75u,.015h);
+penlabels(1,2,3,4,5,6,7); endchar;
+

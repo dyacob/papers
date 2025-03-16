@@ -1,0 +1,173 @@
+========================================================================
+                         DAY 1:  July 15th
+========================================================================
+
+
+ESS/UNECA - Towards Information Society in Ethiopia
+---------------------------------------------------------
+
+* Date: -------------------------July 15th-16th, 1997 
+* Conference room number-------- CR2
+* Address:-----------------------UNECA
+  -------------------------------Addis Ababa, Ethiopia
+* Start Time:--------------------9:00AM in the morning
+     
+* PROGRAM 
+
+
+PART I
+"Welcome and introduction of ESS"
+(Dr. Brook Lakew, NASA Goddard) 
+9:00AM -- 9:10AM
+
+
+PART II
+ECA Opens Session
+(Karima Bounemra ben Soltane, Chief DISD)
+9:10AM -- 9:15AM
+
+
+9:15AM -- 9:45AM
+"IT, Education, and National Information and Communication
+ Infrastructure in Ethiopia"
+-By Lishan Adam, AISI
+
+
+9:45AM -- 10:15AM
+"Software and IT in Developing Nations"
+-By  Nega Gebreyesus
+
+
+10:15AM -- 10:35AM 
+Coffee Break (Coffee and cookies served, courtesy of CPU).
+
+
+
+PART III
+Session Chairperson Opens Session
+(Ahmed Hussien, Addis Ababa University Mathematics Dept/CS Unit)
+10:35AM -- 10:40AM   
+
+
+10:40AM -- 11:10AM
+"Making Information on Ethiopia Available in the Internet: 
+ A case study of Tourism in Ethiopia"
+-By Kibruyisfa Achamyeleh
+
+
+11:10AM -- 12:00PM
+"Ethiopic in the LaTeX Document Preparation System"
+-By Berhanu Beyene, University of Hamburg
+
+
+
+12:00PM -- 13:30PM   *****Break for Lunch*****
+
+
+
+PART IV
+Session Chairperson Opens Session
+(Dr. Dida Midesko, Addis Ababa University, Mathematics Dept/CS Unit)
+13:30PM -- 13:35PM
+
+
+13:35PM -- 14:05PM
+"Elements of Computational Ethiopics"
+-By Daniel Yacob, Indiana University
+
+
+14:05PM -- 14:30PM
+"Object Oriented Promgramming and Amharic Database System Development"
+-By Deres Tesfaye, OmniTech
+
+
+14:30PM -- 15:00PM
+"Ethiopic Computing:  Where are we?"
+-By Nega Alemayehu, School of Information Studies in Africa
+
+
+15:00PM -- 15:20PM 
+Coffee Break (Coffee and cookies served, courtesy of CPU).
+
+
+PART V
+Session Chairperson Opens Session
+(Dr. Dawit Bekele, Addis Ababa University Mathematics, Dept/CS Unit)
+15:20PM -- 15:25PM
+
+
+15:25PM -- 15:55PM 
+"Application of an OCR Algorithm for the Amharic Script"
+-By Worku Alemu, School of Information Studies in Africa
+
+
+15:55PM -- 16:25PM
+"Software Localisation for Ethiopic"
+-By Menasse Zaudou
+ Presented by Dr. Ahmed Hussein, Addis Ababa University, Mathematics Dept/CS Unit
+
+
+16:25PM -- 16:55PM
+"Adding Ethiopic Features to Emacs"
+-By Daniel Yacob, Indiana University
+
+
+16:55PM - 17:10PM
+Closing Remarks and ESS Awards Initiatives
+-By Lishan Adam, AISI
+
+
+
+========================================================================
+                         DAY 2:  July 16th
+========================================================================
+
+PART VI
+Panel Chairperson Opens Session
+(Daniel Yacob, Indiana University)
+9:00AM -- 9:05AM
+
+
+9:05AM -- 9:30AM
+"IT, Education, and National Information and Communication
+ Infrastructure in Ethiopia"
+-By Lishan Adam, AISI
+
+
+9:30AM -- 10:00AM
+"Integrated Business Methodologies"
+-By Fikre Yibrehu
+
+
+10:00AM -- 10:15AM
+"Computer Education in EthioSoft '96"
+-By Tamerat Zewdie, EthioSoft
+ Presented by Solomon Atnafu, Addis Ababa University CS Unit
+
+
+10:15AM -- 10:45AM
+"Computer Related Standards for Ethiopia"
+-By Dr. Dawit Bekele, Addis Ababa University CS Unit
+
+
+10:45AM -- 11:05AM
+"The Need for a National Systems Analysis and Design Standards
+ in Ethiopia"
+-By Daniel Admassie, OmniTech
+
+
+11:05AM -- 11:35AM   *****Coffee Break Courtesy of CPU*****
+
+
+PART VII
+11:35AM -- 13:00AM   
+Panel Chairperson Opens Session
+(Mulegetta Libse, Addis Ababa University School of Statistics)
+"Standards in Ethiopic Software"
+Panelist: Daniel Admassie, Daniel Yacob, Dawit Bekele, Berhanu Beyene
+
+
+13:00PM -- 13:05PM
+Closing Remarks and Conclusion
+-By Lishan Adam, AISI
+

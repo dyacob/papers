@@ -1,0 +1,26 @@
+This is METAFONT, Version 2.718 (C version 6.1.3N) (base=mf 97.9.21)  10 JAN 1998 22:03
+**\mode=local; mag=3
+
+*input src/ethbsb10
+(src/ethbsb10.mf (/usr/lib/texmf/fonts/public/cm/orig/source/cmbase.mf
+>> 3cmbase
+! Improper `:=' will be changed to `='.
+l.3 cmbase:=
+            1; % when |cmbase| is known, this file has been input
+? 
+)
+! I can't find file `ethb_drv'.
+l.78 generate ethb_drv
+                      ;      % switch to the driver file
+Please type another input file name: src/ethb_drv
+(src/ethb_drv.mf
+! I can't find file `ethiomac'.
+l.15 \input ethiomac
+                    ;
+Please type another input file name: 
+! Emergency stop.
+l.15 \input ethiomac
+                    ;
+End of file on the terminal!
+
+

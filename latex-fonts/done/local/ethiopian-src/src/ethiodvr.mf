@@ -1,0 +1,59 @@
+% ---------------------------------------------------------------------------
+% This ETHIODVR.MF, originally created as ROMAN by Donald E. Knuth 
+% and modified and revised as of February, 1993 by Abass B. Alamnehe
+% ---------------------------------------------------------------------------
+
+if ligs>1: font_coding_scheme:="TeX math symbols";
+ spanish_shriek=oct"074"; spanish_query=oct"076";
+else: font_coding_scheme:=if ligs=0: "TeX typewriter text"
+  else: "TeX text without f-ligatures" fi;
+ spanish_shriek=oct"016"; spanish_query=oct"017"; fi
+
+mode_setup; font_setup;
+\input ethiopic.mac;		      % macros
+\input accent.mf;
+\input romand.mf;		      % numeral
+\input ethromp.mf;                    % roman and ethiopic punct.
+\input punct.mf;                      % roman punctuation
+\input ethiob.mf;
+\input ethioc.mf;
+\input ethioch.mf;
+\input ethiod.mf;
+\input ethioe.mf;
+\input ethiof.mf;
+\input ethiog.mf;
+\input ethioh.mf;
+\input ethioi.mf;
+\input ethioj.mf;
+\input ethiok.mf;
+\input ethiol.mf;
+\input ethiom.mf;
+\input ethion.mf;
+\input ethioo.mf;
+\input ethiop.mf;
+\input ethiopp.mf;
+\input ethioq.mf;
+\input ethior.mf;
+\input ethiosh.mf;
+\input ethiot.mf;
+\input ethiott.mf;
+\input ethiov.mf;
+\input ethiow.mf;
+\input ethioyn.mf;
+\input ethioz.mf;
+\input ethiozz.mf;
+if ligs > 0: input comlig; fi
+if ligs <=0: input romsub; fi
+font_slant slant; font_x_height x_height#;
+
+if monospace: font_normal_space 9u#; % no stretching or shrinking
+ font_quad 18u#;
+ font_extra_space 9u#;
+else: font_normal_space 10u#+4letter_fit#;
+ font_normal_stretch 3u#; font_normal_shrink 2u#;
+ font_quad 18u#+6letter_fit#;
+ font_extra_space 3.5u#;
+ ligtable ".": "." kern-5u#; 
+fi;
+ 
+bye.

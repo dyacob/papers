@@ -1,0 +1,117 @@
+
+\section*{Thoughts on Regular Expressions for Ethiopic}
+\centerline{\large\textbf{\textit{{\beG}{\daG}{\nG}{\EG}{\lG}{\spaceG}{\yaG}{\IIG}{\qoG}{\bG}}}}
+\vspace*{0.4in}
+\noi
+Supposing that we could write regular expressions natively in Ethiopic;
+is the regular expressions language itself sufficient for identifying Ethiopic tokens?
+At the very least regex implementations would have to be updated to distinguish
+between Ethiopic syllables, numerals and punctuations for the detection of word boundaries.\\
+
+\noi
+Applying the \texttt{UNICODE} basic range for Ethiopic some simple definitions fall out:\\
+
+\noi
+\begin{tabular}{|>{\tt}r>{\tt}cl|} \hline\hline
+   {[}{\heG}-{\asrxiG}{]}     & :== & Any Single Ethiopic Character (\texttt{$\backslash$ce} in Emacs)    \\
+  {[}\^{\heG}-{\asrxiG}{]}    & :== & Any Single None-Ethiopic Character (\texttt{$\backslash$Ce} in Emacs)  \\
+  {[}{\heG}-{\fYaG}{]}+     & :== & Any Syllabic Element \\ 
+ -?({[}0-9{]}+|{[}{\andG}-{\asrxiG}{]}+) 
+                   & :== & Any Integer Value \\
+  {[}{\periodG} - {\pbreakG}{]}    & :== & Any Single Ethiopic Punctuation \textit{excluding wordspace}\\
+  {[}\ {\spaceG}$\backslash$n$\backslash$t{]}*  
+                   & :== & Zero or more space characters \\ \hline\hline
+\end{tabular}\\
+
+\noi
+For lack of the address range continuity, the implementation of the above 
+gets messy if the ISO/\texttt{UNICODE} extensions are ever made to the 
+Ethiopic character set\ldots\\
+
+Shortly however we would find that the traditional operators and syntax will 
+not be sufficient, or at least not convenient, to meet all of the needs in Ethiopic
+text processing.  Consider if you will a need to detect any 2$^{nd}$ ({\kaG}{\IIG}{\bG}) order of 
+an Ethiopic syllable (as in the case of the male definite and 3$^{rd}$ person
+male possessive articles).  We might then be lead to construct a macro of the form:\\
+
+\noi
+\fbox{
+\begin{tabular}{>{\tt}r >{\tt}c >{\tt}l}
+  {\kaG}{\IIG}{\baG}{\tG} &:==& [{\huG}{\luG}{\HuG}{\muG}{\ssuG}{\ruG}{\suG}{\xuG}{\quG}{\QuG}{\buG}{\vuG}{\tuG}{\cuG}{\hhuG}{\nuG}{\NuG}{\uG}{\kuG}{\KuG}{\wuG}{\uuG}{\zuG}{\ZuG}{\yuG}{\duG}{\DuG}{\juG}{\guG}{\GuG}{\TuG}{\CuG}{\PuG}{\SuG}{\SSuG}{\fuG}{\puG}]\\
+\end{tabular}}\\
+
+Which suffices but does not offer the same utility as would an operator 
+available for this same purpose.  Existing operators offering this service are 
+not known to the author.  The modulus operator, `\texttt{\%}' in C, is suggested here as it is otherwise without special meaning in regex languages.  
+At the implementation level for Ethiopic under \texttt{UNICODE} the operation is
+nearly just that but here we are really specifying the remainder in keeping
+with practices in speech:\\
+
+\noi
+\begin{tabular}{>{\tt}l|l}  \hline\hline
+  {[}{\heG}-{\pWaG}{]}\%7                & Any syllable of the 7$^{th}$ order.  \\ 
+  {[}{\heG}-{\pWaG}{]}\%{\oG}               & The same expressed with a vowel.    \\ 
+  {[}{\heG}-{\pWaG}{]}\%{[}1-5,7-{]}     & Any syllable of orders 1$^{st}$ through 5 $^{th}$,
+                                  and 7$^{th}$ onward\footnotemark.   \\ 
+  {[}{\heG}-{\pWaG}{]}\%{[}{\eG}-{\EG},{\oG}-{]}  & The same expressed with vowels.     \\ 
+  {[}{\heG}-{\pWaG}{]}\%{[}\^{\IG}{]}       & The negative expressions is simplest of all. \\
+  ({[}{\heG}-{\poG}{]}\%{\IG})+            & A consonant cluster such a ``{\tG}{\mG}{\hG}{\rG}{\tG}''.       \\ \hline\hline
+\end{tabular}
+\footnotetext{\texttt{UNICODE} specifies 12 orders for the {\qeG}, {\QeG}, {\hheG}, {\keG}, {\KeG} and
+ {\geG} series. But {\mYaG}, {\rYaG} and {\fYaG} may be considered 13$^{th}$ orders of their respective bases.}\\
+
+The use of vowels is convenient here, however a complication arises were we to
+try and specify an 11$^{th}$ order syllable class.  In this event it would be 
+simpler to allow for mixed use of numbers and vowels within the braces as per 
+\texttt{[{\uG},11]} rather than to try and contrive additional vowels just for this purpose
+or to make one more operator (such a `\texttt{+}') active as per \texttt{[{\uG},{\eG}+10]} or \texttt{[{\uG},{\oG}+4]}.\\
+
+The above would then be sufficient to form regular expression to detect Amharic plural suffixes -{\AG}{\tG}, -{\oG}{\cG}, -{\AG}{\toG}{\cG} as follows:\\
+
+\begin{tabular}{>{\tt}r >{\tt}c >{\tt}l}
+  AmharicPlurals & :== & ([{\heG}-{\poG}]+)(\%{\AG}/{\tG})?(\%{\oG}/{\cG})? \\
+\end{tabular}\\
+
+Without an Ethiopic aware lexicographical analyzer the same expression might be formed to detect the tokens in a buffer of \texttt{SERA} transliterated text as follows:\\ 
+
+\begin{tabular}{>{\tt}r >{\tt}c >{\tt}l}
+  SERAConsonant  & :== &  {[}b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z{]} \\
+  AmharicPlurals & :== &  ($<$SERAConsonant$>$)+(at)?(o/c) \\
+\end{tabular}\\
+
+Which ultimately becomes as unsatisfactory as our \texttt{{\kaG}{\IIG}{\baG}{\tG}} macro
+and in addition we have lost the multilingual context of our text 
+altogether and need to take careful steps to be sure of the language
+context of the stream.\\
+
+
+The operator `\texttt{\%}' may until this point have appeared to be an end fix 
+operator but could also be applied in prefix notation:\\
+
+\noi
+\begin{tabular}{>{\tt}c|l}  \hline\hline
+  \%{\oG}/{\cG}            &  Equivalent to \texttt{({[}{\heG}-{\poG}{]}+)\%{\oG}/{\cG}}       \\ 
+  $\backslash${\AG}{\wiG}   &  \parbox{2.5in}{Alternately, Ethiopic vowels could be\\
+                        applied to define escapes to serve the\\
+                        same purpose as `\texttt{\%}'.} 
+                     \\ 
+  (\%{[}{\uG},{\AG}-{\oG}{]}){\nG}?({\mG}|{\sG})?+(\%{\AG}|{\naG})?   
+                     &  A common formation at the end of words.  \\ \hline\hline
+\end{tabular}\\
+~\\
+
+
+The regular expression languages applied in \texttt{UNIX}, \texttt{Perl} and \texttt{Lex} are drawn upon in the above discussion. It is acknowledged that
+the creation of a new operator could have detrimental effects on backwards 
+compatibility in regex languages.  However, given the other requirements of 
+Ethiopic and other non-Roman writing systems upon lexicographical 
+analyzers, not the least of which will be basic token recognition of the text
+elements in multibyte text streams, the consequences to the languages applying
+the operator will be little or none.\\
+
+A new operator to detect the syllabic order will be of great utility for the
+text processing of  Ethiopic
+and other syllabaries, it should however be carefully and exhaustively
+considered first if existing
+operators, perhaps not meaningful to syllabaries, may be simply applied
+to serve in the desired context.

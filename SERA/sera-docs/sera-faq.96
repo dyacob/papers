@@ -1,0 +1,1077 @@
+SERA FAQ
+
+Frequently asked questions about SERA
+
+Last Modified: 1996/05/18
+
+Daniel Yaqob <yacob@padis.gn.apc.org>
+
+Table of Contents
+
+   * 0. Can I Skip the Explanations and Just See The System Please?
+
+   * 1. Introduction to SERA
+        o 1.1. What is SERA?
+        o 1.2. What is Ethiopic?
+        o 1.3. What is ASCII?
+        o 1.4. What is the need for SERA?
+        o 1.5. What is the present version of SERA?
+        o 1.6. Is SERA also a typing method and font address system for Fidel?
+        o 1.7. Is SERA just for Fidel and Latin?
+        o 1.8. What is a ``zone'' of text?
+
+   * 2. Consonant and Vowel Assignment
+        o 2.1. Why not use ``sh'' for ``x''
+        o 2.2. Why not and ``ie'' or ``y'' for ``E''?
+        o 2.3. Why are both ``a'' and ``e'' used for Aleph-A?
+        o 2.4. Why Are Numbers Used With Letters?
+        o 2.5. Why Does ``s2'' Come Before ``s'' ?
+        o 2.6. How was ``e3'' arrived at for the Aleph-A 8th vowel?
+        o 2.7. Labiovelar, ``W'', Forms
+             + 2.7.1. Why is the capital ``W'' used for labiovelar forms?
+             + 2.7.2. Why is "hWa" used in place of "`hWa" or "h2Wa"?
+             + 2.7.3. Why is ``Wu'' used for the letters I learned were ``W''?
+             + 2.7.4. What are all of the duplicate ways to write the
+                      Labiovelars?
+             + 2.7.5. ``fWE'' is not a letter, why is it acceptable under SERA?
+        o 2.8. What is done with the left-over Latin letters?
+
+   * 3. Punctuation in SERA
+        o 3.1. What is Glyph Mapping?
+             + 3.1.1. Functional Mapping
+             + 3.1.2. Glyph Mapping
+        o 3.2. Ge'ez punctuation in Latin (or other) script zones
+        o 3.3. Latin punctuation in Ethiopic zones
+
+   * 4. Arabic and Ethiopic Numbers in SERA
+        o 4.1. Arabic Numbers
+        o 4.2. Ethiopic Numbers
+
+   * 5. SERA Escape Sequences
+        o 5.1. Script Escapes
+        o 5.2. Graphic Escapes
+        o 5.3. Language Escapes
+
+   * 6. Technical Aspects
+        o 6.1. Extended Escapes
+        o 6.2. Multilingualism
+        o 6.3. HTML and WWW
+        o 6.4. Transcription of Extended Labiovelar Characters
+        o 6.5. Gemination under SERA
+        o 6.6. What If I Wish To Show More Sound For A Sadis Consonant?
+        o 6.7. Line Breaks
+        o 6.8. When 2 or ` Can Not Be Used For Alternate Characters
+        o 6.9. SERA and Sorting
+
+   * 7. Other Resources
+
+============================================================================
+
+0. Can I Skip the Explanations and Just See The System Please?
+
+
+Unabridged SERA Definitions
+
+
+Fidelat Table
+
+      1     2     3     4     5     6     7       8       9      10     11     12
+     g`Iz  ka`Ib sals  rab`I hams  sads  sab`I  diqala -->
+
+ 1    he    hu    hi    ha    hE    h     ho
+ 2    le    lu    li    la    lE    l     lo    lW\lWa
+ 3    He    Hu    Hi    Ha    HE    H     Ho    HW\HWa
+ 4    me    mu    mi    ma    mE    m     mo    mW\mWa
+ 5   `se   `su   `si   `sa   `sE   `s    `so   `sW\`sWa
+ 6    re    ru    ri    ra    rE    r     ro    rW\rWa
+ 7    se    su    si    sa    sE    s     so    sW\sWa
+ 8    xe    xu    xi    xa    xE    x     xo    xW\xWa
+ 9    qe    qu    qi    qa    qE    q     qo    qWe     qW\qWu   qWi    qWa    qWE
+ 10  `qe   `qu   `qi   `qa   `qE   `q    `qo
+ 11   Qe    Qu    Qi    Qa    QE    Q     Qo    QWe     QW\QWu   QWi    QWa    QWE
+ 12   be    bu    bi    ba    bE    b     bo    bW\bWa
+ 13   ve    vu    vi    va    vE    v     vo    vW\vWa
+ 14   te    tu    ti    ta    tE    t     to    tW\tWa
+ 15   ce    cu    ci    ca    cE    c     co    cW\cWa
+ 16  `he   `hu   `hi   `ha   `hE   `h    `ho    hWe     hW\hWu   hWi    hWa    hWE
+ 17   ne    nu    ni    na    nE    n     no    nW\nWa
+ 18   Ne    Nu    Ni    Na    NE    N     No    NW\NWa
+ 19    e/a*  u     i     a     E    I      o     e3
+ 20   ke    ku    ki    ka    kE    k     ko    kWe     kW\kWu   kWi    kWa    kWE
+ 21  `ke   `ku   `ki   `ka   `kE   `k    `ko
+ 22   Ke    Ku    Ki    Ka    KE    K     Ko    KWe     KW\KWu   KWi    KWa    KWE
+ 23   Xe    Xu    Xi    Xa    XE    X     Xo
+ 24   we    wu    wi    wa    wE    w     wo
+ 25   `e    `u    `i    `a    `E   `I     `o
+ 26   ze    zu    zi    za    zE    z     zo    zW\zWa
+ 27   Ze    Zu    Zi    Za    ZE    Z     Zo    ZW\ZWa
+ 28   ye    yu    yi    ya    yE    y     yo    yW\yWa
+ 29   de    du    di    da    dE    d     do    dW\dWa
+ 30   De    Du    Di    Da    DE    D     Do    DW\DWa
+ 31   je    ju    ji    ja    jE    j     jo    jW\jWa
+ 32   ge    gu    gi    ga    gE    g     go    gWe     gW\gWu   gWi    gWa    gWE
+ 33  `ge   `gu   `gi   `ga   `gE   `g    `go
+ 34   Ge    Gu    Gi    Ga    GE    G     Go    GWe     GW\GWu   GWi    GWa    GWE
+ 35   Te    Tu    Ti    Ta    TE    T     To    TW\TWa
+ 36   Ce    Cu    Ci    Ca    CE    C     Co    CW\CWa
+ 37   Pe    Pu    Pi    Pa    PE    P     Po    PW\PWa
+ 38   Se    Su    Si    Sa    SE    S     So    SW\SWa
+ 39  `Se   `Su   `Si   `Sa   `SE   `S    `So
+ 40   fe    fu    fi    fa    fE    f     fo    fW\fWa
+ 41   pe    pu    pi    pa    pE    p     po    pW\pWa
+
+Other Equivalents
+
+Consonant Series   Special Series     Lone Vowels
+
+   B   =   b         s2   =   `s       O   =   o
+   F   =   f         h2   =   `h      `O   =  `o
+   J   =   j         S2   =   `S       U   =   u
+   L   =   l         e2   =   `e      `U   =  `u
+   M   =   m         q2   =   `q       A   =   a
+   R   =   r         g2   =   `g      `A   =  `a
+   V   =   v
+   Y   =   y
+
+   W   =>  when not preceded by a consonant as defined above;
+           it is left to the specific application to interpret.
+           --  It may be ignored or given an additional phonetic
+               character if available.
+
+----------------------------------------------------------------------------
+
+Basic Series
+
+ le    lu    li    la    lE    l    lo    lWa
+
+Independent Vowels:
+
+  e/a*  u/U   i     a/A   E    I     o/O   e3
+
+Independent Vowels Following a 6th Form Consonant:
+
+ l'e   l'u   l'i   l'a   l'E   l'I   l'o   l'e3
+       lU          lA          lI    lO    le3   <-- also
+
+* ``a'' is only valid for ``e'' (Aleph-A) in transcription for Amharic.
+
+----------------------------------------------------------------------------
+
+Punctuation and Numbers in Fidel Zones
+
+Regular Mode
+
+     ,    Ge'ez Comma
+     ;    Ge'ez Semicolon
+     :    Ge'ez Wordspace
+    :-    Ge'ez Preface Colon
+    -:    Ge'ez Colon
+    ::    Ge'ez Full Stop
+    <<    Ge'ez Left Quote
+    >>    Ge'ez Right Quote
+   :|:    Ge'ez Paragraph Terminator
+    `?    Ge'ez 3-Dot Question Mark
+     ?    Ge'ez Stylized Question Mark
+    `!    Ge'ez Sarcasm Question Mark
+     .    Ge'ez Stylized Dot
+
+    \\    Latin BackSlash
+    \,    Latin Comma
+    \;    Latin Semicolon
+    \:    Latin Colon
+    \.    Latin Full Stop
+    \'    Latin Apostrophe
+    \`    Latin Backquote
+
+    '     is always ignored
+    `     is ignored unless a special vowel, consonant, or punctuation follows
+              -- s,S,h,g,q,e,u\U,i,a\A,E,I,o\O,?,!
+
+    ''    Geminates character on left
+    `'    Voiced Sads Vowel
+         ('' and `' are for phonetic use and ignored in most software)
+
+   0..9  Arabic Numerals
+  `1..9  Ethiopic Numerals
+
+----------------------------------------------------------------------------
+
+Punctuation and Numbers in Latin Zones
+
+    \,    Ge'ez Comma
+    \;    Ge'ez Semicolon
+    \:    Ge'ez Wordspace
+    \-:   Ge'ez Colon
+    \:-   Ge'ez Colon
+    \::   Ge'ez Full Stop
+    \<<   Ge'ez Left Quote
+    \>>   Ge'ez Right Quote
+    \:|:  Ge'ez Paragraph Terminator
+    \`?   Ge'ez 3-Dot Question Mark
+    \?    Ge'ez Stylized Question Mark
+    \`!   Ge'ez Sarcasm Question Mark
+    \.    Ge'ez Stylized Dot
+
+    \\    Latin Backslash
+
+   0..9   Arabic Numerals
+ \`1..`9  Ethiopic Numerals
+
+----------------------------------------------------------------------------
+
+Special Escapes
+
+    \     Change to next language of the defined primary-secondary pair.
+
+    \:;'. When followed by a punctuation list of one or more items
+          the list is transcribed in the next language of the defined
+          primary-secondary pair.
+
+    \!    The "Hard Mode Toggle".  The switch turns the mode on-off
+          treating all text as one script until the closing \! .
+          This allows extended use of \ and \~ without the
+          requirement for \\ and \\~ but at the cost of using
+          only one script within the text region.
+
+    \~    If followed by a defined character, the appropriate event occurs.
+          It is left to software houses to recognize each others' graphic
+          escape sequences and provide filters.  \~ is recommended as a means
+          to denote in ASCII the nonstandard characters and glyphs of a font
+          set.
+
+    \~xy  Change to language or script ``xy''.  ``xy'' MUST be
+          followed by " ".
+
+    \~x   Ignored if "x" is a " " or undefined in an application.
+          A " " following "x" is the required terminator.
+
+< > & ;   Contents between remain in Latin script in HTML documents.
+
+----------------------------------------------------------------------------
+1. Introduction to SERA
+
+1.1. What is SERA?
+
+``SERA'' is an acronym for ``System for Ethiopic Representation in
+ASCII''. Most simply put -SERA is a way to write in Fidel script using Latin
+letters. More extendedly; SERA is a convention for transcription of Fidel
+script into Latin that insures the integrity of the format and content of
+the original document, and that it be fully transportable across all
+computer mediums.
+
+As important as the preservation of the original content; the transcription
+system is also designed to be as easy to read and type as possible. SERA has
+been under continued development since early 1993 with the aim to fill these
+roles naturally and intuitively.
+
+Work on SERA originated to facilitate email exchanges. Development has
+occurred on and off-line of computer networks serving the Fidel script user
+communities. Contributors come from all walks of life; they are linguists,
+engineers, economists, programmers, adults, children, educators, students,
+Americans, Eritreans, Ethiopians, Europeans, and Japanese.
+
+The convention for Fidel script that SERA has grown into is now capable of
+serving and supporting Fidel in all computer and personal requirements.
+
+----------------------------------------------------------------------------
+
+1.2. What is Ethiopic?
+
+``Ethiopic'' is the term most familiar to the western world for the primary
+writing system of Eritrea and Ethiopia. Other terms that have been used for
+the script in the west have been ``Abyssinian'', ``Ethiopian'' and
+``Abyssinic''. In Eritrea and Ethiopia the writing system is known
+affectionately as ``Ge'ez'', ``Fidel'', and ``Fidelat'' and the foreign
+names may never be heard in ones lifetime. This GIF allows for examination
+of the script.
+
+Ethiopic is now a candidate for the Unicode address block U+1200 - U+138F.
+In the present paper several names may be used interchangeably for the
+script, the current choice of one term over the others should not be
+interpreted as any more correct or identifying as would be the choice of
+simply ``U+1200 - U+138F''.
+
+----------------------------------------------------------------------------
+
+1.3. What is ASCII?
+
+ASCII \'as-(,)ke^-\
+[American Standard Code for Information Interchange]
+:a code for representing alphanumeric information
+
+ASCII uses 7-bit encoding of computer letters which means there are 128
+addresses available to assign to letters that people and computers may use.
+Of the 128 available letters, humans are given enough for the letters on a
+Latin keyboard -usually the following 95:
+
+        a b c d e f g h i j k l m n o p q r s t u v w x y z
+        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+        1 2 3 4 5 6 7 8 9 0 - = ~ ! @ # $ % ^ & * ( ) _ +
+        [ ] { } \ | / < > ; : ' " , . ? `
+        (space)
+
+These 95 characters are sufficient for humans to communicate with one
+another (in languages with a history of Latin script as a writing system)
+the rest computers need for communication with each other and special
+purposes.
+
+ASCII is the present norm for communication on the Internet, unfortunately
+Fidel requires a 9-bit system for more than 360 addresses. So here lies the
+crux of our problem -how to squeeze Fidel, understandably, into the smaller
+box of letters that ASCII can hold.
+
+----------------------------------------------------------------------------
+
+1.5. What is the need for SERA?
+
+It is the need to communicate, in a simple, consistent, and unambiguous
+manner, in a medium that is restrictive to such communication with the
+script of choice.
+
+It is the need to have Fidel script be fully transportable between computer
+architectures, operating systems, software, data lines, and on storage
+media; in the lowest common denominator of communication between all systems
+-ASCII.
+
+It is the need to use Fidel script on computers systems of any kind as
+easily and as effortlessly as simple key strokes upon a keyboard.
+
+----------------------------------------------------------------------------
+
+1.6. What is the present version of SERA?
+
+Refinements to the system were introduced February 1, 1996 under the name
+SERA-96.
+
+----------------------------------------------------------------------------
+
+1.7. Is SERA also a typing method and font address system for Fidel?
+
+Ease of keyboard entry is a governing consideration in the design of SERA
+and effects many of the character mapping choices. SERA's primary purpose is
+not to be a Fidel input method for computers, but may be (and has been)
+efficiently applied as one*.
+
+
+* See Also ftp://ftp.cs.indiana.edu/pub/fidel/sera-docs/sera-im.ps
+
+----------------------------------------------------------------------------
+
+1.6. Is SERA just for Fidel and Latin?
+
+No. By convention it is Fidel biased, however, as the character mappings
+follow phonetic guidelines the same principles may be applied to other
+scripts. In particular other syllabaries. The extensions made to SERA in 1995
+do allow for multi-, and not just bi-, lingualism. Existing ASCII
+conventions for other scripts, such as Arabic, may be applied within SERA
+documents in zones marked for the additional script. With the multilingual
+mechanism provided in SERA, SERA becomes compatible with any other 7-bit
+encoding convention.
+
+----------------------------------------------------------------------------
+
+1.8. What is a ``zone'' of text?
+
+A ``zone'' or ``mode'' of text is a term used to refer to a region of text
+that, when transcribed, will primarily be of a single script type. In SERA
+zones are marked with the escape character ``\'' between which text will be
+primarily of either Ge'ez, Latin, or another script.
+
+ ..latin.. \ ..fidel.. \~ar ..arabic.. \~el ..greek.. \ ..fidel..
+
+The above shows five zones of four different scripts.
+
+============================================================================
+
+2. Consonant and Vowel Assignment
+
+Although some questions still remain to be answered regarding the number of
+"forms" to use for the ASCII/ETHIOPIC table, we have retained the original
+arrangement of twelve (12) for SERA pending decisions relating to the
+Unicode/ISO standards currently under discussion. We do not believe a change
+in the matrix of the table will affect the work discussed in this paper. An
+extended discussion on the choice of ASCII characters to denote the vowel
+components of the syllabic characters of Fidel is given in this paper from
+"The Journal of EthioSciences" Volume 3 Number 1. This gif also corresponds
+to the table given below.
+
+
+              The Ethiopic Script in ASCII
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      1     2     3     4     5     6     7     8       9      10     11     12
+     g`Iz  ka`Ib sals  rab`I hams  sads  sab`I  diqala -->
+
+ 1    he    hu    hi    ha    hE    h     ho
+ 2    le    lu    li    la    lE    l     lo    lWa
+ 3    He    Hu    Hi    Ha    HE    H     Ho    HWa
+ 4    me    mu    mi    ma    mE    m     mo    mWa
+ 5   `se   `su   `si   `sa   `sE   `s    `so   `sWa
+ 6    re    ru    ri    ra    rE    r     ro    rWa
+ 7    se    su    si    sa    sE    s     so    sWa
+ 8    xe    xu    xi    xa    xE    x     xo    xWa
+ 9    qe    qu    qi    qa    qE    q     qo    qWe   qW\qWu   qWi    qWa    qWE
+ 10  `qe   `qu   `qi   `qa   `qE   `q    `qo                  (`q is Chaha)
+ 11   Qe    Qu    Qi    Qa    QE    Q     Qo    QWe   QW\QWu   QWi    QWa    QWE
+ 12   be    bu    bi    ba    bE    b     bo    bWa           (Q is Tigrigna)
+ 13   ve    vu    vi    va    vE    v     vo    vWa
+ 14   te    tu    ti    ta    tE    t     to    tWa
+ 15   ce    cu    ci    ca    cE    c     co    cWa
+ 16  `he   `hu   `hi   `ha   `hE   `h    `ho    hWe   hW\hWu   hWi    hWa    hWE
+ 17   ne    nu    ni    na    nE    n     no    nWa
+ 18   Ne    Nu    Ni    Na    NE    N     No    NWa
+ 19    e\a*  u\U   i     a\A   E    I      o\O   e3           (e3 as in "e3re!")
+ 20   ke    ku    ki    ka    kE    k     ko    kWe   kW\kWu   kWi    kWa    kWE
+ 21  `ke   `ku   `ki   `ka   `kE   `k    `ko                  (`k is Chaha)
+ 22   Ke    Ku    Ki    Ka    KE    K     Ko    KWe   KW\KWu   KWi    KWa    KWE
+ 23   Xe    Xu    Xi    Xa    XE    X     Xo                  (X is Chaha )
+ 24   we    wu    wi    wa    wE    w     wo
+ 25   `e    `u    `i    `a    `E   `I     `o
+ 26   ze    zu    zi    za    zE    z     zo    zWa
+ 27   Ze    Zu    Zi    Za    ZE    Z     Zo    ZWa
+ 28   ye    yu    yi    ya    yE    y     yo    yWa
+ 29   de    du    di    da    dE    d     do    dWa
+ 30   De    Du    Di    Da    DE    D     Do    DWa           (D is Oromiffa)
+ 31   je    ju    ji    ja    jE    j     jo    jWa
+ 32   ge    gu    gi    ga    gE    g     go    gWe   gW\gWu   gWi    gWa    gWE
+ 33  `ge   `gu   `gi   `ga   `gE   `g    `go                  (`g is Chaha)
+ 34   Ge    Gu    Gi    Ga    GE    G     Go    GWe   GW\GWu   GWi    GWa    GWE
+ 35   Te    Tu    Ti    Ta    TE    T     To    TWa           (G is Bilin)
+ 36   Ce    Cu    Ci    Ca    CE    C     Co    CWa
+ 37   Pe    Pu    Pi    Pa    PE    P     Po    PWa
+ 38   Se    Su    Si    Sa    SE    S     So    SWa
+ 39  `Se   `Su   `Si   `Sa   `SE   `S    `So
+ 40   fe    fu    fi    fa    fE    f     fo    fWa
+ 41   pe    pu    pi    pa    pE    p     po    pWa
+
+* ``a'' is only valid for ``e'' in transcription for Amharic.
+
+----------------------------------------------------------------------------
+
+2.1. Why not use ``sh'' for ``x''
+
+``sh'' would make logical choices for readers familiar with rules in English
+but may not make sense in non-English speaking nations where a form of the
+Latin script is used. It is desirable also to keep the keystrokes to a
+minimum for humans, the parsing requirements of computers as simple as
+possible, also media and transfer sizes to a minimum by avoiding multiple
+character representations when possible.
+
+Further, the reader is left to infer the meaning "sh" as one or two Fidel
+characters. The separator ' presents a solution here but again complicates
+parsing and introduces special case rules vs generalized. The exception to
+the general rules also lends towards greater occurrences of spelling errors.
+
+----------------------------------------------------------------------------
+
+2.2. Why not and ``ie'' or ``y'' for ``E''
+
+``ie'' may be an easier keystroke than ``E'' but again introduces inference
+and parsing complexity. The choice is not always logical as a phonetic model
+for the ``ay'' sound with Latin letters when considering such examples as
+``die'', ``vie'', ``pie'', ``lie'', ``tie'' and other words found in
+/usr/lib/dict/words used by Unix ``spell''.
+
+``y'' occurs more commonly in speech and written text as a consonant than as
+the 5th syllabic form. Hence the lowercase Latin character is better
+reserved for the consonant to save on keystrokes.
+
+----------------------------------------------------------------------------
+
+2.3. Why are both ``a'' and ``e'' used for ``Aleph-a''
+
+Permitting the use of ``a'' for ``e'' is done to accomodate the writing
+convention for Fidel used in Amharic. Were only ``e'' available for Aleph-A
+the "look" of some familiar Amharic words becomes peculiar (edis ebeba in 
+example), and the sound association is poor.
+
+The use of ``a'' for ``e'' will only be applied when transcribing an
+Amharic document (``e'' remains valid as well). The alternative definition
+of ``A'', for the Aleph-A series rabI member, will then be the only
+means in Amharic text to write the forth form vowel.
+
+----------------------------------------------------------------------------
+
+2.4. Why Are Numbers Used With Letters?
+
+A problem that occurs when trying to represent Ethiopic script phonetically
+in Latin is the presence of Ethiopic letters that are phonetic equivalents.
+These cases are encountered with the two Ethiopic characters for ``s'' and
+``S'' and the 4 characters for ``h''. Representing one of the 2nd forms with
+an unused Latin character, say F, R, or V, would be a digression from
+phonetic norms and adds a level of complication to the reading. In the case
+of what would be h4 the uppercase ``K'' is chosen for representation. This
+choice models the husky ``kh'' sound that the character has in Tigrigna and
+other languages.
+
+For the more common type of email exchanges omitting the number 2 or 3 does
+not result in a loss of interpretation. The use of the ordinals becomes more
+important later if the text is to be read and translated into Ethiopic
+script by computer.
+
+----------------------------------------------------------------------------
+
+2.5. Why Does ``s2'' Come Before ``s'' ?
+
+The ``2'' is only needed to distinguish the difference between the two
+``s''s in Ethiopic script. In modern writing it is the the 2nd ``s''
+appearing in the fidel that finds the most frequent use in the spelling of
+words. The first ``s'', ``Negusu-Se'', is represented as ``s2'' because it 
+occurs less frequently in writing vs ``Isatu-Se''. Were the 2nd ``s'' labeled
+as ``s2'' it would give the typist considerably more finger work to perform.
+
+----------------------------------------------------------------------------
+
+2.6. How was ``e3'' arrived at for the Aleph-A 8th vowel?
+
+The choice of ``e3'' is thought to be the best model for the sound of the
+character vs potentially, ``eW'' or ``W''. The sound of the character is in 
+Amharic the same as that of ``e'' (``Aleph-A'', the first vowel) in Tigrigna.
+The choice of a numeral to follow ``e'' will detract from the reading quality
+of the character, which should come at a small cost when its infrequent use
+is considered. Further, ``2'' was not available as it is assigned for 
+``e2'' or ``Aynu-A''.
+
+----------------------------------------------------------------------------
+
+2.7. Labiovelar, ``W'', Forms
+
+Special consideration is made for transcription of labiovelar classes
+occurring spoken languages using Fidel as a writing system. The attempt is
+made to keep the transcription to a minimal number of characters while
+providing an accurate and recognizable mapping of the intended sound.
+
+2.7.1. Why is the capital ``W'' used for labiovelar forms?
+
+The uppercase ``W'' is used to remain phonetically consistent with the sound
+of the diqala forms (forms 8 - 12). The lower case ``w'' is reserved
+exclusively for consonant 21 with the ``w'' sound. Thus confusion and
+ambiguity is avoided with use of the uppercase ``W''.
+
+2.7.2. Why is ``hWa'' used in place of "`hWa" or ``h2Wa''?
+
+This is a break in consistency from how forms 1 through 7 of "h2'' were
+represented. However, as ``h'' does not have forms after the sab`I (the 7th
+form) there is no opportunity for confusion to arise from the omitted ``2''
+of ``h2W''. Hence ``hW'' will be uniquely identifiable as representing
+diqala forms of the h2 consonant. The advantage of dropping the ``2'' in the
+diqalawoc range, will be the keystroke saved for typists.
+
+2.7.3. Why is ``Wu'' used for the letters I learned were ``W''?
+
+Actually both are valid under SERA. In different geographic regions, and at
+different times within the same region, people have been taught two
+different sounds for the 2nd form labiovelar (which one may have learned as
+a 6th form). Phonetic representations as ``kWu'' ``kW'' and "kW'", in
+example, are permitted for both ways a person may have been taught. Each
+form is no more right or wrong than the other.
+
+2.7.4. What are all of the duplicate ways to write the Labiovelars?
+
+While multiple means are provided for transcription of three of the
+labiovelar forms, it is best when writing text intended to be read primarily
+in Latin that all three characters be given (``mWa'' vs ``mW'') for benefit
+of the reader. The two character alternative is intended for special
+purposes such as for keyboard entry and reduced text transfer and storage
+costs.
+
+For consonants having an 8th form; both ``Wa'' and ``W'' will be recognized
+following the consonant as the ASCII denotator of the 8th form.
+
+For consonants having 12 forms; "Wu", "W'", and "W" will be recognized
+following the consonant as the same form -considered either the
+labiovelar-sads or labiovelar-ka`Ib.
+
+2.7.5. ``fWE'' is not a letter, why is it acceptable under SERA?
+
+``fWE'' and extended labiovelars such as ``pWe'', ``mWe'', ``yWa'', etc are
+unfamiliar to many Amharic and Tigrigna speakers but may be found in other
+languages such as Chaha1. It is assumed that all labiovelar forms found in
+spoken languages that Fidel as a writing system, are known priori to the
+SERA designers. The combination of ``W'' followed by any vowel is then
+acceptable under SERA, it is left to the software implementing SERA to
+provide a resulting written character or handle the occurrence
+alternatively.
+
+1 Leslau, Wolf, ``Ethiopians speak; studies in cultural background.'',
+ 1964, University of California publications. Near Eastern studies;
+ v. 7, 9, 11,
+
+----------------------------------------------------------------------------
+
+2.8. What is done with the left-over Latin letters?
+
+The ``left over'' Latin uppercase consonants and vowels; B, F, J, L, M, O,
+R, U, V, and Y, are now recognized as equivalent to their lowercase
+counterparts. That is ``Y'' in transliteration would be interpreted 
+identically as ``y'' etc. These same Latin characters are considered to be
+on a ``reserve'' status to model some overlooked sound in an Eritrean or
+Ethiopian language.
+
+============================================================================
+
+3. Punctuation in SERA
+
+3.1. What is Glyph Mapping?
+
+Originally SERA mappings for Ge'ez punctuation follow their nearest
+functional equivalent in Latin. Such a choice is logical to minimize the key
+strokes required of a typist, and should be intuitive from the like
+functionality.
+
+Later mappings were added based on the similarity of Latin punctuation's
+appearance (the glyph value) to that of Ethiopic punctuation. Glyph mapping
+allow documents to maintain a similar ``look'' as they would in native form.
+This result has a strong esthetic appeal and is common place in email
+exchanges.
+
+----------------------------------------------------------------------------
+
+3.1.1. Functional Mapping
+
+Ge'ez punctuation mappings following Latin functional equivalency are:
+
+    ,     Ethiopic Comma
+    ;     Ethiopic Semicolon
+    :     Ethiopic Colon
+    .     Ethiopic Stylized Dot
+    ?     Ethiopic Stylized Question Mark
+   `?     Ethiopic 3-Dot Question Mark
+
+----------------------------------------------------------------------------
+
+3.1.2. Glyph Mapping
+
+Ge'ez punctuation that can be assembled from similar looking Latin
+punctuation may be given by:
+
+   wordspace       :    :
+   preface colon   :   :-
+   colon           :   -:
+   period          :   ::
+   quotation       :   << >>
+   paragraph break :   :|:
+   sarcasm mark    :   `!
+
+----------------------------------------------------------------------------
+
+3.2. Ge'ez punctuation in Latin (or other) script zones
+
+To denote Ge'ez punctuation in Latin or other script zones the escape
+character will be required preceding the punctuation. Any number of
+punctuation characters following \ will be transcribed as Ge'ez from
+non-Ge'ez zones. The Ge'ez punctuation list given in the above is
+represented here as it would appear in non-Fidel zones.
+
+    \,     Eth. Comma
+    \;     Eth. Semicolon
+    \:     Eth. Wordspace
+    \-:    Eth. Colon
+    \:-    Eth. Colon
+    \::    Eth. Full Stop
+    \<<    Eth. Left Quote
+    \>>    Eth. Right Quote
+    \:|:   Eth. Paragraph Terminator
+    \`?    Eth. 3-Dot Question Mark
+    \?     Eth. Stylized Question Mark
+    \`!    Eth. Sarcasm Mark
+    \?     Eth. Stylized Question Mark
+    \.     Eth. Stylized Dot
+
+    \:;'.  Transcribes Ethiopic punctuations in list following \
+           The list may be of length 1 (above) or greater.
+
+----------------------------------------------------------------------------
+
+3.3. Latin punctuation in Ethiopic zones
+
+Latin punctuation that coincides with Ethiopic equivalents will require the
+escape character preceding the punctuation. Any number of punctuation
+characters following \ will be transcribed as Latin from non-Latin zones.
+Latin punctuation presented here as it would appear in non-Latin zones.
+
+    \,     Latin Comma.
+    \;     Latin Semicolon.
+    \:     Latin Colon.
+    \.     Latin Full Stop.
+    \'     Latin Apostrophe.
+    \`     Latin Backquote.
+
+    \\     Sends "\" from either zone
+    \:;'.  Transcribes Latin punctuation in list following \
+           The list may be of length 1 (above) or greater.
+
+    '     is always ignored
+    `     is ignored unless a special vowel, consonant, or punctuation follows
+              -- s,S,h,g,q,e,u\U,i,a\A,E,I,o\O,?
+
+============================================================================
+
+4. Arabic and Ethiopic Numbers in SERA
+
+The Arabic and Ethiopic numerals will both be given with the Arabic numbers
+found on Latin keyboards. The Arabic numbers may be used in the usual way
+from any text ``zone''. Ethiopic numbers require the alternate specifier, `
+, before the numbers. An understanding of the Ethiopic number system will
+benefit the composer.
+
+----------------------------------------------------------------------------
+
+4.1. Arabic Numbers
+
+In present day writing practices the Arabic numerals are found in
+considerably for frequent use than the Ethiopic. Under this consideration it
+would most benefit the typist to be able to key-in the more common of the
+two number systems with the minimal of effort. Thus the Arabic numbers are
+given precedence of the Ethiopic and may be given directly without the use
+of the SERA alternate mechanism ` .
+
+----------------------------------------------------------------------------
+
+4.2. Ethiopic Numbers
+
+From any ``zone'' of text in a document, Fidel or otherwise, the alternate
+specifier ` will be required preceding the string of numbers to be
+transliterated into Ethiopic numerals. Multiple forms of representation are
+also permittable:
+
+  `10`9`100`80`7 = `109100807 = `10900807 
+
+An explanation of this convention follows:
+
+For most practical email exchanges it is enough to type ``1987'' to
+communicate to the reader the year nineteen-hundred-and-eighty-seven. But
+for a machine to interpret the Arabic numbers into Ethiopic, ``1987''
+becomes a highly ambiguous sequence of numbers. The following is offered to
+present a method to represent Ethiopic numbers with Arabic for simple
+computer translation.
+
+In our example, ``1987'', though understood as a Christian year could easily
+have been a part of a phone number, a street address, or most anything in
+another context. As there are 20 Ethiopic numbers (21 if the letter ``xi'',
+used for 1,000 is counted) we are presented with the problem of interpreting
+then, which numbers the typist had intended to communicate.
+
+In example: is 1987 to be read as the 6 Ethiopic numbers 10-100-9-100-80-7.
+Or the 5 numbers 10-9-100-80-7, or the 4 numbers 10-9-80-7 , 10-9-8-7,
+1-90-8-7, or finally (skipping a few other possibilities) 1-9-8-7.
+
+Writing each of the 20 Ethiopic numbers discreetly avoids the ambiguity
+problem and the Christian year 1987 is written as 109100807.
+
+It may seem a little ungainly to have to type 9 Arabic numbers so that a
+computer can understand that 5 Ethiopic numbers are desired. This problem
+can be affected slightly by applying some of the same philosophy that was
+presented for denoting the forms of consonants for Ethiopic letters. With
+the same method applied here the numbers 1,2,3,4...9 are thought of as
+consonants and the vowels are then 0, 00, 000, and 0000 to denote the forms
+"tens", "hundreds", "thousands", and "ten-thousands" (analogous to "g`Iz",
+"ka`Ib", "sals", and "rab`I"). We then have a Fidel for numbers :
+
+ ones   tens   hundreds  thousands  ten-thousands ....
+          0       00        000         0000
+
+  1      10      100       1000        10000
+  2      20      200       2000        20000
+  3      30      200       3000        30000
+  4      40      400       4000        40000
+  .
+  .
+  9      90      900       9000        90000
+
+and we may write the same 5 Ethiopic numbers for the year 1987 with the 8
+Arabic numbers 10900807. It is intrinsic in this system that when the number
+of zeros, 0, following a one (1,2,3...9) is greater than 2, that 2 Ethiopic
+numbers are being represented. That is, it is understood that 200 is
+equivalent to the Ethiopic 2-100 and 2000 is 20-100. If one wishes to use
+``xi'' as a number, 2000 should then be written as 2xi. A small computer
+algorithm that determines Ethiopic numbers with the system described, is
+available from the authors.
+
+As a last thought on the representation of Ethiopic numbers with Arabic we
+suggest that if commas "," or decimals "." be used to denote orders of a
+thousand as in $5,362 , that the number be interpreted strictly as a
+summation. In this instance 5,362 = 5000 + 300 + 60 + 2 and is written in
+Ethiopic as either the 5 characters 50-100-400-60-2 or 5-xi-400-60-2.
+
+============================================================================
+
+5. SERA Escape Sequences
+
+``Escapes'' or ``switches'' are provided in SERA to allow for simple text
+manipulations of punctuation, graphics, and most importantly to indicate a
+change of language within the ASCII text. The back-slash character is chosen
+for this purpose as it is in agreement with the existing conventions of
+Unix, La/TeX, C, and other programming languages.
+
+----------------------------------------------------------------------------
+
+5.1. Script Escapes
+
+    \  Followed by any undefined char, toggles the script interpreter
+       mode (Fidelat<->Latin).  An alphabetic (readable) character
+       may not be used as an escape sequence following the \ text
+       escape.  The defined escapes sequences may have different
+       functions in the two script modes.  When followed by a blank
+       space " ", the mode toggle occurs and the space is deleted.
+
+In Ethiopic Zones
+
+
+    \,     Latin Comma
+    \;     Latin Semicolon
+    \:     Latin Colon
+    \.     Latin Full Stop
+    \'     Latin Apostrophe
+    \`     Latin Backquote
+    \\     Latin BackSlash
+    \:;'.  Transcribes Latin punctuations in list following \
+           The list may be of length 1 (above) or greater.
+
+In Other Script Zones
+
+    \,     Ethiopic Comma
+    \;     Ethiopic Semicolon
+    \:     Ethiopic Wordspace
+    \-:    Ethiopic Colon
+    \:-    Ethiopic Colon
+    \::    Ethiopic Full Stop
+    \<<    Ethiopic Left Quote
+    \>>    Ethiopic Right Quote
+    \:|:   Ethiopic Paragraph Terminator
+    \`?    Ethiopic 3-Dot Question Mark
+    \?     Ethiopic Stylized Question Mark
+    \`!    Ethiopic Sarcasm Mark
+    \.     Ethiopic Stylized Dot
+    \`1..9  Ethiopic Numerals
+    \:;'.  Transcribes Ethiopic punctuations in list following \
+           The list may be of length 1 (above) or greater.
+
+In Both Ethiopic and Additional Script Zones
+
+    \\     Sends "\" from either mode
+    \:;'.  Transcribes ":;'." of other mode
+
+Escapes for Text Subzones
+
+    \!     The "Hard Mode Toggle".  The switch turns the mode on-off
+           treating all text as one script until the closing \! .
+           This allows extended use of \ and \~ without the
+           requirement for \\ and \\~ but at the cost of using only
+           one script within the text region.
+
+----------------------------------------------------------------------------
+
+5.2. Graphical (Extended) Escapes
+
+    ~  If followed by a defined character, the appropriate event occurs.
+       It is left to software houses to recognize each others' extended
+       escape sequences and provide filters.  ~ is recommended as a means
+       to denote in ASCII the nonstandard characters and glyphs of a font
+       set.  ~ is also the mechanism employed in SERA for multilingualism.
+
+  \~x  Ignored if "x" is a " " or undefined in an application.
+       A " " following "x" is the required terminator.
+
+
+  See also Technical Aspects.
+
+Trouble Shooting
+
+If a user truly wants to toggle modes and  have : , <<, >>, !, ?, ~
+appear as the first character in the new mode, the simple solution is
+to type the character before toggle such as :
+
+        ~\     <<\
+        :\     >>\
+        ?\      !\
+
+----------------------------------------------------------------------------
+
+5.3. Language Escapes
+
+It is necessary when the writer desires text to later be transcribed into
+another script, that the script to be transcribed into be in some way
+identified to the transcriber. Following the convention devised for HTML 3.0
+for the same purpose SERA parsers will use the ISO's 2 character and 3
+character language tags following the graphic escape ``\~''.
+
+It is assumed that a document will be written primary in two languages
+--which may be written in one or two scripts. The regular script escape,
+``\'' , always serves the two primary languages in the document. After
+switching to a third language, ``\'' will indicate a return to the last of
+the two major modes.
+
+In example :
+
+ 1) ..latin.. \ ..fidel.. \~ar ..arabic.. \~el ..greek.. \ ..fidel..
+ 2) ..latin.. \ ..fidel.. \~ar ..arabic.. \~ar ..fidel..
+
+*1) Hence ``\'' will always mean ``return to last'' of the 2 defaulted
+scripts.
+*2) If an escape is found that would change the current language to the
+current language, the 2nd escape should mark the end-of-zone and function as
+per ``\'' in (1).
+
+============================================================================
+
+6. Technical Aspects
+
+The content here is provided for developers implementing SERA or working
+with an existing SERA parser.
+
+6.1. Extended Escapes
+
+SERA provides an escape mechanism that may be applied for software specific
+implementations of SERA when an existing SERA definition is not available.
+The escape is \~ followed by an identifying key term given in the 7-bit
+ASCII range and terminated by the first space `` '' character. The following
+space character does not appear in the output.
+
+\~u and \~b might start and stop ``underline'' and ``bold'' for example. The
+\~ escape may also be used for extension to the font tables for special
+symbols. Extended descriptions should be bracketed between { and } as per
+\~{word1 word2}.
+
+A second SERA parser that does not have the escape sequence defined, should
+simply ignore the escape.
+
+----------------------------------------------------------------------------
+
+6.2. Multilingualism
+
+The SERA extended escape, \~ , is also employed for changes between
+languages, scripts, and encoding systems. For changes between languages
+using the same writing system, ISO's 2 character and 3 character language
+tags following ``\~''. It is left to the software to determine if the change
+of language requires a change of script or encoding system. 
+
+----------------------------------------------------------------------------
+
+6.3. HTML and WWW
+
+The principle consideration for HTML and SERA is that SERA parsers should
+give HTML defined escapes precedence over SERA definitions. Hence, < and > ,
+and & with ; should be parsed first as appropriate HTML escapes. When the
+syntax does not qualify as HTML, the parser should proceed to SERA
+transcription.
+
+Mule with the W3 web browser demonstrate the ideal implementation of SERA in
+HTML. W3 convert SERA text between <sera> and </sera> markups automatically
+into Fidel.
+
+----------------------------------------------------------------------------
+
+6.4. Transcription of Extended Labiovelar Characters
+
+Any number of extended labiovelar forms may be constructed from consonant
+classes in the Fidel domain. Some not already found in the modern Fidel may
+actually be in low frequency use in Eritrea and Ethiopia, others are useful
+for representing sounds from foreign languages phonetically with Fidel
+script. (bWe), (pWE), (fWE), (mWi) are for example but a few of the
+extensions introduced for Chaha. The transcription of these extended forms
+is left to individual developers.
+
+Existing SERA parsers return unique addresses for ``We'', ``Wu'' (also
+``W''), ``Wi'', ``Wa'' and ``WE''. Developers using these parsers are
+welcome to render or ignore the returned code points as they wish.
+Transcription of ``pWe'' would return an address for (p) and an address for
+(We). Applications could reconstruct (pWe) from the address pairs of
+(p)+(We) or render two glyphs (p)(we) for example or (p)(We) where (We) is a
+specialized extension for an 8th form of (we).
+
+----------------------------------------------------------------------------
+
+6.5. Gemination Under SERA
+
+Amharic and Tigrigna writing conventions do not have a built in way to
+denote doubling and stressing of characters and vowels. A convention for
+gemination of the consonant component of a Fidel syllable is employed in a
+number of texts on the study of these languages. The nonspacing gemination
+glyph appears as two square-like dots over the character to be affected.
+
+The gemination of a Fidel letter in SERA is made with '' following the
+letter to be lengthened. Examples are shown the out dated SERA 95 hypertext.
+
+----------------------------------------------------------------------------
+
+6.6. What If I Wish To Show More Sound For A Sadis Consonant?
+
+The 6th or ``sadis'' order of a syllabic series in Fidel is usually treated
+as a natural consonant. In practice this is not always true and commonly a
+vowel component of the 6th syllable is voiced. The correct enunciation of
+the vowel is of importance to linguists and students of Fidel written
+natural languages.
+
+SERA parsers will return a defined code number for SOFTSADIS when `' are
+found together. It is then left to the software to ignore or provide a
+phonetic character, or other handling, for the vowel component. The phonetic
+system output option of sera2latex for example, will provide a phonetic
+character for the vowel part of the sadis syllable when `' are present.
+
+Apostrophe ' may be used for the same purpose but will not have the
+SOFTSADIS code number returned. Some examples are:
+
+      ysTlN  =  y'sT'l'N
+      tgrNa  =  tg'r'Na
+      alfelgm  =  alfel'g'm
+      TrE  =  T`'rE
+
+----------------------------------------------------------------------------
+
+6.7. Line Breaks
+
+Following the convention of two byte systems, when a line break (carriage
+return or newline) is encountered when parsing a SERA buffer, text before
+and after the line break must be transliterated as two different Fidel
+characters. In example, were ``pa'' written together on a single line, the
+Fidel (pa) would be given. If ``p'' were found at the end of a line, and
+``a'' the first character on the next line; (p) \n (a) is the correct
+transcription.
+
+----------------------------------------------------------------------------
+
+6.8. When 2 or ` Can Not Be Used For Alternate Characters
+
+An application programmer may still find instances where in a programming
+language neither of the alternate identifiers ` and the number 2 are 
+permittable syntax (in the case of macro definitions in C and TeX for 
+instance).
+
+It is suggested then that the SERA Input Method convention for keystrokes
+be employed in these instances.  Here, `se and s2e would become sse, `he
+and h2e become hhe etc.  It is emphasized that the representation is reserved
+for IM or program-internal variable representation and is NOT used for
+document transcription.
+
+----------------------------------------------------------------------------
+
+6.9. SERA and Sorting
+
+At no point in the design of SERA is the issue of sorting considered nor
+addressed.  A sortable transcription convention, sortable under Ethiopic
+lexicography, would likely not be so human readable -essential criterion
+in SERA.
+
+SERA is an ASCII transcription of Ethiopic, as such sorting should not
+be attempted at the ASCII level.  Sorting should only be applied when
+SERA text has been tokenized back into some representation of Ethiopic.
+
+============================================================================
+
+7. Other Resources
+
+PostScript documents on SERA topics are available by ftp from:
+
+  ftp://ftp.cs.indiana.edu/pub/fidel/sera-docs/
+
+Hypertext documents on SERA topics are available by www from:
+
+  http://www.cs.indiana.edu/~hyplan/dmulholl/fidel/fidel.html
+
+Software applying ``libeth'' use a SERA parser written in f/lex and may
+be found under:
+
+  ftp://ftp.cs.indiana.edu/pub/fidel/
+
+============================================================================

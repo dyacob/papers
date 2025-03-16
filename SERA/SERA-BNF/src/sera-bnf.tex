@@ -1,0 +1,54 @@
+
+
+%\hspace*{-1.5in}
+\subsection*{The SERA Specification In BNF}
+\texttt{
+\begin{tabular}{|rrl|} \hline\hline
+SYLLABLE    & ::= &  LONEVOWEL $|$ CONSONANT(VOWEL)? $|$ CONSONANT(W)[euiaE]? \\ 
+            & $|$ &  [mrf]Ya \\
+            &  ;  &  \\
+LONEVOWEL   & ::= &  (`)?(VOWEL$|$[UIAO])  $|$ (VOWEL$|$[UIAO])(2)? $|$ ea ; \\
+VOWEL       & ::= &  [euiaEo] ; \\ 
+CONSONANT   & ::= &  [b-d,f-h,j-n,p-t,v-z] \\
+            & $|$ &  [B-D,F-H,J-N,P-T,V,X-Z] \\
+            & $|$ &  `[qhkgsS] \\
+            & $|$ &   [qhkgsS]2\\
+            &  ;  &          \\ \hline
+NUMBER      & ::= &  DIGIT $|$ TEN $|$ HUNDRED $|$ TENTHOUSAND ; \\
+TENTHOUSAND & ::= &  HUNDRED(00) ; \\
+HUNDRED     & ::= &  TEN(0) ; \\  
+TEN         & ::= &  DIGIT(0) ; \\ 
+DIGIT       & ::= & `[1-9] ; \\  \hline 
+PUNCTUATION & ::= & WORDSPACE $|$ COMMA $|$ SEMICOLON $|$ PRECOLON \\
+            & $|$ & COLON     $|$ FULLSTOP $|$ PARAGRAPH $|$ GEMINATION \\
+            & $|$ & TEMHERTSLAQ $|$ QUESTIONMARK $|$ OLDQUESTIONMARK \\
+            & $|$ & LEFTQUOTE $|$ RIGHTQUOTE $|$ DOT \\
+            &  ;  &          \\
+WORDSPACE   & ::= & [ ]?:[ ]? $|$ `: ; \\
+COMMA       & ::= & , ; \\
+SEMICOLON   & ::= & {\textrm{``}};{\textrm{''}} ; \\
+PRECOLON    & ::= & :- ;\\
+COLON$^\star$             & ::= & -: $|$ : ; \\
+FULLSTOP    & ::= & :: ; \\
+PARAGRAPH   & ::= & {\textrm{``}}:$|$:{\textrm{''}} ; \\
+GEMINATION  & ::= & '' ; \\
+TEMHERTSLAQ & ::= & `! ; \\
+QUESTIONMARK$^\star$      & ::= & ? ; \\
+OLDQUESTIONMARK$^\star$   & ::= & `? ; \\
+LEFTQUOTE   & ::= & << ; \\
+RIGHTQUOTE  & ::= & >> ; \\
+DOT         & ::= & . ; \\ \hline
+ESCAPE      & ::= & $\backslash$ \\
+            & $|$ & $\backslash$(ASCII-PUNCTUAION) \\
+            & $|$ & $\backslash\tilde{}$\,LANG($\tilde{}$\,LANG)? \\ 
+            & $|$ & $\backslash\tilde{}$\,\{application defined\} \\ 
+            & $|$ & $\backslash\tilde{}$! \\ 
+            &  ;  &          \\
+LANG        & ::= & am[h]? $|$ ti[r]? $|$ en[g]? $|$ g[e]z? $|$ etc ; \\ \hline
+SOFTSADS    & ::= & `' ; \\
+IGNORED     & ::= & ' ; \\ \hline\hline
+\end{tabular}}  \\
+\noi
+
+$^\star$ Transliteration may depend on a default setting.
+

@@ -1,0 +1,113 @@
+
+
+Cyber Sunrise Over Addis Ababa
+             by
+        Daniel Yacob
+
+There has been and there shall be lots of talk about all that's available from
+the coming Internet.  Readers of this week's issue are already familiar with
+what's to come -so lets turn our attention then to how we can start, even now,
+exploring this world within worlds.
+
+Access to Internet services in Addis Ababa is available to anyone with three
+essential ingredients:  1) A computer  2) A Modem (to use a computer over
+telephone lines) 3) A telephone.  With this a person may contact by telephone
+(51-45-34) the PADIS computer bulletin board known as "The Hornet".  From the
+Hornet a person would retrieve by computer two final ingredients:  A web
+browser (your "car" for driving on the information super highway), and the
+"winsock" communications software (to make your computer think the phone line
+is an Internet line).  Those who contact the Hornet will find step-by-step
+instructions for how to proceed.
+
+With the web browser ("Netscape" is the most well known) the Internet explorer
+(called a "surfer") would call back to the Hornet.  From the Hornet the surfer
+will be able to view 3 World Wide Web services and retrieve new software by FTP.
+
+FTP is a file transmission and retrieval system for sending and receive items
+like software between computers on the Internet.  Following Email, the World 
+Wide Web, or just "web" or "WWW", is the greatest utility that the Internet 
+provides.  With Email a person composing a document is required to mail it to
+each person he or she wishes to read it.  With WWW the document is never sent
+to anyone, the document may remain on the composer's computer and anyone
+wishing to read it is welcome to come (electronically) and do so.  This saves
+a lot of trouble when there might be thousands or millions of people who may
+wish to read!
+
+Navigating the Internet through the web is a lot like reading a big electronic
+magazine.  You will view in your web browser pages of text and pictures
+(sometimes sounds and movies but less often) that you can read at your leisure.
+Turning pages will then be done through the keyboard or by the computer "mouse".
+Only now when you change pages you may also have changed computers.  The new
+computer that you read the next page from may be located around the world.  The
+magazine reader may not even realize that they have change to another computer
+on the other side of the planet.  This is the "magic of the Internet" and of the
+"cyberspace" we have journeyed through by changing pages and computers.  At its
+best, distance loses its relevance in cyberspace.  All going well, flipping 
+between computers (like flipping pages) is as fast and invisible to the surfer
+as working on their own computer in the comforts of their home.
+
+The Web is often used interchangeably with the term "Internet" though this is a
+misnomer.  The two are quite different.  The Internet is merely a network that
+connects networks of computers.  Physically it is a collection of cables and
+open satellite links.  This is much the same as our "world wide" telephone
+network only that we are ultimately connecting computers and not telephones.
+The Web is then a service we can use over this network.  Voice communication is
+one type of service people use on the telephone network, but sending and 
+receiving faxes is another kind of service we can use on the same network.
+The Web is just one of many services we can use the Internet for.
+
+So what do you see when one computer calls another over Internet?  Web surfers
+in Addis Ababa who call The Hornet will have three web services available to
+them. As you might expect the ECA web pages are available to the public.  Also
+the UN Emergencies Unit for Ethiopia is "on line".  Finally the "Ethiopia On
+Line" web service is a popular location.
+
+Ethiopia On Line is a web server for non-UN materials.  There you will find
+such interesting sites as "The Addis Ababa Home Page",  "The Ethiopian
+Scientific Society Home Page" , "The Abyssinia Cyberspace Gateway", "The Addis
+Tribune Home Page" and the ESS 1996 Telecom Conference proceedings.  Coming
+soon will be Microsoft's very own "Mungo Park" adventure magazine which has been
+tracking the Tekeze River Expidition -previously unaccessible within Ethiopia.
+By the way, a "Home Page" if we have not mentioned it is an organization's 
+self presentation to the Internet community -like a fancy brochure explaining
+what an organization is about or what products a company might sell.
+
+Even without installing the special web browsing software on your home PC, 
+the ECA web services are accessible with the limitation of "text only" 
+viewing -meaning no pictures can be transmitted.
+
+
+Is This Really The Internet?
+
+In a word:- "no".  Visitors to the ECA's web sites will experience the services
+of the Internet but only from the computers within the ECA compound.  The ECA
+will not be able to provide access to the outside Internet -only the ETA will
+have the authority to do so.  However, new materials from the outside Internet
+will be downloaded and made available to the Ethiopian surfer from with the ECA
+compound.  This limited glimpse of the truly "World Wide'' Internet should
+still be enjoyable to the average user.
+
+The same procedures and software will be used through the ETA service when it
+becomes available.  The main difference being the telephone number you will
+call and the unlimited number of web sites available.  These external web sites
+may also be downloaded by ECA and ETA email subscribers through "Agora" web
+servers that will retrieve and email back the web sites you request.  This is
+the best approach for people wanting to view web in the outside world without
+the added cost of a full internet subscription.  Visit The Hornet for a list of
+Agora web-by-email addresses.
+
+
+It's Better to Give Than Receive
+
+Not only can you read Internet materials at The Hornet -you may also publish!
+The Hornet has always been the community's public electronic communications
+area in Ethiopia.  This spirit and service continues with the latest form of
+electronic communication -the World Wide Web.  The Ethiopia On Line web service
+is available to organizations, companies and the interested to publish WWW
+materials for the public to browse and enjoy.  Materials published at Ethiopia
+On Line will also be available to the surfers outside of Ethiopia.
+
+The Addis Tribune has for two months lead the way of Ethiopian companies in
+this latest communications frontier.  All are invited to come see what the
+Addis Tribune has done to present Ethiopia to the world and to follow their
+lead in bringing Ethiopia to the Internet!

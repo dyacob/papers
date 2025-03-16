@@ -1,0 +1,108 @@
+<html>
+<body color="#ffffff">
+
+<h3>Daniel's Ethiopic Number Algorithm #4</h3>
+For one reason or another during the last four years it seems necessary that 
+each year I write a new number algorithm for converting Arabic numbers into Ethiopic.  
+Usually this happens as a memory test that fails and then a new algorithm
+is created and new insight gained.  This year I was finally getting around to
+HTMLing last year's algorithm but couldn't find it!  I tried to rediscover it
+from some computer code but ended up inventing yet another algorithm.
+<p>
+I think this one is pretty simple, I've tried to emphasize that in the
+presentation below.  The key is that numbers are read in groups of 2 and
+each group gets the same conversion process.  There is only a single special
+rule that is discussed at the end:
+
+
+<p>
+<table width=100% bgcolor="white">
+  <tr align="center"><td align="right"><b>1)</b></td><td colspan=4 bgcolor=tan><b>7,654,321</b></td>
+  <td><font size=-1>Start with an arbitrary number.</font></td></tr>
+ 
+  <tr align="right"><td><b>2)</b></td><td bgcolor="hotpink"><b>[07]<sub>&nbsp;</sub></b></td><td bgcolor="yellow"><b>[65]<sub>&nbsp;</sub></b></td><td bgcolor="beige"><b>[43]<sub>&nbsp;</sub></b></td><td bgcolor="aqua"><b>[21]<sub>&nbsp;</sub></b></td>
+  <td align="center"><font size=-1>From left to right group  numbers in sets of 2.</font></td></tr>
+
+  <tr align="right"><td><b>3)</b></td><td bgcolor="hotpink"><b>[07]<sub>3</sub></b></td><td bgcolor="yellow"><b>[65]<sub>2</sub></b></td><td bgcolor="beige"><b>[43]<sub>1</sub></b></td><td bgcolor="aqua"><b>[21]<sub>0</sub></b></td>
+  <td align="center"><font size=-1>We'll add subscripts for book keeping.</font></td></tr>
+
+  <tr align="right"><td><b>4)</b></td><td bgcolor="hotpink"><b>[07]<sub>3</sub></b></td><td bgcolor="yellow"><b>[60+5]<sub>2</sub></b></td><td bgcolor="beige"><b>[40+3]<sub>1</sub></b></td><td bgcolor="aqua"><b>[20+1]<sub>0</sub></b></td>
+  <td align="center"><font size=-1>Now expand the sets into 10's and 1's.</font></td></tr>
+
+  <tr align="right"><td><b>5)</b></td><td bgcolor="hotpink"><b>([7])<sub>3</sub></b></td><td bgcolor="yellow"><b>([60][5])<sub>2</sub></b></td><td bgcolor="beige"><b>([40][3])<sub>1</sub></b></td><td bgcolor="aqua"><b>([20][1])<sub>0</sub></b></td>
+  <td align="center"><font size=-1>Write expansions as seperate numbers.</font></td></tr>
+
+  <tr align="right"><td><b>6)</b></td><td bgcolor="hotpink"><b>(<img src="fidels/sebat.gif" align="absmiddle">)<sub>3</sub></b></td><td bgcolor="yellow"><b>(<img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle">)<sub>2</sub></b></td><td bgcolor="beige"><b>(<img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle">)<sub>1</sub></b></td><td bgcolor="aqua"><b>(<img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">)<sub>0</sub></b></td>
+  <td align="center"><font size=-1>Go ahead and convert to Ethiopic numbers.</font></td></tr>
+
+  <tr align="right"><td><b>7)</b></td>
+    <td bgcolor="hotpink"><b>(<img src="fidels/sebat.gif" align="absmiddle">) + (3 * {<img src="fidels/meto.gif" align="absmiddle">})</b></td>
+    <td bgcolor="yellow"><b>(<img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle">) + (2 * {<img src="fidels/meto.gif" align="absmiddle">})</b></td>
+    <td bgcolor="beige"><b>(<img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle">) + (1 * {<img src="fidels/meto.gif" align="absmiddle">})</b></td>
+    <td bgcolor="aqua"><b>(<img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">) + (0 * {<img src="fidels/meto.gif" align="absmiddle">})</b></td>
+    <td align="center" rowspan=2><font size=-1>The subscripts now tell how many <img src="fidels/meto.gif" align="absmiddle">'s we need.</tr>
+
+
+  <tr align="right"><td><b>8)</b></td>
+    <td bgcolor="hotpink"><b>(<img src="fidels/sebat.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/meto.gif" align="absmiddle">)</b></td>
+    <td bgcolor="yellow"><b>(<img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/meto.gif" align="absmiddle">)</b></td>
+    <td bgcolor="beige"><b>(<img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">)</b></td>
+    <td bgcolor="aqua"><b>(<img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">) + (0)</b></td></tr>
+
+  <tr align="right"><td><b>9)</b></td>
+    <td bgcolor="hotpink"><b>(<img src="fidels/sebat.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/asr-xi.gif" align="absmiddle">)</b></td>
+    <td bgcolor="yellow"><b>(<img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle">) + (<img src="fidels/asr-xi.gif" align="absmiddle">)</b></td>
+    <td bgcolor="beige"><b>(<img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">)</b></td>
+    <td bgcolor="aqua"><b>(<img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">) + (0)</b></td>
+    <td align="center"><font size=-1>Reduce as per <img src="fidels/asr-xi.gif" align="absmiddle"> = <img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/meto.gif" align="absmiddle"></tr>
+
+  <tr align="right"><td><b>10)</b></td>
+    <td bgcolor="hotpink"><b><img src="fidels/sebat.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"></b></td>
+    <td bgcolor="yellow"><b><img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"></b></td>
+    <td bgcolor="beige"><b><img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"></b></td>
+    <td bgcolor="aqua"><b><img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle"></b></td>
+    <td align="center"><font size=-1>Group...</tr>
+
+  <tr align="center"><td align="right"><b>11)</b></td><td colspan=4 bgcolor=tan>
+    <img src="fidels/sebat.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"><img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/amst.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"><img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"><img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle"></td>
+    <td align="center"><font size=-1>Collect and we're done!</tr>
+
+<tr><td colspan=6 bgcolor="#bfbfbf">
+<p>&nbsp;</p>
+<strong>Note!</strong>  Except for when we use subscript ``0'' (the far
+right side) there is a rule that 1's in the 1's place are absorbed by an 
+    <img src="fidels/asr.gif" align="absmiddle">, <img src="fidels/meto.gif" align="absmiddle">, 
+ or <img src="fidels/asr-xi.gif" align="absmiddle"> on the right.  So if we
+ changed the ``5'' in <b>[65]<sub>2</sub></b> to a ``1'' in the above; the reduction would go
+ as<p></p></td>
+
+  <tr align="right"><td><b>3)</b></td><td bgcolor="hotpink"><b>[07]<sub>3</sub></b></td><td bgcolor="yellow"><b>[61]<sub>2</sub></b></td><td bgcolor="beige"><b>[43]<sub>1</sub></b></td><td bgcolor="aqua"><b>[21]<sub>0</sub></b></td>
+  <td align="center"><font size=-1>We'll add subscripts for book keeping.</font></td></tr>
+
+  <tr align="right"><td><b>:&nbsp;&nbsp;</b></td><td bgcolor="hotpink"><b>:&nbsp;&nbsp;&nbsp;&nbsp;</b></td><td bgcolor="yellow"><b>:&nbsp;&nbsp;&nbsp;&nbsp;</b></td><td bgcolor="beige"><b>:&nbsp;&nbsp;&nbsp;&nbsp;</b></td><td bgcolor="aqua"><b>:&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+  <td align="center"><font size=-1>:</font></td></tr>
+
+  <tr align="right"><td><b>9)</b></td>
+    <td bgcolor="hotpink"><b>(<img src="fidels/sebat.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/asr-xi.gif" align="absmiddle">)</b></td>
+    <td bgcolor="yellow"><b>(<img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">) + (<img src="fidels/asr-xi.gif" align="absmiddle">)</b></td>
+    <td bgcolor="beige"><b>(<img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle">) + (<img src="fidels/meto.gif" align="absmiddle">)</b></td>
+    <td bgcolor="aqua"><b>(<img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle">) + (0)</b></td>
+    <td align="center"><font size=-1>Reduce as per <img src="fidels/asr-xi.gif" align="absmiddle"> = <img src="fidels/meto.gif" align="absmiddle">+<img src="fidels/meto.gif" align="absmiddle"></tr>
+
+  <tr align="right"><td><b>10)</b></td>
+    <td bgcolor="hotpink"><b><img src="fidels/sebat.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"></b></td>
+    <td bgcolor="yellow"><b><img src="fidels/slsa.gif" align="absmiddle"><img src="fidels/asr-xi.gif" align="absmiddle"></b></td>
+    <td bgcolor="beige"><b><img src="fidels/arba.gif" align="absmiddle"><img src="fidels/sost.gif" align="absmiddle"><img src="fidels/meto.gif" align="absmiddle"></b></td>
+    <td bgcolor="aqua"><b><img src="fidels/haya.gif" align="absmiddle"><img src="fidels/and.gif" align="absmiddle"></b></td>
+    <td align="center"><font size=-1>Group...</tr>
+
+</table>
+
+<p>The interesting consequence then is that <img src="fidels/and.gif" align="absmiddle">
+can <b><i>only</i></b> appear in the one's place (the far right)!
+
+
+<p><hr><p>
+
+</body>
+</html>
