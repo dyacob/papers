@@ -5,11 +5,15 @@ Adding all to a repository is done in large part so I can find things when I wan
 been scattered across various, decaying, media and leaving me unsure of what the final version of a document
 was. Getting organized is also meant to set the stage for me to write additional papers in the years ahead.
 
+## Digitally Remastered
+
 Many of the older documents have been “digitallly remastered”, meaning that a file previously in `HTML`
-or `DOC` format was opened in Microsoft Word, some typefaces changed (for better quality, or to avoid
-dependency on a commercially licensed product), spell checker suggestions applied, as well as grammar
-checker suggestions (usually just for commas). Minor layout and other formatting changes may also have
-been made when it improved readability. The qualitative content remains unchanged.
+or `DOC` format was opened in modern Microsoft Word (2021, Mac v16.95) where some typefaces might be changed
+(for better quality, or to avoid dependency on a commercially licensed product),
+spell checker suggestions applied, as well as grammar checker suggestions (usually just for commas).
+Broken hyperlinks have been updated when the new link is known (and sometimes linked into archive.org).
+Minor layout and formatting changes may also have been made when it improved readability.
+The qualitative content remains unchanged.
 
 Many of the papers in this repository have also been posted to [Academia.edu](https://vt.academia.edu/DanielYacob).
 
