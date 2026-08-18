@@ -1,0 +1,2 @@
+src/ColourAndCommunication-20260818-WithImages.docx filter=lfs diff=lfs merge=lfs -text
+ColourAndCommunication-20260818-WithImages.pdf filter=lfs diff=lfs merge=lfs -text
